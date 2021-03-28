@@ -9,22 +9,42 @@
         <lastBuildDate>Sun, 28 Mar 2021 11:19:57 +0800</lastBuildDate>
         <category>jquery</category>
         <item>
-            <guid isPermalink="true">https://serena-tz.github.io/2021/03/28/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</guid>
-            <title>小试牛刀</title>
-            <link>https://serena-tz.github.io/2021/03/28/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</link>
+            <guid isPermalink="true">https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</guid>
+            <title>jquery基本介绍（入口函数）</title>
+            <link>https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</link>
             <category>jquery</category>
             <pubDate>Sun, 28 Mar 2021 11:19:57 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;jq文件和版本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jq文件和版本&#34;&gt;#&lt;/a&gt; JQ 文件和版本&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;### 完整版：
-    1、用于开发环境中（写项目）
-    2、是正常的未压缩的源代码
-### 压缩版：
-    1、用于生成环境（线上）
-    2、去掉了注释、留白、并且压缩了变化、函数名等
-### 版本选择：
-    1. 如果要兼容老版本浏览器（即在PC上），最好使用1.12.4版本即以下的
-    2. 否则使用3最新版本，这样可以兼容PC版主流浏览器+移动端浏览器
-    3. 各个版本间区别不是太大，基本API都是通用的&lt;/code&gt;&lt;/pre&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;1-jq文件和版本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-jq文件和版本&#34;&gt;#&lt;/a&gt; 1 JQ 文件和版本&lt;/h2&gt;
+&lt;h3 id=&#34;11-完整版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-完整版&#34;&gt;#&lt;/a&gt; 1.1 完整版：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;用于开发环境中（写项目）&lt;/li&gt;
+&lt;li&gt;是正常的未压缩的源代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;12压缩版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12压缩版&#34;&gt;#&lt;/a&gt; 1.2 压缩版：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;用于生成环境（线上）&lt;/li&gt;
+&lt;li&gt;去掉了注释、留白、并且压缩了变化、函数名等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;13版本选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#13版本选择&#34;&gt;#&lt;/a&gt; 1.3 版本选择：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;如果要兼容老版本浏览器（即在 PC 上），最好使用 1.12.4 版本即以下的&lt;/li&gt;
+&lt;li&gt;否则使用 3 最新版本，这样可以兼容 PC 版主流浏览器 + 移动端浏览器&lt;/li&gt;
+&lt;li&gt;各个版本间区别不是太大，基本 API 都是通用的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-使用jquery&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-使用jquery&#34;&gt;#&lt;/a&gt; 2 使用 jquery&lt;/h2&gt;
+&lt;h3 id=&#34;21-导入jq库文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#21-导入jq库文件&#34;&gt;#&lt;/a&gt; 2.1 导入 JQ 库文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;//使用本地库文件
+&amp;lt;script src=&amp;quot;jquery-3.1.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+//或使用cdn(内容分发网络)，即使用外部jQuery库资源（外链）
+&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.9.1/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;22-在script标签或新的js文件中写jq代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#22-在script标签或新的js文件中写jq代码&#34;&gt;#&lt;/a&gt; 2.2 在 script 标签或新的 JS 文件中写 JQ 代码&lt;/h3&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $(function()&amp;#123;
+        //这里写你的代码
+    &amp;#125;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-onload与ready的对比&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-onload与ready的对比&#34;&gt;#&lt;/a&gt; 3 onload 与 ready 的对比&lt;/h2&gt;
  ]]></description>
         </item>
         <item>

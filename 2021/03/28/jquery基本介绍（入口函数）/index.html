@@ -27,12 +27,12 @@
   <meta name="keywords" content="jquery" />
 
 
-<link rel="canonical" href="https://serena-tz.github.io/2021/03/28/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/">
+<link rel="canonical" href="https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/">
 
 
 
   <title>
-小试牛刀 |
+jquery基本介绍（入口函数） |
 阳光果苏 = Serena = 追忆似水年华</title>
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,7 +60,7 @@
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">小试牛刀
+  <h1 itemprop="name headline">jquery基本介绍（入口函数）
   </h1>
   
 <div class="meta">
@@ -102,12 +102,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -136,7 +136,7 @@
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2021/03/28/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -151,17 +151,37 @@
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="jq文件和版本"><a class="markdownIt-Anchor" href="#jq文件和版本">#</a> JQ 文件和版本</h2>
-<pre><code>### 完整版：
-    1、用于开发环境中（写项目）
-    2、是正常的未压缩的源代码
-### 压缩版：
-    1、用于生成环境（线上）
-    2、去掉了注释、留白、并且压缩了变化、函数名等
-### 版本选择：
-    1. 如果要兼容老版本浏览器（即在PC上），最好使用1.12.4版本即以下的
-    2. 否则使用3最新版本，这样可以兼容PC版主流浏览器+移动端浏览器
-    3. 各个版本间区别不是太大，基本API都是通用的</code></pre>
+    <h2 id="1-jq文件和版本"><a class="markdownIt-Anchor" href="#1-jq文件和版本">#</a> 1 JQ 文件和版本</h2>
+<h3 id="11-完整版"><a class="markdownIt-Anchor" href="#11-完整版">#</a> 1.1 完整版：</h3>
+<ol>
+<li>用于开发环境中（写项目）</li>
+<li>是正常的未压缩的源代码</li>
+</ol>
+<h3 id="12压缩版"><a class="markdownIt-Anchor" href="#12压缩版">#</a> 1.2 压缩版：</h3>
+<ol>
+<li>用于生成环境（线上）</li>
+<li>去掉了注释、留白、并且压缩了变化、函数名等</li>
+</ol>
+<h3 id="13版本选择"><a class="markdownIt-Anchor" href="#13版本选择">#</a> 1.3 版本选择：</h3>
+<ol>
+<li>如果要兼容老版本浏览器（即在 PC 上），最好使用 1.12.4 版本即以下的</li>
+<li>否则使用 3 最新版本，这样可以兼容 PC 版主流浏览器 + 移动端浏览器</li>
+<li>各个版本间区别不是太大，基本 API 都是通用的</li>
+</ol>
+<h2 id="2-使用jquery"><a class="markdownIt-Anchor" href="#2-使用jquery">#</a> 2 使用 jquery</h2>
+<h3 id="21-导入jq库文件"><a class="markdownIt-Anchor" href="#21-导入jq库文件">#</a> 2.1 导入 JQ 库文件</h3>
+<pre><code>//使用本地库文件
+&lt;script src=&quot;jquery-3.1.0.js&quot;&gt;&lt;/script&gt;
+//或使用cdn(内容分发网络)，即使用外部jQuery库资源（外链）
+&lt;script src=&quot;http://libs.baidu.com/jquery/1.9.1/jquery.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="22-在script标签或新的js文件中写jq代码"><a class="markdownIt-Anchor" href="#22-在script标签或新的js文件中写jq代码">#</a> 2.2 在 script 标签或新的 JS 文件中写 JQ 代码</h3>
+<p>比如：</p>
+<pre><code>    $(function()&#123;
+        //这里写你的代码
+    &#125;)
+</code></pre>
+<h2 id="3-onload与ready的对比"><a class="markdownIt-Anchor" href="#3-onload与ready的对比">#</a> 3 onload 与 ready 的对比</h2>
 
       <div class="tags">
           <a href="/tags/jquery/" rel="tag"><i class="ic i-tag"></i> jquery</a>
@@ -176,7 +196,7 @@
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-28 11:23:54" itemprop="dateModified" datetime="2021-03-28T11:23:54+08:00">2021-03-28</time>
+    <time title="修改时间：2021-03-28 11:33:32" itemprop="dateModified" datetime="2021-03-28T11:33:32+08:00">2021-03-28</time>
   </span>
 </div>
 
@@ -207,7 +227,7 @@
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://serena-tz.github.io/2021/03/28/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/" title="小试牛刀">https://serena-tz.github.io/2021/03/28/小试牛刀/</a>
+    <a href="https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">https://serena-tz.github.io/2021/03/28/jquery基本介绍（入口函数）/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -226,7 +246,7 @@
     <div class="item left">
       
 
-  <a href="/2013/12/24/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexj2jgzj20zk0m8b09.jpg" title="Hello World">
+  <a href="/2013/12/24/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="Hello World">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Hello World</h3>
@@ -250,7 +270,7 @@
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jq%E6%96%87%E4%BB%B6%E5%92%8C%E7%89%88%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text"> JQ 文件和版本</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-jq%E6%96%87%E4%BB%B6%E5%92%8C%E7%89%88%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text"> 1 JQ 文件和版本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%AE%8C%E6%95%B4%E7%89%88"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 完整版：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E5%8E%8B%E7%BC%A9%E7%89%88"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 压缩版：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9"><span class="toc-number">1.3.</span> <span class="toc-text"> 1.3 版本选择：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8jquery"><span class="toc-number">2.</span> <span class="toc-text"> 2 使用 jquery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E5%AF%BC%E5%85%A5jq%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 导入 JQ 库文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-%E5%9C%A8script%E6%A0%87%E7%AD%BE%E6%88%96%E6%96%B0%E7%9A%84js%E6%96%87%E4%BB%B6%E4%B8%AD%E5%86%99jq%E4%BB%A3%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 在 script 标签或新的 JS 文件中写 JQ 代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-onload%E4%B8%8Eready%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text"> 3 onload 与 ready 的对比</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -363,7 +383,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/28/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/" title="小试牛刀">小试牛刀</a></span>
+    <span><a href="/2013/12/24/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -372,7 +392,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2013/12/24/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
   </li>
 
   </ul>
@@ -403,7 +423,7 @@
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2021/03/28/小试牛刀/',
+    path: '2021/03/28/jquery基本介绍（入口函数）/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
