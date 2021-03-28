@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Serena",
+    "title": "Serena • All posts by \"jquery\" tag",
     "description": "日常记事&编程笔记整理",
     "home_page_url": "https://Serena-tz.github.io",
     "items": [
@@ -13,14 +13,6 @@
             "tags": [
                 "jquery"
             ]
-        },
-        {
-            "id": "https://serena-tz.github.io/2013/12/24/hello-world/",
-            "url": "https://serena-tz.github.io/2013/12/24/hello-world/",
-            "title": "Hello World",
-            "date_published": "2013-12-24T09:49:32.000Z",
-            "content_html": "<p>Welcome to <span class=\"exturl\" data-url=\"aHR0cDovL3plc3BpYS50dy9oZXhv\">Hexo</span>! This is your very first post. Check <span class=\"exturl\" data-url=\"aHR0cDovL3plc3BpYS50dy9oZXhvL2RvY3M=\">documentation</span> to learn how to use.</p>\n",
-            "tags": []
         }
     ]
 }

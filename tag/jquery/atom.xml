@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Serena-tz.github.io</id>
-    <title>Serena</title>
+    <title>Serena • Posts by &#34;jquery&#34; tag</title>
     <link href="https://Serena-tz.github.io" />
     <updated>2021-03-28T03:19:57.000Z</updated>
     <category term="jquery" />
@@ -23,13 +23,5 @@
 </content>
         <category term="jquery" />
         <updated>2021-03-28T03:19:57.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://serena-tz.github.io/2013/12/24/hello-world/</id>
-        <title>Hello World</title>
-        <link rel="alternate" href="https://serena-tz.github.io/2013/12/24/hello-world/"/>
-        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3plc3BpYS50dy9oZXhv&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3plc3BpYS50dy9oZXhvL2RvY3M=&#34;&gt;documentation&lt;/span&gt; to learn how to use.&lt;/p&gt;
-</content>
-        <updated>2013-12-24T09:49:32.000Z</updated>
     </entry>
 </feed>
