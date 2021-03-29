@@ -7,8 +7,8 @@
         <language>zh-CN</language>
         <pubDate>Mon, 17 Aug 2020 11:19:57 +0800</pubDate>
         <lastBuildDate>Mon, 17 Aug 2020 11:19:57 +0800</lastBuildDate>
-        <category>jquery</category>
         <category>manual</category>
+        <category>jquery</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</guid>
             <title>jquery基本介绍（入口函数）</title>
