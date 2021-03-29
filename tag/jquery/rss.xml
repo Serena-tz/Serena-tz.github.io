@@ -5,15 +5,16 @@
         <link>https://Serena-tz.github.io</link>
         <description>心情笔记 &amp; 编程日记</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 28 Mar 2021 11:19:57 +0800</pubDate>
-        <lastBuildDate>Sun, 28 Mar 2021 11:19:57 +0800</lastBuildDate>
+        <pubDate>Mon, 17 Aug 2020 11:19:57 +0800</pubDate>
+        <lastBuildDate>Mon, 17 Aug 2020 11:19:57 +0800</lastBuildDate>
         <category>jquery</category>
+        <category>manual</category>
         <item>
-            <guid isPermalink="true">https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</guid>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</guid>
             <title>jquery基本介绍（入口函数）</title>
-            <link>https://serena-tz.github.io/2021/03/28/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</link>
+            <link>https://serena-tz.github.io/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/</link>
             <category>jquery</category>
-            <pubDate>Sun, 28 Mar 2021 11:19:57 +0800</pubDate>
+            <pubDate>Mon, 17 Aug 2020 11:19:57 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;1-jq文件和版本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-jq文件和版本&#34;&gt;#&lt;/a&gt; 1 JQ 文件和版本&lt;/h2&gt;
 &lt;h3 id=&#34;11-完整版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-完整版&#34;&gt;#&lt;/a&gt; 1.1 完整版：&lt;/h3&gt;
 &lt;ol&gt;
