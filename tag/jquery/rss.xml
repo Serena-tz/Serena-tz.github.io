@@ -8,8 +8,10 @@
         <pubDate>Fri, 21 Aug 2020 15:29:02 +0800</pubDate>
         <lastBuildDate>Fri, 21 Aug 2020 15:29:02 +0800</lastBuildDate>
         <category>jquery</category>
-        <category>manual</category>
+        <category>git</category>
         <category>echarts</category>
+        <category>manual</category>
+        <category>服务器</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/</guid>
             <title>jquery的事件</title>

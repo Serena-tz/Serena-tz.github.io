@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "阳光果苏 • All posts by \"服务器\" tag",
+    "description": "心情笔记 & 编程日记",
+    "home_page_url": "https://Serena-tz.github.io",
+    "items": [
+        {
+            "id": "https://serena-tz.github.io/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/",
+            "url": "https://serena-tz.github.io/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/",
+            "title": "域名服务器的基本介绍",
+            "date_published": "2020-11-18T07:34:34.000Z",
+            "content_html": "<h2 id=\"服务器是什么\"><a class=\"markdownIt-Anchor\" href=\"#服务器是什么\">#</a> 服务器是什么？</h2>\n<p>我们写的代码如何让全世界的人都看得到，必须使用服务器。云端：服务器。一台远程的电脑。配置和速度和网上都要比。放运营商的机房。</p>\n<h2 id=\"域名服务器有谁来完成工作\"><a class=\"markdownIt-Anchor\" href=\"#域名服务器有谁来完成工作\">#</a> 域名服务器有谁来完成（工作）</h2>\n<ol>\n<li>运维工程师（需要懂一定的代码）</li>\n<li>后台也可以做（公司比较小）</li>\n<li>前端学习的目的是方便自己，多学一个技能（每多学一项技能，就可以少说一句求人的话）</li>\n</ol>\n<h2 id=\"域名\"><a class=\"markdownIt-Anchor\" href=\"#域名\">#</a> 域名</h2>\n<ol>\n<li>域名和 IP 的关系</li>\n</ol>\n<p>访问一个域名，访问的是该域名所代表的那个 IP 地址。</p>\n<p>IP 是什么？</p>\n<p>一个 IP 对应一台上网的设备。</p>\n<p>买服务器相当于是买了个可以专用的 IP 地址。</p>\n<p>但是 IP 地址很难记，可以买域名，然后绑定 IP，通过域名来访问。</p>\n<ol start=\"2\">\n<li>如何申请域名</li>\n</ol>\n<p>域名和域名后缀组成。</p>\n<p>到阿里云、百度云、腾讯云等大的互联网公司都可以注册。</p>\n<ol start=\"3\">\n<li>域名和服务器的关系</li>\n</ol>\n<p>需要绑定服务器 IP 地址，才能形成一个映射，即访问域名就是在访问你绑定的这台服务器</p>\n<ol start=\"4\">\n<li>一个 IP 可以对应多个域名</li>\n</ol>\n<h2 id=\"服务器\"><a class=\"markdownIt-Anchor\" href=\"#服务器\">#</a> 服务器</h2>\n<p>买服务器相当于是买了个专用 IP 地址。买了一块服务器资源。</p>\n<ol>\n<li>\n<p>国内服务器（备案，打算用一年）</p>\n<p>备案，到工信部备案。备案了才能正常使用</p>\n</li>\n<li>\n<p>国外免备案服务器</p>\n<p>好处：免备案。</p>\n<p>坏处：不稳定，访问速度慢</p>\n</li>\n</ol>\n<p>服务器种类：</p>\n<ol>\n<li>\n<p>虚拟主机</p>\n<p>价格便宜，一台虚拟机只能绑定一个域名，299 元一年</p>\n</li>\n<li>\n<p>云服务器</p>\n<p>价格稍贵，可以绑定多个网站，一般一个月几十元。或一年几千元。</p>\n</li>\n</ol>\n<p>主机和域名绑定需要绑定。到主机管理面板将其进行绑定。</p>\n<h2 id=\"通过ftp上传代码到服务器\"><a class=\"markdownIt-Anchor\" href=\"#通过ftp上传代码到服务器\">#</a> 通过 ftp 上传代码到服务器</h2>\n<p>ftp: 是一个协议。同步线上线下代码的</p>\n<p>ftp 上传软件是实现该协议的一个工具。</p>\n<p>推荐工具：flashftxp–跟 github 桌面版差不多</p>\n<p>使用该软件需要知道服务器的 ftp 的账户名密码，主机服务商会提供给你。</p>\n<p>盗梦电影项目：<span class=\"exturl\" data-url=\"aHR0cHM6Ly90aWNrZXQubmV4dHRpeC5uZXQv\">https://ticket.nexttix.net/</span></p>\n",
+            "tags": [
+                "服务器"
+            ]
+        }
+    ]
+}

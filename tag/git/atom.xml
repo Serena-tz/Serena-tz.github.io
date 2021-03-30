@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Serena-tz.github.io</id>
+    <title>阳光果苏 • Posts by &#34;git&#34; tag</title>
+    <link href="https://Serena-tz.github.io" />
+    <updated>2020-10-17T07:57:42.000Z</updated>
+    <category term="jquery" />
+    <category term="git" />
+    <category term="echarts" />
+    <category term="manual" />
+    <category term="服务器" />
+    <entry>
+        <id>https://serena-tz.github.io/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
+        <title>git零基础入门</title>
+        <link rel="alternate" href="https://serena-tz.github.io/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
+        <content type="html">&lt;h2 id=&#34;系统命令行工具来操作电脑&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#系统命令行工具来操作电脑&#34;&gt;#&lt;/a&gt; 系统命令行工具来操作电脑&lt;/h2&gt;
+&lt;p&gt;CMD–command。使用使用指令的方式来操作我们的电脑。现在还在使用命令行操作的系统：Linux 和 Unix，服务器电脑中还有存在。可视化的系统：window 和 Mac&lt;/p&gt;
+&lt;h2 id=&#34;可以使用以下任意一种工具来输入命令行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可以使用以下任意一种工具来输入命令行&#34;&gt;#&lt;/a&gt; 可以使用以下任意一种工具来输入命令行&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;cmd&lt;/p&gt;
+&lt;p&gt;所有的 window 系统都支持&lt;br&gt;
+打开方式：&lt;br&gt;
+win+R 键–&amp;gt;cmd–&amp;gt; 回车&lt;br&gt;
+缺点：最古老的命令行工具，一些新的指令不支持，比如 ls&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;powershell&lt;br&gt;
+ 是 win10 才有的命令行工具 - 更加强大更加好用&lt;br&gt;
+&lt;strong&gt;好处：&lt;/strong&gt;&lt;br&gt;
+可以在任意文件夹下通过&lt;strong&gt; shift + 右键单击&lt;/strong&gt;，打开该工具，可以直接定位到该目录下，而不需要多次 Cd 才能进入目录&lt;br&gt;
+以后经常要使用的方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git bash&lt;br&gt;
+ 安装了 git 软件后才有的，学 github 安装了两款软件：github 桌面版，git 软件。&lt;br&gt;
+安装后，可以在任意文件夹下右键单击，选择 git bash&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好处：&lt;/strong&gt;&lt;br&gt;
+a. 完成使用命令行操作 github 的任务&lt;br&gt;
+ b. 像 powerShell 那样在任意文件夹下运行以上任意指令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;一些常用的打开软件的指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一些常用的打开软件的指令&#34;&gt;#&lt;/a&gt; 一些常用的打开软件的指令&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;notepad  记事本&lt;/li&gt;
+&lt;li&gt;calc   计算器&lt;/li&gt;
+&lt;li&gt;write  写字板&lt;/li&gt;
+&lt;li&gt;mspaint  画图的软件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;命令行来操作文件和文件夹&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#命令行来操作文件和文件夹&#34;&gt;#&lt;/a&gt; 命令行来操作文件和文件夹&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;进入到指定的硬盘分区&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;盘符:  然后回车&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;比如：f:  &lt;span class=&#34;comment&#34;&gt;//输入后回车&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开文件&lt;br&gt;
+找到对应的文件夹后  输入  文件名 回车&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;比如： &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;123.&lt;/span&gt;txt  回车&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建文件夹&lt;br&gt;
+ md 文件夹名称  —make directory 的简称&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;比如：md  test   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//在当前路径下新建了一个test文件夹&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开指定的文件夹&lt;br&gt;
+语法：cd  文件夹的名字&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;回到上一级目录   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd ../&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;回到根目录   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd /&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出该文件夹下的所有的文件&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;输入指令：ls  &lt;span class=&#34;comment&#34;&gt;//指的是list  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;然后回车  &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;操作网络的指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作网络的指令&#34;&gt;#&lt;/a&gt; 操作网络的指令&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;看看网站是否能访问&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ping www.baidu.com &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//看看百度能不能ping得通,如果能返回数据则可以&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;看看自己的电脑 IP 是多少&lt;br&gt;
+在命令行中输入：ipconfig  回车&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;cmd小技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cmd小技巧&#34;&gt;#&lt;/a&gt; cmd 小技巧&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用键盘上下键可以切换到上一条或下一条指令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl +C 退出未完成的指令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用命令行来操作github&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用命令行来操作github&#34;&gt;#&lt;/a&gt; 使用命令行来操作 github&lt;/h2&gt;
+&lt;p&gt;准备工作：安装 git 软件，目的让系统支持 git 指令，因为 git 指令是非系统指令，要让系统识别，就需要安装对应的软件。下载地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=&#34;&gt;https://git-scm.com/downloads&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;场景1-线上github资源库下载到线下本地&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#场景1-线上github资源库下载到线下本地&#34;&gt;#&lt;/a&gt; 场景 1: 线上（github）资源库下载到线下（本地）&lt;/h3&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;1.&lt;/span&gt;复制要clone的在线资源库地址&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;比如：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git clone 资源库地址&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;比如：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git clone https:&lt;span class=&#34;comment&#34;&gt;//github.com/kouok/web19-beidou.git&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;场景2同步线上资源库到本地后如何将本地更新同步到线上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#场景2同步线上资源库到本地后如何将本地更新同步到线上&#34;&gt;#&lt;/a&gt; 场景 2：同步线上资源库到本地后，如何将本地更新同步到线上&lt;/h3&gt;
+&lt;p&gt;场景 2 在场景 1 的基础上新增了如下步骤：注意看是不是进入到了要操作的那个本地资源库目录下：&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;在本地资源库目录修改或新增文件、文件后按下面的操作：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;1.&lt;/span&gt; 添加到暂存区&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	git add 文件或文件夹的名字 &lt;span class=&#34;comment&#34;&gt;//同步一个&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    git add .  &lt;span class=&#34;comment&#34;&gt;//同步所有&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;2.&lt;/span&gt; 提交到暂存区&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;写注释内容&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;3.&lt;/span&gt; 正式提交到线上&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	git push&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;回到对应的github远程库中看看是否已经同步过来。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;场景3远程库更新后如何同步到线下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#场景3远程库更新后如何同步到线下&#34;&gt;#&lt;/a&gt; 场景 3：远程库更新后如何同步到线下&lt;/h3&gt;
+&lt;p&gt;已经同步到本地后，远程库更新了如何本地也更新。&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;将线上最新的资源拉取到本地&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;在本地资源库中输入以下指令即可：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git pull&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;场景4在任意文件夹下同步到远程库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#场景4在任意文件夹下同步到远程库&#34;&gt;#&lt;/a&gt; 场景 4：在任意文件夹下同步到远程库&lt;/h3&gt;
+&lt;p&gt;步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在要提交的目录下打开命令行工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始化 git 项目&lt;br&gt;
+ git init&lt;br&gt;
+ 作用：会在当前目录下新增一个.git 目录用来记录同步状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按照提交三部曲进行（场景 2）&lt;br&gt;
+git add .&lt;br&gt;
+git commit -m “注释”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关联远程目录库&lt;br&gt;
+在关联前，首先要到 github 中创建一个空的资源库，然后复制远程库地址：&lt;/p&gt;
+&lt;p&gt;语法：git remote add origin 远程库地址&lt;br&gt;
+比如：&lt;br&gt;
+git remote add origin &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2tvdW9rL3dlYjE5LWJzLXByb2plY3QuZ2l0&#34;&gt;https://github.com/kouok/web19-bs-project.git&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正式提交&lt;br&gt;
+ git push -u origin master&lt;br&gt;
+ 可能会弹出输入框让你输入用户名，密码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后续就按场景 2 或场景 3 进行（本地更新了或远程更新了才需要按场景 2 或场景 3）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：在已有的资源库中不能再嵌套另外一个资源库。&lt;/p&gt;
+</content>
+        <category term="git" />
+        <updated>2020-10-17T07:57:42.000Z</updated>
+    </entry>
+</feed>

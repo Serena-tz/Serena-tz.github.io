@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>阳光果苏 • Posts by &#34;服务器&#34; tag</title>
+        <link>https://Serena-tz.github.io</link>
+        <description>心情笔记 &amp; 编程日记</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 18 Nov 2020 15:34:34 +0800</pubDate>
+        <lastBuildDate>Wed, 18 Nov 2020 15:34:34 +0800</lastBuildDate>
+        <category>jquery</category>
+        <category>git</category>
+        <category>echarts</category>
+        <category>manual</category>
+        <category>服务器</category>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</guid>
+            <title>域名服务器的基本介绍</title>
+            <link>https://serena-tz.github.io/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</link>
+            <category>服务器</category>
+            <pubDate>Wed, 18 Nov 2020 15:34:34 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;服务器是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#服务器是什么&#34;&gt;#&lt;/a&gt; 服务器是什么？&lt;/h2&gt;
+&lt;p&gt;我们写的代码如何让全世界的人都看得到，必须使用服务器。云端：服务器。一台远程的电脑。配置和速度和网上都要比。放运营商的机房。&lt;/p&gt;
+&lt;h2 id=&#34;域名服务器有谁来完成工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#域名服务器有谁来完成工作&#34;&gt;#&lt;/a&gt; 域名服务器有谁来完成（工作）&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;运维工程师（需要懂一定的代码）&lt;/li&gt;
+&lt;li&gt;后台也可以做（公司比较小）&lt;/li&gt;
+&lt;li&gt;前端学习的目的是方便自己，多学一个技能（每多学一项技能，就可以少说一句求人的话）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;域名&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#域名&#34;&gt;#&lt;/a&gt; 域名&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;域名和 IP 的关系&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;访问一个域名，访问的是该域名所代表的那个 IP 地址。&lt;/p&gt;
+&lt;p&gt;IP 是什么？&lt;/p&gt;
+&lt;p&gt;一个 IP 对应一台上网的设备。&lt;/p&gt;
+&lt;p&gt;买服务器相当于是买了个可以专用的 IP 地址。&lt;/p&gt;
+&lt;p&gt;但是 IP 地址很难记，可以买域名，然后绑定 IP，通过域名来访问。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;如何申请域名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;域名和域名后缀组成。&lt;/p&gt;
+&lt;p&gt;到阿里云、百度云、腾讯云等大的互联网公司都可以注册。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;域名和服务器的关系&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需要绑定服务器 IP 地址，才能形成一个映射，即访问域名就是在访问你绑定的这台服务器&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;一个 IP 可以对应多个域名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#服务器&#34;&gt;#&lt;/a&gt; 服务器&lt;/h2&gt;
+&lt;p&gt;买服务器相当于是买了个专用 IP 地址。买了一块服务器资源。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;国内服务器（备案，打算用一年）&lt;/p&gt;
+&lt;p&gt;备案，到工信部备案。备案了才能正常使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;国外免备案服务器&lt;/p&gt;
+&lt;p&gt;好处：免备案。&lt;/p&gt;
+&lt;p&gt;坏处：不稳定，访问速度慢&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;服务器种类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟主机&lt;/p&gt;
+&lt;p&gt;价格便宜，一台虚拟机只能绑定一个域名，299 元一年&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;云服务器&lt;/p&gt;
+&lt;p&gt;价格稍贵，可以绑定多个网站，一般一个月几十元。或一年几千元。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;主机和域名绑定需要绑定。到主机管理面板将其进行绑定。&lt;/p&gt;
+&lt;h2 id=&#34;通过ftp上传代码到服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#通过ftp上传代码到服务器&#34;&gt;#&lt;/a&gt; 通过 ftp 上传代码到服务器&lt;/h2&gt;
+&lt;p&gt;ftp: 是一个协议。同步线上线下代码的&lt;/p&gt;
+&lt;p&gt;ftp 上传软件是实现该协议的一个工具。&lt;/p&gt;
+&lt;p&gt;推荐工具：flashftxp–跟 github 桌面版差不多&lt;/p&gt;
+&lt;p&gt;使用该软件需要知道服务器的 ftp 的账户名密码，主机服务商会提供给你。&lt;/p&gt;
+&lt;p&gt;盗梦电影项目：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90aWNrZXQubmV4dHRpeC5uZXQv&#34;&gt;https://ticket.nexttix.net/&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
