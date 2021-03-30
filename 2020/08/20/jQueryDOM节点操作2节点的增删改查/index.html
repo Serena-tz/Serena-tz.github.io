@@ -1,0 +1,598 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="jquery" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">
+
+
+
+  <title>
+jQueryDOM节点操作2节点的增删改查 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">jQueryDOM节点操作2节点的增删改查
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-20 11:54:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-20T11:54:00+08:00">2020-08-20</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="查找节点"><a class="markdownIt-Anchor" href="#查找节点">#</a> 查找节点</h2>
+<h3 id="找自身"><a class="markdownIt-Anchor" href="#找自身">#</a> 找自身</h3>
+<h4 id="js"><a class="markdownIt-Anchor" href="#js">#</a> JS</h4>
+<p>JS 选择器（6 个不同的选择器）</p>
+<h4 id="jq"><a class="markdownIt-Anchor" href="#jq">#</a> JQ</h4>
+<p>$(“css 选择器”)</p>
+<h3 id="父节点往上面找"><a class="markdownIt-Anchor" href="#父节点往上面找">#</a> 父节点 (往上面找)</h3>
+<h4 id="js-2"><a class="markdownIt-Anchor" href="#js-2">#</a> JS</h4>
+<p>节点.parentNode;// 上一级</p>
+<h4 id="jq-2"><a class="markdownIt-Anchor" href="#jq-2">#</a> JQ</h4>
+<ol>
+<li>对象.parent ()  直接上级</li>
+<li>对象.parents (参数) 不加参数默认是到 HTML，加参数可到参数父级结束<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">&quot;</mi><mi>d</mi><mi>i</mi><mi>v</mi><mi mathvariant="normal">&quot;</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>s</mi><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mtext>所有的祖先节点都找到</mtext></mrow><annotation encoding="application/x-tex">(&quot;div&quot;).parents();//所有的祖先节点都找到
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">祖</span><span class="mord cjk_fallback">先</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">都</span><span class="mord cjk_fallback">找</span><span class="mord cjk_fallback">到</span></span></span></span>(“div”).parents (“body”);// 找到对应的那个祖先元素</li>
+</ol>
+<h3 id="子节点往下面找"><a class="markdownIt-Anchor" href="#子节点往下面找">#</a> 子节点（往下面找）</h3>
+<h4 id="js-3"><a class="markdownIt-Anchor" href="#js-3">#</a> JS</h4>
+<p>节点.children;// 数组，直接子元素<br>
+节点.firstElementChild   找第一个<br>
+节点.lastElementChild  找最后一个</p>
+<h4 id="jq-3"><a class="markdownIt-Anchor" href="#jq-3">#</a> JQ</h4>
+<ol>
+<li>对象.children (选择器)<br>
+ 直接子级的集合，可设置参数过滤</li>
+<li>对象.find (“选择器”)  在对象内查找选择器匹配的节点<br>
+特点：找任意后辈节点</li>
+<li>对象.children (&quot;:first&quot;);</li>
+<li>对象.children (&quot;:last&quot;);</li>
+</ol>
+<h3 id="兄弟节点"><a class="markdownIt-Anchor" href="#兄弟节点">#</a> 兄弟节点</h3>
+<h4 id="js-4"><a class="markdownIt-Anchor" href="#js-4">#</a> JS</h4>
+<p>节点.previousElementSibling;// 上一个兄弟<br>
+节点.nextElementSibling;// 下一个</p>
+<h4 id="jq-4"><a class="markdownIt-Anchor" href="#jq-4">#</a> JQ</h4>
+<ol>
+<li>
+<p>上一个<br>
+对象.prev ()  只返回前一个</p>
+<p>对象.prevAll (选择器)  返回所有的哥哥辈元素</p>
+</li>
+<li>
+<p>下一个<br>
+对象.next ()  只返回后一个<br>
+对象.nextAll (选择器)  返回后面的所有的兄弟元素</p>
+</li>
+<li>
+<p>所有的兄弟节点（除自己外）<br>
+对象.siblings (选择器)</p>
+</li>
+</ol>
+<h2 id="创建节点"><a class="markdownIt-Anchor" href="#创建节点">#</a> 创建节点</h2>
+<h4 id="js-5"><a class="markdownIt-Anchor" href="#js-5">#</a> JS</h4>
+<p>var odiv=document.createElement(“div”);<br>
+odiv.innerText=“内容”;<br>
+odiv.title=“属性”;</p>
+<h4 id="jq-5"><a class="markdownIt-Anchor" href="#jq-5">#</a> JQ</h4>
+<ol>
+<li>创建元素节点<br>
+语法：$(&quot;&lt; 标签名&gt;&quot;)<br>
+ 如：var <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mi>i</mi><mn>0</mn></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">li_0=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(&quot;</li><li></li>&quot;);<br>
+var <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mi>i</mi><mn>1</mn></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">li_1=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(&quot;<li></li>&quot;);
+<li>创建带文本的元素节点<br>
+如：var <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mi>i</mi><mn>0</mn></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">li_0=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(“</li><li>橘子</li>”);
+<li>创建带文本 + 属性的节点<br>
+如：var <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mi>i</mi><mn>0</mn></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">li_0=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(“</li><li class="red">橘子</li>”);
+<li>创建带文本 + 属性 + 子节点：<br>
+如：var <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mi>i</mi><mn>0</mn></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">li_0=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(“</li><li class="red"><span>橘子</span></li>”);
+</ol>
+<h2 id="插入节点重点"><a class="markdownIt-Anchor" href="#插入节点重点">#</a> 插入节点 (重点)</h2>
+<h4 id="js-在某父节点内前后"><a class="markdownIt-Anchor" href="#js-在某父节点内前后">#</a> JS - 在某父节点内（前后）</h4>
+<p>父节点.apppendChild (新的子节点);</p>
+<h4 id="jq-在某父节点内前后"><a class="markdownIt-Anchor" href="#jq-在某父节点内前后">#</a> JQ - 在某父节点内（前后）</h4>
+<ol>
+<li>
+<p>JQ 后面：<br>
+a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mtext>父节点</mtext><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo stretchy="false">(</mo><mtext>子节点</mtext><mo stretchy="false">)</mo><mo separator="true">;</mo><mi>b</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(父节点).append(子节点);
+ b.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span><span class="mord mathnormal">p</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mord">.</span></span></span></span>(子节点).appendTo (父节点);// 可以不记，快速记忆：to，到的意思，将子节点追加到父节点内部</p>
+</li>
+<li>
+<p>JQ 前面：<br>
+a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mtext>父节点</mtext><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo stretchy="false">(</mo><mtext>子节点</mtext><mo stretchy="false">)</mo><mo separator="true">;</mo><mi>b</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(父节点).prepend(子节点);
+b.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span><span class="mord mathnormal">p</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mord">.</span></span></span></span>(子节点).prependTo (父节点);</p>
+</li>
+</ol>
+<h4 id="js-在兄弟节点前后"><a class="markdownIt-Anchor" href="#js-在兄弟节点前后">#</a> JS - 在兄弟节点前后</h4>
+<p>父节点.insertBefore (新，旧);</p>
+<h4 id="jq-在兄弟节点前后"><a class="markdownIt-Anchor" href="#jq-在兄弟节点前后">#</a> JQ - 在兄弟节点前后</h4>
+<ol>
+<li>
+<p>JQ 前面：<br>
+a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mtext>旧兄弟节点</mtext><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>b</mi><mi>e</mi><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo stretchy="false">(</mo><mtext>新的兄弟节点</mtext><mo stretchy="false">)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mtext>在兄弟节点前插入新的兄弟节点</mtext><mi>b</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(旧兄弟节点).before(新的兄弟节点); //在兄弟节点前插入新的兄弟节点
+b.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">旧</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal">b</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span><span class="mopen">(</span><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">插</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord mathnormal">b</span><span class="mord">.</span></span></span></span>(新的兄弟节点).insertBefore (旧兄弟节点);// 将新兄弟节点插入到旧节点前</p>
+</li>
+<li>
+<p>JQ 后面：<br>
+a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mtext>旧兄弟节点</mtext><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo stretchy="false">(</mo><mtext>新的兄弟节点</mtext><mo stretchy="false">)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mtext>在兄弟节点后插入新的兄弟节点</mtext><mi>b</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(旧兄弟节点).after(新的兄弟节点); //在兄弟节点后插入新的兄弟节点
+b.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">旧</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">后</span><span class="mord cjk_fallback">插</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">兄</span><span class="mord cjk_fallback">弟</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord mathnormal">b</span><span class="mord">.</span></span></span></span>(新的兄弟节点).insertAfter (旧兄弟节点);// 将新兄弟节点插入到旧节点后</p>
+</li>
+</ol>
+<h2 id="删除节点"><a class="markdownIt-Anchor" href="#删除节点">#</a> 删除节点</h2>
+<h4 id="js-6"><a class="markdownIt-Anchor" href="#js-6">#</a> jS</h4>
+<p>父节点.removeChild (子节点);</p>
+<h4 id="jq-6"><a class="markdownIt-Anchor" href="#jq-6">#</a> JQ</h4>
+<ol>
+<li>删除节点<br>
+ $(要删除的节点).remove (); // 彻底删除，包括它自己</li>
+<li>清空节点<br>
+ $(要清空的节点).empty (); // 将该节点内容清空，保留它自己</li>
+</ol>
+<h2 id="复制节点"><a class="markdownIt-Anchor" href="#复制节点">#</a> 复制节点</h2>
+<h4 id="js-7"><a class="markdownIt-Anchor" href="#js-7">#</a> JS</h4>
+<p>节点.cloneNode (true);// 添加 true 为深度复制，默认为浅复制</p>
+<h4 id="jq-7"><a class="markdownIt-Anchor" href="#jq-7">#</a> JQ</h4>
+<p>$(“要复制的节点”).clone (boolean);  true 复制事件，默认为 false</p>
+<h2 id="替换节点"><a class="markdownIt-Anchor" href="#替换节点">#</a> 替换节点</h2>
+<ol>
+<li>
+<p>$(旧节点).replaceWith (新节点); // 旧节点被新节点替换</p>
+</li>
+<li>
+<p>$(新节点).replaceAll (旧节点); // 新节点替换旧节点</p>
+</li>
+</ol>
+<h2 id="包裹节点"><a class="markdownIt-Anchor" href="#包裹节点">#</a> 包裹节点</h2>
+<ol>
+<li>
+<p>将某个节点用其他元素包裹起来（单独包裹）<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mtext>子节点</mtext><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>r</mi><mi>a</mi><mi>p</mi><mo stretchy="false">(</mo><mi mathvariant="normal">&quot;</mi><mtext>父节点标签</mtext><mi mathvariant="normal">&quot;</mi><mo stretchy="false">)</mo><mo separator="true">;</mo><mtext>例子：</mtext></mrow><annotation encoding="application/x-tex">(子节点).wrap(&quot;父节点标签&quot;);
+        例子：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">标</span><span class="mord cjk_fallback">签</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">例</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">：</span></span></span></span>(“p”).wrap(&quot;<div></div>&quot;);  // 用父节点把子节点包起来</p>
+</li>
+<li>
+<p>将所有匹配的元素用另一个元素包裹起来（打包包裹）<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mtext>子节点</mtext><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>r</mi><mi>a</mi><mi>p</mi><mi>A</mi><mi>l</mi><mi>l</mi><mo stretchy="false">(</mo><mi mathvariant="normal">&quot;</mi><mtext>父节点标签</mtext><mi mathvariant="normal">&quot;</mi><mo stretchy="false">)</mo><mo separator="true">;</mo><mtext>例子：</mtext></mrow><annotation encoding="application/x-tex">(子节点).wrapAll(&quot;父节点标签&quot;);
+	例子：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">标</span><span class="mord cjk_fallback">签</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">例</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">：</span></span></span></span>(“p”).wrapAll(&quot;<div></div>&quot;); // 所有的 p 都会被 div 个打包</p>
+</li>
+<li>
+<p>将每一个匹配的子内容用其他标记包裹起来。相当于是对 wrap 取相反。<br>
+$(“父节点标签”).wrapInner (子节点);</p>
+</li>
+</ol>
+
+      <div class="tags">
+          <a href="/tags/jquery/" rel="tag"><i class="ic i-tag"></i> jquery</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-30 12:35:38" itemprop="dateModified" datetime="2021-03-30T12:35:38+08:00">2021-03-30</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="jQueryDOM节点操作2节点的增删改查">https://serena-tz.github.io/2020/08/20/jQueryDOM节点操作2节点的增删改查/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclimtf7dj20zk0m8qav.jpg" title="JQ的dom操作">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>JQ的dom操作</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E8%8A%82%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text"> 查找节点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%BE%E8%87%AA%E8%BA%AB"><span class="toc-number">1.1.</span> <span class="toc-text"> 找自身</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js"><span class="toc-number">1.1.1.</span> <span class="toc-text"> JS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq"><span class="toc-number">1.1.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%B6%E8%8A%82%E7%82%B9%E5%BE%80%E4%B8%8A%E9%9D%A2%E6%89%BE"><span class="toc-number">1.2.</span> <span class="toc-text"> 父节点 (往上面找)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-2"><span class="toc-number">1.2.1.</span> <span class="toc-text"> JS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-2"><span class="toc-number">1.2.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E8%8A%82%E7%82%B9%E5%BE%80%E4%B8%8B%E9%9D%A2%E6%89%BE"><span class="toc-number">1.3.</span> <span class="toc-text"> 子节点（往下面找）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-3"><span class="toc-number">1.3.1.</span> <span class="toc-text"> JS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-3"><span class="toc-number">1.3.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9"><span class="toc-number">1.4.</span> <span class="toc-text"> 兄弟节点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-4"><span class="toc-number">1.4.1.</span> <span class="toc-text"> JS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-4"><span class="toc-number">1.4.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%8A%82%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text"> 创建节点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-5"><span class="toc-number">2.0.1.</span> <span class="toc-text"> JS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-5"><span class="toc-number">2.0.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9%E9%87%8D%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text"> 插入节点 (重点)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-%E5%9C%A8%E6%9F%90%E7%88%B6%E8%8A%82%E7%82%B9%E5%86%85%E5%89%8D%E5%90%8E"><span class="toc-number">3.0.1.</span> <span class="toc-text"> JS - 在某父节点内（前后）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-%E5%9C%A8%E6%9F%90%E7%88%B6%E8%8A%82%E7%82%B9%E5%86%85%E5%89%8D%E5%90%8E"><span class="toc-number">3.0.2.</span> <span class="toc-text"> JQ - 在某父节点内（前后）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#js-%E5%9C%A8%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9%E5%89%8D%E5%90%8E"><span class="toc-number">3.0.3.</span> <span class="toc-text"> JS - 在兄弟节点前后</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-%E5%9C%A8%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9%E5%89%8D%E5%90%8E"><span class="toc-number">3.0.4.</span> <span class="toc-text"> JQ - 在兄弟节点前后</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9"><span class="toc-number">4.</span> <span class="toc-text"> 删除节点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-6"><span class="toc-number">4.0.1.</span> <span class="toc-text"> jS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-6"><span class="toc-number">4.0.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E8%8A%82%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text"> 复制节点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js-7"><span class="toc-number">5.0.1.</span> <span class="toc-text"> JS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jq-7"><span class="toc-number">5.0.2.</span> <span class="toc-text"> JQ</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E8%8A%82%E7%82%B9"><span class="toc-number">6.</span> <span class="toc-text"> 替换节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E8%A3%B9%E8%8A%82%E7%82%B9"><span class="toc-number">7.</span> <span class="toc-text"> 包裹节点</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">5</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
+</div>
+
+    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/" title="JQ的dom操作">JQ的dom操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="jQueryDOM节点操作2节点的增删改查">jQueryDOM节点操作2节点的增删改查</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/" title="分类于 操作步骤">操作步骤</a>
+</div>
+
+    <span><a href="/2020/04/01/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" title="jQuery选择器">jQuery选择器</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/08/20/jQueryDOM节点操作2节点的增删改查/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
