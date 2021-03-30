@@ -5,10 +5,19 @@
         <link>https://Serena-tz.github.io</link>
         <description>心情笔记 &amp; 编程日记</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 20 Aug 2020 11:54:00 +0800</pubDate>
-        <lastBuildDate>Thu, 20 Aug 2020 11:54:00 +0800</lastBuildDate>
+        <pubDate>Fri, 21 Aug 2020 15:29:02 +0800</pubDate>
+        <lastBuildDate>Fri, 21 Aug 2020 15:29:02 +0800</lastBuildDate>
         <category>jquery</category>
         <category>manual</category>
+        <category>echarts</category>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/</guid>
+            <title>jquery的事件</title>
+            <link>https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/</link>
+            <category>jquery</category>
+            <pubDate>Fri, 21 Aug 2020 15:29:02 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</guid>
             <title>jQueryDOM节点操作2节点的增删改查</title>
