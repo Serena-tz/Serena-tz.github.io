@@ -102,12 +102,12 @@ Serena = 阳光果苏 = 自律给我自由</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,30 +153,30 @@ Serena = 阳光果苏 = 自律给我自由</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="1-jq文件和版本"><a class="markdownIt-Anchor" href="#1-jq文件和版本">#</a> 1 JQ 文件和版本</h2>
-<h3 id="11-完整版"><a class="markdownIt-Anchor" href="#11-完整版">#</a> 1.1 完整版：</h3>
+    <h2 id="jq文件和版本"><a class="markdownIt-Anchor" href="#jq文件和版本">#</a> JQ 文件和版本</h2>
+<h3 id="完整版"><a class="markdownIt-Anchor" href="#完整版">#</a> 完整版：</h3>
 <ol>
 <li>用于开发环境中（写项目）</li>
 <li>是正常的未压缩的源代码</li>
 </ol>
-<h3 id="12压缩版"><a class="markdownIt-Anchor" href="#12压缩版">#</a> 1.2 压缩版：</h3>
+<h3 id="压缩版"><a class="markdownIt-Anchor" href="#压缩版">#</a> 压缩版：</h3>
 <ol>
 <li>用于生成环境（线上）</li>
 <li>去掉了注释、留白、并且压缩了变化、函数名等</li>
 </ol>
-<h3 id="13版本选择"><a class="markdownIt-Anchor" href="#13版本选择">#</a> 1.3 版本选择：</h3>
+<h3 id="版本选择"><a class="markdownIt-Anchor" href="#版本选择">#</a> 版本选择：</h3>
 <ol>
 <li>如果要兼容老版本浏览器（即在 PC 上），最好使用 1.12.4 版本即以下的</li>
 <li>否则使用 3 最新版本，这样可以兼容 PC 版主流浏览器 + 移动端浏览器</li>
 <li>各个版本间区别不是太大，基本 API 都是通用的</li>
 </ol>
-<h2 id="2-使用jquery"><a class="markdownIt-Anchor" href="#2-使用jquery">#</a> 2 使用 jquery</h2>
-<h3 id="21-导入jq库文件"><a class="markdownIt-Anchor" href="#21-导入jq库文件">#</a> 2.1 导入 JQ 库文件</h3>
+<h2 id="使用jquery"><a class="markdownIt-Anchor" href="#使用jquery">#</a> 使用 jquery</h2>
+<h3 id="导入jq库文件"><a class="markdownIt-Anchor" href="#导入jq库文件">#</a> 导入 JQ 库文件</h3>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用本地库文件</span></span><br><span class="line">&lt;script src=<span class="string">&quot;jquery-3.1.0.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"><span class="comment">//或使用cdn(内容分发网络)，即使用外部jQuery库资源（外链）</span></span><br><span class="line">&lt;script src=<span class="string">&quot;http://libs.baidu.com/jquery/1.9.1/jquery.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="22-在script标签或新的js文件中写jq代码"><a class="markdownIt-Anchor" href="#22-在script标签或新的js文件中写jq代码">#</a> 2.2 在 script 标签或新的 JS 文件中写 JQ 代码</h3>
+<h3 id="在script标签或新的js文件中写jq代码"><a class="markdownIt-Anchor" href="#在script标签或新的js文件中写jq代码">#</a> 在 script 标签或新的 JS 文件中写 JQ 代码</h3>
 <p>比如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//这里写你的代码</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="3-onload与ready的对比"><a class="markdownIt-Anchor" href="#3-onload与ready的对比">#</a> 3 onload 与 ready 的对比</h2>
+<h2 id="onload与ready的对比"><a class="markdownIt-Anchor" href="#onload与ready的对比">#</a> onload 与 ready 的对比</h2>
 <table>
 <thead>
 <tr>
@@ -203,6 +203,9 @@ Serena = 阳光果苏 = 自律给我自由</title>
 </tr>
 </tbody>
 </table>
+<h2 id="jquery实例-tab页"><a class="markdownIt-Anchor" href="#jquery实例-tab页">#</a> jquery 实例 - tab 页</h2>
+<p>基于 jquery 做的 tab 页，放入.html 文件中在有网的环境下可以直接执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">&lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;style type=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line">    <span class="comment">/* css 重置 */</span></span><br><span class="line">    *&#123;<span class="attr">margin</span>:<span class="number">0</span>; padding:<span class="number">0</span>; list-style:none; &#125;</span><br><span class="line">    body&#123; <span class="attr">background</span>:#fff; font:normal 12px/22px 宋体;  &#125;</span><br><span class="line">    img&#123; <span class="attr">border</span>:<span class="number">0</span>;  &#125;</span><br><span class="line">    a&#123; text-decoration:none; color:#333;  &#125;</span><br><span class="line">    a:hover&#123; color:#1974A1;  &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 本例子css */</span></span><br><span class="line">    .notice &#123; <span class="attr">width</span>: 298px;margin:10px auto; border: 1px solid #d5d5d5; overflow: hidden; &#125;</span><br><span class="line">    .notice .tab-hd &#123; height: 29px; background-color: #eee; margin-bottom: -1px; color: #404040; &#125;</span><br><span class="line">    .notice .tab-hd ul &#123; padding-top: 4px; margin-left: 7px; &#125;</span><br><span class="line">    .notice .tab-hd li&#123; <span class="attr">float</span>: left; height: 24px; line-height: 18px; border-top: 1px solid #eee; &#125;</span><br><span class="line">    .notice .tab-hd li a&#123; <span class="attr">display</span>:block; padding:<span class="number">0</span> 14px;  &#125;</span><br><span class="line">    .notice .tab-hd li a:hover&#123; <span class="attr">color</span>:#f60; text-decoration:underline;   &#125;</span><br><span class="line">    .notice .tab-hd li.on&#123; <span class="attr">border</span>: 1px solid #d5d5d5; border-bottom: none; background-color: #fff; font-weight: bold; position: relative; margin-left: -1px; margin-right: -1px; &#125;</span><br><span class="line">    .notice .tab-bd &#123; border-top: 1px solid #e8e8e8; padding:5px;&#125;</span><br><span class="line">    .notice .tab-pal&#123;<span class="attr">display</span>: none;   &#125;</span><br><span class="line">    .notice .tab-bd ul&#123; <span class="attr">overflow</span>:hidden; zoom:<span class="number">1</span>; &#125;</span><br><span class="line">    .notice .tab-bd li &#123; <span class="attr">height</span>: 22px; line-height: 22px; padding: <span class="number">0</span> 10px <span class="number">0</span> 5px; overflow: hidden; width: 125px; float: left; &#125;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;notice&quot;</span>&gt;</span><br><span class="line">    &lt;!-- 面板标题 --&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tab-hd&quot;</span>&gt;</span><br><span class="line">        &lt;ul <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tab-nav&quot;</span> id=<span class="string">&quot;tabTit&quot;</span>&gt;</span><br><span class="line">          &lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;on&quot;</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>公告<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">          &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>规则<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">          &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>论坛<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!--面板主体  --&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tab-bd&quot;</span> id=<span class="string">&quot;tabBody&quot;</span>&gt;</span><br><span class="line">        &lt;!-- 公告面板 --&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tab-pal&quot;</span> style=<span class="string">&quot;display: block;&quot;</span>&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;h&quot;</span>&gt;</span>[三联]疯狂的24小时<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>[访谈]打造爆款有绝招<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>[话题]那些感动淘宝事<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>[123]别错过聚划算<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;!-- 规则面板 --&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tab-pal&quot;</span>&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>规则<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>女装发布数量限制<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>规则<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>违规信息升级<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>规则<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>延迟发货变更<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>规则<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;h&quot;</span>&gt;</span>违背发货时间<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;!-- 论坛面板 --&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;tab-pal&quot;</span>&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>杂谈<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>小而美无下限！<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>焦点<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;h&quot;</span>&gt;</span>减库存方式调整<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>话题<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>小卖家抱团公约<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>[<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网商<span class="tag">&lt;/<span class="name">a</span>&gt;</span>]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1212小而美占位<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;!-- <span class="number">1</span>、导入jq库 --&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="comment">//这里实现tab切换页，原理同有指示器的轮播图</span></span><br><span class="line"><span class="comment">// function tabs()&#123;</span></span><br><span class="line">  $(<span class="string">&quot;.tab-nav&gt;li&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// jq特色：链式操作</span></span><br><span class="line">    <span class="comment">//          隐式迭代</span></span><br><span class="line">    <span class="comment">// 给当前li标签添加高亮class,并找到其他兄弟元素，移出这些兄弟元素的高亮样式</span></span><br><span class="line">    $(<span class="built_in">this</span>).addClass(<span class="string">&quot;on&quot;</span>).siblings().removeClass(<span class="string">&quot;on&quot;</span>);</span><br><span class="line">    <span class="comment">// 点击某一个li时，让对应的面板显示</span></span><br><span class="line">    <span class="comment">// 让其他面板隐藏</span></span><br><span class="line">    $(<span class="string">&quot;.tab-bd&gt;div&quot;</span>).eq($(<span class="built_in">this</span>).index()).show(<span class="number">400</span>).siblings().hide(<span class="number">400</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// tabs();</span></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
       <div class="tags">
           <a href="/tags/jquery/" rel="tag"><i class="ic i-tag"></i> jquery</a>
@@ -217,7 +220,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-30 11:15:18" itemprop="dateModified" datetime="2021-03-30T11:15:18+08:00">2021-03-30</time>
+    <time title="修改时间：2021-03-30 11:21:44" itemprop="dateModified" datetime="2021-03-30T11:21:44+08:00">2021-03-30</time>
   </span>
 </div>
 
@@ -267,7 +270,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <div class="item left">
       
 
-  <a href="/2020/04/01/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitspjpbj20zk0m81ky.jpg" title="Hello World">
+  <a href="/2020/04/01/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxxcb6rj20zk0m8b29.jpg" title="Hello World">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 操作步骤</span>
   <h3>Hello World</h3>
@@ -275,6 +278,14 @@ Serena = 阳光果苏 = 自律给我自由</title>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitht3xtj20zk0m8k5v.jpg" title="jQuery选择器">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>jQuery选择器</h3>
+  </a>
+
     </div>
 </div>
 
@@ -291,7 +302,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-jq%E6%96%87%E4%BB%B6%E5%92%8C%E7%89%88%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text"> 1 JQ 文件和版本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%AE%8C%E6%95%B4%E7%89%88"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 完整版：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E5%8E%8B%E7%BC%A9%E7%89%88"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 压缩版：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9"><span class="toc-number">1.3.</span> <span class="toc-text"> 1.3 版本选择：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8jquery"><span class="toc-number">2.</span> <span class="toc-text"> 2 使用 jquery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E5%AF%BC%E5%85%A5jq%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 导入 JQ 库文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-%E5%9C%A8script%E6%A0%87%E7%AD%BE%E6%88%96%E6%96%B0%E7%9A%84js%E6%96%87%E4%BB%B6%E4%B8%AD%E5%86%99jq%E4%BB%A3%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 在 script 标签或新的 JS 文件中写 JQ 代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-onload%E4%B8%8Eready%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text"> 3 onload 与 ready 的对比</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jq%E6%96%87%E4%BB%B6%E5%92%8C%E7%89%88%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text"> JQ 文件和版本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%89%88"><span class="toc-number">1.1.</span> <span class="toc-text"> 完整版：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E7%89%88"><span class="toc-number">1.2.</span> <span class="toc-text"> 压缩版：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9"><span class="toc-number">1.3.</span> <span class="toc-text"> 版本选择：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jquery"><span class="toc-number">2.</span> <span class="toc-text"> 使用 jquery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5jq%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text"> 导入 JQ 库文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8script%E6%A0%87%E7%AD%BE%E6%88%96%E6%96%B0%E7%9A%84js%E6%96%87%E4%BB%B6%E4%B8%AD%E5%86%99jq%E4%BB%A3%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text"> 在 script 标签或新的 JS 文件中写 JQ 代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#onload%E4%B8%8Eready%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text"> onload 与 ready 的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jquery%E5%AE%9E%E4%BE%8B-tab%E9%A1%B5"><span class="toc-number">4.</span> <span class="toc-text"> jquery 实例 - tab 页</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -309,7 +320,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">2</span>
+        <span class="count">3</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -381,10 +392,12 @@ Serena = 阳光果苏 = 自律给我自由</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2020/04/01/hello-world/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -410,6 +423,15 @@ Serena = 阳光果苏 = 自律给我自由</title>
 </div>
 
     <span><a href="/2020/04/01/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" title="jQuery选择器">jQuery选择器</a></span>
   </li>
 
       
