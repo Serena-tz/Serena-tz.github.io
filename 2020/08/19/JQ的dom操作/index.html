@@ -1,0 +1,523 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="jquery" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/">
+
+
+
+  <title>
+JQ的dom操作 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JQ的dom操作
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-19 11:42:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-19T11:42:00+08:00">2020-08-19</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="jq的dom操作"><a class="markdownIt-Anchor" href="#jq的dom操作">#</a> JQ 的 DOM 操作</h2>
+<p>如何对 HTML+CSS 进行增删改查，jQuery 的设计思路：赋值和取值合体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> 这是文本<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">$(&quot;div&quot;).text();//取值</span><br><span class="line">$(&quot;div&quot;).text(&quot;这是一段纯洁的文字&quot;);//赋值</span><br><span class="line">反观JS：</span><br><span class="line">div.getAttribute(&quot;&quot;);//取值用一个方法</span><br><span class="line">div.setAttribute(&quot;&quot;);//赋值也用一个方法</span><br></pre></td></tr></table></figure>
+<h2 id="jq操作html的属性和方法"><a class="markdownIt-Anchor" href="#jq操作html的属性和方法">#</a> JQ 操作 HTML 的属性和方法</h2>
+<h3 id="attr-方法"><a class="markdownIt-Anchor" href="#attr-方法">#</a> attr 方法</h3>
+<p>attr==Attribute  属性。作用：给标签添加或删除指定的属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span> &gt;</span></span><br><span class="line">	这里是文字</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">JQ:需求：给div添加HTML属性</span><br><span class="line">$(&quot;div&quot;).attr(&quot;属性名&quot;,[&quot;属性值&quot;]);</span><br><span class="line">//比如：</span><br><span class="line">$(&quot;div&quot;).attr(&quot;id&quot;);//box,获取</span><br><span class="line">//设置</span><br><span class="line">$(&quot;div&quot;).attr(&quot;id&quot;,&quot;mydiv&quot;);//box改为mydiv</span><br><span class="line">$(&quot;div&quot;).attr(&quot;title&quot;,&quot;提示文字&quot;);//</span><br><span class="line">$(&quot;div&quot;).attr(&quot;id&quot;,&quot;&quot;);//只是把属性值清空</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>TIPS：技巧</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//批量一次性给div添加多个属性</span></span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).attr(&#123;</span><br><span class="line">    id:<span class="string">&quot;box&quot;</span>,</span><br><span class="line">    class:&quot;box2&quot;,</span><br><span class="line">    title:<span class="string">&quot;提示文字&quot;</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//JS</span></span><br><span class="line">odiv.id=<span class="string">&quot;box&quot;</span>;</span><br><span class="line">odiv.className=<span class="string">&quot;div2&quot;</span>;</span><br><span class="line">odvi.title=<span class="string">&quot;提示文字&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="removeattr"><a class="markdownIt-Anchor" href="#removeattr">#</a> removeAttr()</h3>
+<p>作用：彻底删除标签的指定的属性名</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">JQ:</span><br><span class="line">$(&quot;div&quot;).removeAttr(&quot;id&quot;);//彻底删除，只要写一个参数就可以了</span><br></pre></td></tr></table></figure>
+<h3 id="jqprop属性名属性值"><a class="markdownIt-Anchor" href="#jqprop属性名属性值">#</a> jQ.prop (“属性名”,[‘属性值’])</h3>
+<p>作用：同 attr，只是该方法适用于表单控件的属性值，而不是普通元素的属性值</p>
+<p>面试：prop 和 attr 有什么区别，分别用于哪些元素中？？</p>
+<h3 id="removeprop"><a class="markdownIt-Anchor" href="#removeprop">#</a> removeProp()</h3>
+<p>用法含义同 removeAttr ()</p>
+<h3 id="jq对象html"><a class="markdownIt-Anchor" href="#jq对象html">#</a> jq 对象.html ()</h3>
+<p>js 对象.innerHTML</p>
+<p>作用：获取或设置标签的内容（标签）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>这是原本的内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">$(&quot;div&quot;).html();//获取div中的所有的内容，包含标签</span><br><span class="line">$(&quot;div&quot;).html(&quot;<span class="tag">&lt;<span class="name">h1</span>&gt;</span>新增的内容<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>&quot;);//设置div中的所有的内容，包含标签</span><br><span class="line">总结：不加参数就是获取，添加参数就是设置</span><br></pre></td></tr></table></figure>
+<h3 id="text"><a class="markdownIt-Anchor" href="#text">#</a> text()</h3>
+<p>相当于是 JS 中的 innerText, 用来设置或获取标签的文本内容。</p>
+<p>特点：会过滤标签，只留下纯文本。</p>
+<p>用法同 html ();</p>
+<h3 id="val"><a class="markdownIt-Anchor" href="#val">#</a> val()</h3>
+<p>相当于是 JS 中的  控件对象.value;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input value=<span class="string">&quot;123&quot;</span>&gt;</span><br><span class="line">JQ:</span><br><span class="line">$(<span class="string">&quot;input&quot;</span>).val();<span class="comment">//获取</span></span><br><span class="line">$(<span class="string">&quot;input&quot;</span>).val(<span class="number">456</span>);<span class="comment">//设置</span></span><br></pre></td></tr></table></figure>
+<h3 id="trim"><a class="markdownIt-Anchor" href="#trim">#</a> $.trim()</h3>
+<p>作用：去掉字符串的首尾空格。该方法不是去选择元素然后做什么事情，该方法为工具方法，区别于前面的 1-7 的方法，叫对象方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str&#x3D;&quot;  agdasdg  gasdg   &quot;</span><br><span class="line">JQ:</span><br><span class="line">$.trim(str);&#x2F;&#x2F;&#39;agdasdg  gasdg&#39;</span><br><span class="line">&#x2F;&#x2F;用于表单验证中</span><br><span class="line">之前在JS中是没有这个现成的方法的</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>JS 去首尾空的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> reg=<span class="regexp">/^\s+|\s+$/g</span>;</span><br><span class="line">    <span class="keyword">return</span> str.replace(reg,<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">trim(<span class="string">&quot; asdgasdg  agasdg   &quot;</span>);</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>遇到的第一个 JQ 属性： .length</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).length;&#x2F;&#x2F;10</span><br><span class="line">&#x2F;&#x2F;可以统计标签的使用数量</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="css操作"><a class="markdownIt-Anchor" href="#css操作">#</a> CSS 操作</h2>
+<h3 id="css"><a class="markdownIt-Anchor" href="#css">#</a> css()</h3>
+<p>相当于是 JS 中的  style. 样式名，用来添加行内样式的</p>
+<ol>
+<li>
+<p>添加单个样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).css(&quot;样式名&quot;,&quot;样式值&quot;)</span><br><span class="line">//注意：样式名即为css的写法，样式值也为css的写法</span><br><span class="line">//又给我们减轻了负担</span><br><span class="line">//js---&gt;  <span class="attribute">background-color</span>  要改蛇形</span><br><span class="line">//JQ---&gt;不需要改</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>添加多行样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).css(&#123;</span><br><span class="line">&quot;样式名<span class="number">1</span>&quot;:<span class="string">&quot;样式值1&quot;</span>,</span><br><span class="line"><span class="string">&quot;样式名2&quot;</span>:<span class="string">&quot;样式值2&quot;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="addclass"><a class="markdownIt-Anchor" href="#addclass">#</a> addClass()</h3>
+<p>作用：给指定的标签添加 className，可以连续添加多个。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;box&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).addClass(<span class="string">&quot;box2&quot;</span>);<span class="comment">//如果标签没有，则添加，如果有则新增一个</span></span><br><span class="line"><span class="comment">//反观JS：</span></span><br><span class="line">odiv.className=<span class="string">&quot;box2&quot;</span>;<span class="comment">//有没有问题？？会替换老的class</span></span><br></pre></td></tr></table></figure>
+<h3 id="removeclass要删除的class"><a class="markdownIt-Anchor" href="#removeclass要删除的class">#</a> removeClass (“要删除的 class”)</h3>
+<p>上面的只能添加，如果要删除一个或多个，则需要使用删除的方法进行操作</p>
+<h3 id="toggleclass要切换的class名"><a class="markdownIt-Anchor" href="#toggleclass要切换的class名">#</a> toggleClass (“要切换的 class 名”);</h3>
+<h3 id="hasclass有没有指定的classtruefalse"><a class="markdownIt-Anchor" href="#hasclass有没有指定的classtruefalse">#</a> hasClass (“有没有指定的 class”);//true,false</h3>
+<h3 id="width"><a class="markdownIt-Anchor" href="#width">#</a> width()</h3>
+<p>指的是样式宽，即 style.width，可读写</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:100px&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">//jQ</span><br><span class="line">不管有没有写行内样式，都可以读出它的样式宽</span><br><span class="line">$(&quot;div&quot;).width();//读</span><br><span class="line">$(&quot;div&quot;).width(200);//设置它的宽度为200px</span><br></pre></td></tr></table></figure>
+<h3 id="innerwidth"><a class="markdownIt-Anchor" href="#innerwidth">#</a> innerWidth()；</h3>
+<p>可视宽，包括 padding，只读</p>
+<h3 id="outerwidth"><a class="markdownIt-Anchor" href="#outerwidth">#</a> outerWidth()</h3>
+<p>只读属性</p>
+<p>a. 占位宽：包括 padding+border</p>
+<p>b. 如果参数为 true，则还包括左右 margin</p>
+<p>outerWidth (true);//width + 左右 padding + 左右 border + 左右 margin</p>
+<h3 id="heightinnerheigthouterheigth同width的用法"><a class="markdownIt-Anchor" href="#heightinnerheigthouterheigth同width的用法">#</a> height (),innerHeigth (),outerHeigth () 同 width 的用法</h3>
+<h2 id="dom操作实例"><a class="markdownIt-Anchor" href="#dom操作实例">#</a> DOM 操作实例</h2>
+<h3 id="实例1"><a class="markdownIt-Anchor" href="#实例1">#</a> 实例 1</h3>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>作业1<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">button</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">line-height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">1px</span> solid;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">outline</span>: none;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-tag">button</span><span class="selector-class">.active</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>: <span class="number">#f60</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>: <span class="number">#fff</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 这里写代码</span></span></span><br><span class="line"><span class="javascript">		$(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">			$(<span class="built_in">this</span>).toggleClass(<span class="string">&quot;active&quot;</span>).siblings().removeClass(<span class="string">&quot;active&quot;</span>);</span></span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;);</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>女装<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>男装<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="实例2"><a class="markdownIt-Anchor" href="#实例2">#</a> 实例 2</h3>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>作业3<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>请输入用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;验证&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 写JQ代码</span></span></span><br><span class="line"><span class="javascript">		$(<span class="string">&quot;#btn&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> reg=<span class="regexp">/^[a-zA-Z]&#123;6&#125;$/</span>;</span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> str=$.trim($(<span class="string">&quot;#username&quot;</span>).val());</span></span><br><span class="line"><span class="javascript">			reg.test(str)?alert(<span class="string">&quot;验证成功！&quot;</span>):alert(<span class="string">&quot;验证失败！&quot;</span>);</span></span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/jquery/" rel="tag"><i class="ic i-tag"></i> jquery</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-30 11:51:51" itemprop="dateModified" datetime="2021-03-30T11:51:51+08:00">2021-03-30</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/" title="JQ的dom操作">https://serena-tz.github.io/2020/08/19/JQ的dom操作/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="jQuery选择器">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>jQuery选择器</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jq%E7%9A%84dom%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text"> JQ 的 DOM 操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jq%E6%93%8D%E4%BD%9Chtml%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> JQ 操作 HTML 的属性和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#attr-%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text"> attr 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#removeattr"><span class="toc-number">2.2.</span> <span class="toc-text"> removeAttr()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jqprop%E5%B1%9E%E6%80%A7%E5%90%8D%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="toc-number">2.3.</span> <span class="toc-text"> jQ.prop (“属性名”,[‘属性值’])</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#removeprop"><span class="toc-number">2.4.</span> <span class="toc-text"> removeProp()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jq%E5%AF%B9%E8%B1%A1html"><span class="toc-number">2.5.</span> <span class="toc-text"> jq 对象.html ()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#text"><span class="toc-number">2.6.</span> <span class="toc-text"> text()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#val"><span class="toc-number">2.7.</span> <span class="toc-text"> val()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#trim"><span class="toc-number">2.8.</span> <span class="toc-text"> $.trim()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text"> CSS 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css"><span class="toc-number">3.1.</span> <span class="toc-text"> css()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#addclass"><span class="toc-number">3.2.</span> <span class="toc-text"> addClass()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#removeclass%E8%A6%81%E5%88%A0%E9%99%A4%E7%9A%84class"><span class="toc-number">3.3.</span> <span class="toc-text"> removeClass (“要删除的 class”)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toggleclass%E8%A6%81%E5%88%87%E6%8D%A2%E7%9A%84class%E5%90%8D"><span class="toc-number">3.4.</span> <span class="toc-text"> toggleClass (“要切换的 class 名”);</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hasclass%E6%9C%89%E6%B2%A1%E6%9C%89%E6%8C%87%E5%AE%9A%E7%9A%84classtruefalse"><span class="toc-number">3.5.</span> <span class="toc-text"> hasClass (“有没有指定的 class”);&#x2F;&#x2F;true,false</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#width"><span class="toc-number">3.6.</span> <span class="toc-text"> width()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#innerwidth"><span class="toc-number">3.7.</span> <span class="toc-text"> innerWidth()；</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#outerwidth"><span class="toc-number">3.8.</span> <span class="toc-text"> outerWidth()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#heightinnerheigthouterheigth%E5%90%8Cwidth%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number">3.9.</span> <span class="toc-text"> height (),innerHeigth (),outerHeigth () 同 width 的用法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom%E6%93%8D%E4%BD%9C%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text"> DOM 操作实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B1"><span class="toc-number">4.1.</span> <span class="toc-text"> 实例 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B2"><span class="toc-number">4.2.</span> <span class="toc-text"> 实例 2</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">4</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/" title="JQ的dom操作">JQ的dom操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" title="jQuery选择器">jQuery选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
+</div>
+
+    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/" title="分类于 操作步骤">操作步骤</a>
+</div>
+
+    <span><a href="/2020/04/01/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/08/19/JQ的dom操作/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
