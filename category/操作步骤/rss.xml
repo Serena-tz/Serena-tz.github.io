@@ -7,11 +7,15 @@
         <language>zh-CN</language>
         <pubDate>Wed, 01 Apr 2020 09:19:57 +0800</pubDate>
         <lastBuildDate>Wed, 01 Apr 2020 09:19:57 +0800</lastBuildDate>
-        <category>jquery</category>
-        <category>git</category>
-        <category>echarts</category>
         <category>manual</category>
+        <category>SEO</category>
+        <category>jquery</category>
+        <category>echarts</category>
+        <category>git</category>
         <category>服务器</category>
+        <category>ES6</category>
+        <category>web应用</category>
+        <category>小程序</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/04/01/hello-world/</guid>
             <title>Hello World</title>

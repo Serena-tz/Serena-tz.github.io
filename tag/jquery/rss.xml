@@ -7,11 +7,15 @@
         <language>zh-CN</language>
         <pubDate>Fri, 21 Aug 2020 15:29:02 +0800</pubDate>
         <lastBuildDate>Fri, 21 Aug 2020 15:29:02 +0800</lastBuildDate>
-        <category>jquery</category>
-        <category>git</category>
-        <category>echarts</category>
         <category>manual</category>
+        <category>SEO</category>
+        <category>jquery</category>
+        <category>echarts</category>
+        <category>git</category>
         <category>服务器</category>
+        <category>ES6</category>
+        <category>web应用</category>
+        <category>小程序</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/</guid>
             <title>jquery的事件</title>

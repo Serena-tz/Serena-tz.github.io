@@ -7,11 +7,15 @@
         <language>zh-CN</language>
         <pubDate>Tue, 17 Nov 2020 15:33:58 +0800</pubDate>
         <lastBuildDate>Tue, 17 Nov 2020 15:33:58 +0800</lastBuildDate>
-        <category>jquery</category>
-        <category>git</category>
-        <category>echarts</category>
         <category>manual</category>
+        <category>SEO</category>
+        <category>jquery</category>
+        <category>echarts</category>
+        <category>git</category>
         <category>服务器</category>
+        <category>ES6</category>
+        <category>web应用</category>
+        <category>小程序</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/11/17/echarts%E5%9B%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/</guid>
             <title>echarts图表的基本应用</title>

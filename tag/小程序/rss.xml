@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>阳光果苏 • Posts by &#34;小程序&#34; tag</title>
+        <link>https://Serena-tz.github.io</link>
+        <description>心情笔记 &amp; 编程日记</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 22 Nov 2020 16:13:49 +0800</pubDate>
+        <lastBuildDate>Sun, 22 Nov 2020 16:13:49 +0800</lastBuildDate>
+        <category>manual</category>
+        <category>SEO</category>
+        <category>jquery</category>
+        <category>echarts</category>
+        <category>git</category>
+        <category>服务器</category>
+        <category>ES6</category>
+        <category>web应用</category>
+        <category>小程序</category>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-php%E5%AE%9E%E7%8E%B0%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+            <title>微信小程序+php实现今日头条小程序</title>
+            <link>https://serena-tz.github.io/2020/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-php%E5%AE%9E%E7%8E%B0%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+            <category>小程序</category>
+            <pubDate>Sun, 22 Nov 2020 16:13:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;今日头条小程序数据库和json地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#今日头条小程序数据库和json地址&#34;&gt;#&lt;/a&gt; 今日头条小程序数据库和 json 地址&lt;/h2&gt;
+&lt;p&gt;数据保存到数据库中的，里面的内容如何获取？由 PHP 文件获取，并且生成一个 json 文件&lt;/p&gt;
+&lt;p&gt;提供的 3 个 PHP 文件，是用来负责连接指定的数据库，并且提取数据库内容，生成一个 json 文件&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;、 http:&lt;span class=&#34;comment&#34;&gt;//localhost/toutiao/getType.php   //返回分类的json文件的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;、 http:&lt;span class=&#34;comment&#34;&gt;//localhost/toutiao/getList.php?typeId=1002  //返回分类下的所有列表文章&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;、 http:&lt;span class=&#34;comment&#34;&gt;//localhost/toutiao/getDetail.php?newsId=news-1002&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//（下次课） 返回指定文章详情&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;也就是需要将这三个PHP文件放到toutiao目录并将该目录放到PHPstudy/www文件夹中&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;前端拿到数据源地址就可以开始干活了。&lt;/p&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;搭建好 PHP 后台。&lt;br&gt;
+放置 PHP 文件到 www 目录下。&lt;/p&gt;
+&lt;p&gt;导入数据库&lt;br&gt;
+在浏览器中访问 PHP 文件，看能否返回 json 数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库两张表的解释&lt;br&gt;
+ type: 放栏目名称–显示菜单 - getType.php 获取该 json&lt;/p&gt;
+&lt;p&gt;news: 具体的文章内容.&lt;/p&gt;
+&lt;p&gt;由两个 PHP 文件来处理：&lt;/p&gt;
+&lt;p&gt;getList.php?typeId=1002 获取指定分类的文章&lt;/p&gt;
+&lt;p&gt;1002 指的是数据库中字段的名字。&lt;/p&gt;
+&lt;p&gt;getDetail.php?newsId=news-1002 根据文章 ID 获取某篇文章&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;写静态页面-首页列表页&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#写静态页面-首页列表页&#34;&gt;#&lt;/a&gt; 写静态页面 - 首页（列表页）&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;顶部导航需要左右滑动&lt;br&gt;
+&lt;scroll-view&gt;&lt;/scroll-view&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给标签添加 data - 属性&lt;br&gt;
+说明：该属性是 H5 的，可以实现自定义属性&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;data-index&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;5&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//如何在JS中获取&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;var odiv=document.getElementsByTagName(&amp;quot;div&amp;quot;)[0];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;console.log(odiv.dataset.index)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过列表数据的 img_type 的值 0,1,3 来确定使用哪种文章模板&lt;/p&gt;
+&lt;p&gt;使用 wx:if 来决定用哪种结构&lt;/p&gt;
+&lt;p&gt;0 无图模式&lt;br&gt;
+ 1 一张图&lt;br&gt;
+ 3 三张图&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/11/21/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8C%87%E4%BB%A4/</guid>
+            <title>微信小程序的指令</title>
+            <link>https://serena-tz.github.io/2020/11/21/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8C%87%E4%BB%A4/</link>
+            <category>小程序</category>
+            <pubDate>Sat, 21 Nov 2020 16:13:27 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;微信的指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微信的指令&#34;&gt;#&lt;/a&gt; 微信的指令&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;wx:for 列表循环&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;array&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt; wx:key=&lt;span class=&#34;string&#34;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#123;&amp;#123;index+&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&amp;#125;&amp;#125;-- &amp;#123;&amp;#123;item&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//改变默认的item和index的名字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;array&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt; wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;-item=&lt;span class=&#34;string&#34;&gt;&amp;quot;t&amp;quot;&lt;/span&gt; wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;-index=&lt;span class=&#34;string&#34;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#123;&amp;#123;i+&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&amp;#125;&amp;#125;-- &amp;#123;&amp;#123;t&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//循环嵌套，遍历&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;array&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt; &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#123;&amp;#123;index+&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&amp;#125;&amp;#125;-- &amp;#123;&amp;#123;item&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;lt;text wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;item&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt; wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;-item=&lt;span class=&#34;string&#34;&gt;&amp;quot;t&amp;quot;&lt;/span&gt;  wx:&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;-index=&lt;span class=&#34;string&#34;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&amp;gt;&amp;#123;&amp;#123;t&amp;#125;&amp;#125;---&amp;#123;&amp;#123;i&amp;#125;&amp;lt;/text&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wx:if&lt;/p&gt;
+&lt;p&gt;用法和含义跟 vue 一样。&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;条件表达式&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt; True &amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;age&amp;gt;18&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt; 成年了 &amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wx:if-wxelif-wx:else&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;length &amp;gt; 5&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt; &amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:elif=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;length &amp;gt; 2&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt; &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; &amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view wx:&lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt;&amp;gt; &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt; &amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小胡子语法&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&amp;#123;msg&amp;gt;&lt;span class=&#34;number&#34;&gt;19&lt;/span&gt;?&lt;span class=&#34;string&#34;&gt;&amp;quot;成年了&amp;quot;&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;未成年&amp;quot;&lt;/span&gt;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何 v-show, 没有，使用 hidden 来代替&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;view hidden=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;表达式&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt; 如果表达式成立，则隐藏该view标签 &amp;lt;/view&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;block 标签（虚拟标签，地位等同于 vue 的 template）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;获取json数据&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取json数据&#34;&gt;#&lt;/a&gt; 获取 json 数据&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;何时获取&lt;/p&gt;
+&lt;p&gt;点击按钮再获取&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;则写方法&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;在微信小程序中没有methods属性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;加载页面时就要获取&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;将其写在钩子函数中，在onshow之前使用，一般写在onload里面&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据来源&lt;/p&gt;
+&lt;p&gt;只能使用在线数据，不能使用相对路径导入数据&lt;/p&gt;
+&lt;p&gt;a. 本地 x&lt;/p&gt;
+&lt;p&gt;b. 后台 、自己搭建的平台&lt;/p&gt;
+&lt;p&gt;​	自己家的程序员或网站，或自己用小皮搭建后台提供&lt;/p&gt;
+&lt;p&gt;c. 第三方、mock&lt;/p&gt;
+&lt;p&gt;​	别人家的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网站的要求 (假设小程序要发布上线，需要满足以下条件)&lt;/p&gt;
+&lt;p&gt;国内备案的域名 + https&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何获取&lt;/p&gt;
+&lt;p&gt;浏览器：ajax，vue 用 axios，在微信小程序中不需要用任何插件，它自己有一套获取数据的方式&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//用法同JQ的ajax或axios&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wx.request(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  url: &lt;span class=&#34;string&#34;&gt;&amp;#x27;test.php&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;comment&#34;&gt;//仅为示例，并非真实的接口地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  method:&lt;span class=&#34;string&#34;&gt;&amp;quot;get&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  success (res) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(res.data)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;title&#34;&gt;fail&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;err&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(err);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;让数据可响应&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#让数据可响应&#34;&gt;#&lt;/a&gt; 让数据可响应&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;this&lt;/p&gt;
+&lt;p&gt;指的是微信页面实例&lt;/p&gt;
+&lt;p&gt;注意 this 的传递问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对象或数组或其他的变量的响应式操作&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;this&lt;/span&gt;.setData(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    老数据:新数据&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;本地存储的例子页面通信&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#本地存储的例子页面通信&#34;&gt;#&lt;/a&gt; 本地存储的例子（页面通信）&lt;/h2&gt;
+&lt;p&gt;需求：在 A 页面添加留言后，同步到 B 页面并且展示&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;在数据后面添加方法即可，每添加一个方法，相当于是增加了一个葫芦娃兄弟&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;页面通信&lt;/p&gt;
+&lt;p&gt;a. 本地存储（今天）&lt;/p&gt;
+&lt;p&gt;10M 的本地存储&lt;/p&gt;
+&lt;p&gt;todolist 的微信小程序实现了&lt;/p&gt;
+&lt;p&gt;b. url 传参（明天）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;简单的双向数据绑定（兼容性问题，基础库要在一定的条件）&lt;/p&gt;
+&lt;p&gt;提示：基础库 2.9.3 开始支持，低版本需做&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXJzLndlaXhpbi5xcS5jb20vbWluaXByb2dyYW0vZGV2L2ZyYW1ld29yay9jb21wYXRpYmlsaXR5Lmh0bWw=&#34;&gt;兼容处理&lt;/span&gt;。&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;input model:value=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;value&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;跳转页面的两种方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#跳转页面的两种方式&#34;&gt;#&lt;/a&gt; 跳转页面的两种方式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;昨天说的，用 navigator 标签&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;今天说的&lt;/p&gt;
+&lt;p&gt;用方法来实现跳转（wx.navigator ()）&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wx.navigateTo(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      url: &lt;span class=&#34;string&#34;&gt;&amp;#x27;/pages/add/add&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;微信的css单位rpx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微信的css单位rpx&#34;&gt;#&lt;/a&gt; 微信的 css 单位（rpx）&lt;/h2&gt;
+&lt;p&gt;可以用 px,%,rem 等常用单位，也有一个专属单位：rpx&lt;/p&gt;
+&lt;p&gt;rpx（responsive pixel）:&lt;/p&gt;
+&lt;p&gt;可以根据屏幕宽度进行自适应。规定屏幕宽为 750rpx。如在 iPhone6 上，屏幕宽度为 375px，共有 750 个物理像素，则 750rpx = 375px = 750 物理像素，1rpx = 0.5px = 1 物理像素。&lt;/p&gt;
+&lt;p&gt;建议：以 750px 的 iPhone6s 设计稿为参考搞，量出来是多少，就使用多少 rpx.&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;设计设计图是750px(iPhone6,6s,&lt;span class=&#34;number&#34;&gt;8&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;此时量出来多少，就写多少rpx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40rpx*50rpx&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;假设你的设计图是375px&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10px*30px==&amp;gt; 20rpx*60rpx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/11/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E3%80%81%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/</guid>
+            <title>小程序常用标签、基础指令</title>
+            <link>https://serena-tz.github.io/2020/11/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E3%80%81%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/</link>
+            <category>小程序</category>
+            <pubDate>Fri, 20 Nov 2020 16:12:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;使用开发者工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用开发者工具&#34;&gt;#&lt;/a&gt; 使用开发者工具&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;扫码绑定微信账号&lt;/li&gt;
+&lt;li&gt;新建微信小程序空白模板&lt;/li&gt;
+&lt;li&gt;在该工具内实现开发、调试、预览、上传、发布等操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;微信页面的组成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微信页面的组成&#34;&gt;#&lt;/a&gt; 微信页面的组成&lt;/h2&gt;
+&lt;p&gt;一个微信页面由 4 个文件组成&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;wxml: 放的是微信自定义的标签，不是放 HTML 的那些标签，这些自定义标签可以认为是组件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wxss: 样式，同 css 一样，可省&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;js: 用来放 JS 代码，放微信小程序的页面实例代理，类似于 vue 实例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;json: 配置该页面的文件，可省&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;— 在微信小程序不能放除以上 4 个语言外的代码，比如 PHP，Python、.net,java 等等通通不能放 —&lt;/p&gt;
+&lt;p&gt;总结：微信小程序是纯前端的内容。后端只是给微信小程序提供 json 数据而已。&lt;/p&gt;
+&lt;h2 id=&#34;如何新建一个微信小程序页面&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何新建一个微信小程序页面&#34;&gt;#&lt;/a&gt; 如何新建一个微信小程序页面&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在 pages 下右键单击，选择新建目录&lt;/li&gt;
+&lt;li&gt;在该目录下右键单击选择新建 pages 可以一键生成 4 个文件&lt;/li&gt;
+&lt;li&gt;还可以自动将该页面的信息写入到路由中（app.json）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;在微信小程序中写样式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在微信小程序中写样式&#34;&gt;#&lt;/a&gt; 在微信小程序中写样式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在页面中写。相当于是在当前页面中有效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 app.wxss 中写。相当于是全局的，在任何页面中都有效。可以将全局的样式导入进来。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;css 的选择器仅支持常用的。class,id, 标签，过滤，后端，直接子元素，CSS3 的选择器几乎都不支持。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;小程序常用标签学习&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小程序常用标签学习&#34;&gt;#&lt;/a&gt; 小程序常用标签学习&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;image 标签&lt;/li&gt;
+&lt;/ol&gt;
+   &lt;figure class=&#34;highlight css&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;image  mode=&amp;quot;aspectFit&amp;quot; &amp;gt;&amp;lt;/image&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//如果图片变形了，可以设置mode属性，让图片自适应&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;具体看这个文档：https://developers.weixin.qq.com/miniprogram/dev/component/image.html&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;view&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;text&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;navigator&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;更多查看官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXJzLndlaXhpbi5xcS5jb20vbWluaXByb2dyYW0vZGV2L2NvbXBvbmVudC8=&#34;&gt;https://developers.weixin.qq.com/miniprogram/dev/component/&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;微信小程序的指令-跟vue一样&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微信小程序的指令-跟vue一样&#34;&gt;#&lt;/a&gt; 微信小程序的指令 - 跟 vue 一样&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;if    控制视图是否显示，如果是 true 则显示，否则不显示&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;wx:if&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;condition&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt; True &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;比如：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;wx:if&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;age&amp;gt;18&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt; True &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for   - 跟 vue 不太一样&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;wx:for&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;#123;&amp;#123;数组或对象&amp;#125;&amp;#125;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&amp;#123;item&amp;#125;&amp;#125;---&amp;#123;&amp;#123;index&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//vue&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;v-for&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;item,index in 数组或对象&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;view&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小胡子语法&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&amp;#123;表达式或来自data中的属性&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;比如：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&amp;#123;age&amp;gt;&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;?&lt;span class=&#34;string&#34;&gt;&amp;#x27;啊哈哈&amp;#x27;&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;#x27;啊啊啊&amp;#x27;&lt;/span&gt;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&amp;#123;&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;+&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;+&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;appjson说明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#appjson说明&#34;&gt;#&lt;/a&gt; appjson 说明&lt;/h2&gt;
+&lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//路由，有多少个页面，就要写多少个链接（url）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;&amp;quot;pages&amp;quot;&lt;/span&gt;:[&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;string&#34;&gt;&amp;quot;pages/index/index&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;string&#34;&gt;&amp;quot;pages/logs/logs&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  ],&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//配置微信小程序顶部界面颜色&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;&amp;quot;window&amp;quot;&lt;/span&gt;:&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//backgroundTextStyle 下拉的时候的文字配色，默认是浅色，可以写dark&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;backgroundTextStyle&amp;quot;&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;light&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//导航条背景色，值必须是16进制的颜色代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;navigationBarBackgroundColor&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;#fff&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//指的是页面标题&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;navigationBarTitleText&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;Weixin&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//指的是导航条的文字颜色：black、white&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;navigationBarTextStyle&amp;quot;&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;&amp;quot;style&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;v2&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;&amp;quot;sitemapLocation&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;sitemap.json&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;小程序生命周期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小程序生命周期&#34;&gt;#&lt;/a&gt; 小程序生命周期&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;pic.png&#34; alt=&#34;阳光果苏&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;页面通信的第二种方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#页面通信的第二种方式&#34;&gt;#&lt;/a&gt; 页面通信的第二种方式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;原来用的是本地存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;url 传参&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A 页面中将对应的数据，比如 id 等通过 url 传递到 B 页面&lt;/p&gt;
+&lt;p&gt;类似于 form 表单提交传递到后台一样，get,&lt;/p&gt;
+&lt;p&gt;php  $_GET[‘name’]&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tLw==&#34;&gt;https://mp.weixin.qq.com/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注册的小程序要跟线下代码关联，才能发布&lt;/p&gt;
+&lt;p&gt;需要获取 APPID&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

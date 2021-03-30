@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>阳光果苏 • Posts by &#34;seo&#34; tag</title>
+        <link>https://Serena-tz.github.io</link>
+        <description>心情笔记 &amp; 编程日记</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 26 Nov 2020 16:17:05 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Nov 2020 16:17:05 +0800</lastBuildDate>
+        <category>manual</category>
+        <category>SEO</category>
+        <category>jquery</category>
+        <category>echarts</category>
+        <category>git</category>
+        <category>服务器</category>
+        <category>ES6</category>
+        <category>web应用</category>
+        <category>小程序</category>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/11/26/SEO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</guid>
+            <title>SEO的基本介绍</title>
+            <link>https://serena-tz.github.io/2020/11/26/SEO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</link>
+            <category>SEO</category>
+            <pubDate>Thu, 26 Nov 2020 16:17:05 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前端性能优化规则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前端性能优化规则&#34;&gt;#&lt;/a&gt; 前端性能优化规则&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;减少 HTTP 请求。方法：将多个 css 合并在一起；将多个 JS 合并在一起；使用雪碧图&lt;/li&gt;
+&lt;li&gt;使用内容发布网络（CDN）。方法：可引入第三方的资源库，比如引入国内提供 cdn 加速的网站的 jquery 资源等。&lt;/li&gt;
+&lt;li&gt;压缩 JS、CSS、使用合理大小图片等&lt;/li&gt;
+&lt;li&gt;将样式表放在顶部&lt;/li&gt;
+&lt;li&gt;将脚本放在底部&lt;/li&gt;
+&lt;li&gt;精简 JavaScript（即模块化开发，尽可能实现代码共用，避免死循环，移除重复脚本）健壮性&lt;/li&gt;
+&lt;li&gt;代码书写规范，确保代码的健壮性，及时删除冗余的代码&lt;/li&gt;
+&lt;li&gt;尽量减少使用 JS 操作 DOM，比如追加和删除，只让 JS 做必须做的事&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;seo站内优化搜索引擎优化站内优化前端职责&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#seo站内优化搜索引擎优化站内优化前端职责&#34;&gt;#&lt;/a&gt; SEO 站内优化（搜索引擎优化）站内优化：前端职责&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;1.  页面结构、框架：html代码与CSS分离，尽量少的嵌套
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;留白检测，js 体积，代码后置：清除多余的空白，采用 Gzip 压缩，尽可能的减少 js 数量，将它们适当的合并&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;页面代码规范&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· title标签 全面，合理，添加关键字&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· h1-h4标签 重要部分，标题使用h1-h2 合理使用，不能滥用 比如文章或内容有些强调部分可以使用Strong或em就不要用h标签&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· img 所有的都加上Alt 部分加上title，里面添加内容要有关键字&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· meta标签 全面重要为先原则&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· HTML元素使用正确，尽量减少嵌套，行内元素不能嵌套块内元素，尽量不用各种hack方法&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· keywords 和description标签&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网站载入速度&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· 使用性能佳的服务器&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· 尽量少的js代码与体积&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· 使用Sprite技术&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· 减少DNS查询&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;· 使用缓存，减少HTTP请求&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有网站地图，有利于搜索引擎抓取页面，收录页面（站外优化：  SEM）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他的则是运营，推广的工作了。目的就是让搜索引擎更加热爱访问你的网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;前端性能诊断优化工具介绍与使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前端性能诊断优化工具介绍与使用&#34;&gt;#&lt;/a&gt; 前端性能诊断优化工具介绍与使用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;chrome 的内置诊断工具：network 、audits&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;也可以到谷歌或火狐的应用商店下载与网站优化或开发有关的插件辅助诊断和改善&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生产环境清除缓存方式：加版本号。刚好与开发环境要缓存相反。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;站内seo基本html结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#站内seo基本html结构&#34;&gt;#&lt;/a&gt; 站内 SEO 基本 html 结构&lt;/h2&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;html lang&amp;#x3D;&amp;quot;en&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;meta charset&amp;#x3D;&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;!-- 标题会被显示到百度搜索引擎中，规范：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    要有关键字，最好能描述你的内容，使用_隔开，字数不超过40个值&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;title&amp;gt;网红推荐超补水面膜-双十一提前降价_最火网&amp;lt;&amp;#x2F;title&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;!-- meta的description标签&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    会显示到搜索引擎的描述部分：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    规范，一段读得通俗的概要文字，要包含关键字，字数不超过200个&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;meta name&amp;#x3D;&amp;quot;description&amp;quot; content&amp;#x3D;&amp;quot;你点开此文,说明你对Web开发是有兴趣的,或者你正在思考开始学习Web开发。在这里,我会告诉你成为一名Web开发者的路线,是对初学者关于Web开发的指导。这篇文章不会&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;!-- 作用：能增加关键字密度，能被百度爬虫识别，能提高网站的自然排名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    规范：关键字之间使用,隔开，字数不宜超过80个字&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;meta name&amp;#x3D;&amp;quot;keyword&amp;quot; content&amp;#x3D;&amp;quot;网红面膜,补水面膜,双十一面膜&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;script src&amp;#x3D;&amp;quot;jquery.min.js&amp;quot;&amp;gt;&amp;lt;&amp;#x2F;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;!-- 使用CDN分发网络上的jquery库 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;script src&amp;#x3D;&amp;quot;https:&amp;#x2F;&amp;#x2F;cdn.bootcss.com&amp;#x2F;jquery&amp;#x2F;3.4.1&amp;#x2F;jquery.slim.js&amp;quot;&amp;gt;&amp;lt;&amp;#x2F;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;#x2F;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;img src&amp;#x3D;&amp;quot;..&amp;#x2F;1.jpg&amp;quot; alt&amp;#x3D;&amp;quot;这里写图片有关的标题，要包含关键字&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;a href&amp;#x3D;&amp;quot;#&amp;quot; title&amp;#x3D;&amp;quot;重要的a链接内容还要添加title信息&amp;quot;&amp;gt;链接内容&amp;lt;&amp;#x2F;a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;#x2F;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;#x2F;html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
