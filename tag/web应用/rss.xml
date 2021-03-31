@@ -8,20 +8,29 @@
         <pubDate>Fri, 27 Nov 2020 16:33:31 +0800</pubDate>
         <lastBuildDate>Fri, 27 Nov 2020 16:33:31 +0800</lastBuildDate>
         <category>Bootstrap</category>
-        <category>ajax</category>
+        <category>CSS3</category>
+        <category>H5</category>
         <category>jquery</category>
-        <category>SEO</category>
         <category>PHP</category>
+        <category>SEO</category>
+        <category>ajax</category>
         <category>echarts</category>
         <category>git</category>
         <category>manual</category>
         <category>json</category>
-        <category>ES6</category>
+        <category>vue</category>
         <category>web应用</category>
+        <category>响应式布局</category>
+        <category>ES6</category>
+        <category>地理位置</category>
         <category>服务器</category>
         <category>小程序</category>
+        <category>弹性盒子</category>
         <category>数据库</category>
+        <category>移动端</category>
+        <category>本地存储</category>
         <category>跨域</category>
+        <category>canvas</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/11/27/web%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83/</guid>
             <title>web应用的打包和发布</title>

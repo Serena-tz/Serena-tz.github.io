@@ -8,20 +8,29 @@
         <pubDate>Fri, 28 Aug 2020 11:06:43 +0800</pubDate>
         <lastBuildDate>Fri, 28 Aug 2020 11:06:43 +0800</lastBuildDate>
         <category>Bootstrap</category>
-        <category>ajax</category>
+        <category>CSS3</category>
+        <category>H5</category>
         <category>jquery</category>
-        <category>SEO</category>
         <category>PHP</category>
+        <category>SEO</category>
+        <category>ajax</category>
         <category>echarts</category>
         <category>git</category>
         <category>manual</category>
         <category>json</category>
-        <category>ES6</category>
+        <category>vue</category>
         <category>web应用</category>
+        <category>响应式布局</category>
+        <category>ES6</category>
+        <category>地理位置</category>
         <category>服务器</category>
         <category>小程序</category>
+        <category>弹性盒子</category>
         <category>数据库</category>
+        <category>移动端</category>
+        <category>本地存储</category>
         <category>跨域</category>
+        <category>canvas</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/</guid>
             <title>jquery工具方法和开发插件</title>

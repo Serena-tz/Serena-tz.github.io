@@ -1,0 +1,642 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="canvas" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/09/07/canvas%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+
+
+
+  <title>
+canvas基础入门 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">canvas基础入门
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-09-07 11:46:02">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-09-07T11:46:02+08:00">2020-09-07</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/09/07/canvas%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="新建画布"><a class="markdownIt-Anchor" href="#新建画布">#</a> 新建画布</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;ca&quot;</span> <span class="attr">width</span>=<span class="string">&quot;454&quot;</span> <span class="attr">height</span>=<span class="string">&quot;350&quot;</span>&gt;</span>亲爱的，您的浏览器不支持canvas，请升级浏览器后再来<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">//默认的宽度是300*150</span><br><span class="line">注意事项：宽高不能写%，写了会把它当做固定单位来看待</span><br></pre></td></tr></table></figure>
+<h2 id="准备画笔工具js"><a class="markdownIt-Anchor" href="#准备画笔工具js">#</a> 准备画笔（工具）—js</h2>
+<p>canvas 只有一只 2d 画笔，所有的形状都通过该画笔来实现。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取canvas对象</span></span><br><span class="line"><span class="comment">//每写一个canvas标签，就相当于是生成了一个canvas对象</span></span><br><span class="line"><span class="keyword">var</span> ca=<span class="built_in">document</span>.getElementById(<span class="string">&quot;ca&quot;</span>);</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//生成一只2D笔,该笔是canvas对象下的一个方法</span></span><br><span class="line"><span class="keyword">var</span> pen=ca.getContext(<span class="string">&#x27;2d&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="画点什么学习pen的方法和属性了"><a class="markdownIt-Anchor" href="#画点什么学习pen的方法和属性了">#</a> 画点什么–学习 pen 的方法和属性了</h2>
+<p>可以画的东西有：</p>
+<ol>
+<li>
+<p><strong>矩形（正方形 + 长方形）</strong></p>
+<p>a. 空心矩形</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.strokeRect(x,y,w,h);</span><br></pre></td></tr></table></figure>
+<p>b. 实心矩形</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.fillRect(x,y,w,h);</span><br></pre></td></tr></table></figure>
+<p>c. 透明矩形 — 清除矩形–超实用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pen.clearRect(x,y,w,h);</span><br><span class="line"><span class="comment">//作用：</span></span><br><span class="line"><span class="number">1</span>、做异形形状，比如</span><br><span class="line"><span class="number">2</span>、刷新画布，清空画布（）</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>路径</strong><br>
+通过路径可以绘制任何的形状，包括上面的矩形。是一个万能的画形状的方式。</p>
+<p><strong>注意事项：路径需要描边或填充才能看到。</strong></p>
+<p>在画路径之前，先使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.beginPath()</span><br></pre></td></tr></table></figure>
+<p>画完后，可以使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.closePath()</span><br></pre></td></tr></table></figure>
+<p>来结束，如果路径本身就是闭合了的，则该方法什么也不做。</p>
+<p>a. 直线、三角形、菱形等</p>
+<p>需要使用起点、第二个点、再连线实现（锚点连线）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//起点</span></span><br><span class="line">pen.moveTo(x,y)</span><br><span class="line">比如：</span><br><span class="line">pen.moveTo(<span class="number">10</span>,<span class="number">10</span>);</span><br><span class="line"><span class="comment">//第二个点起（包括终点和中间点）</span></span><br><span class="line">pen.lineTo(x,y);</span><br><span class="line"><span class="comment">//描边</span></span><br><span class="line">pen.stroke();</span><br></pre></td></tr></table></figure>
+<p>b. 圆、圆弧、半圆</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法：</span></span><br><span class="line">pen.arc(x, y,半径, 开始弧度,结束弧度, anticlockwise)</span><br><span class="line"><span class="comment">//参数说明：</span></span><br><span class="line"><span class="number">0.</span> x,y是圆心的位置</span><br><span class="line"><span class="number">1.</span>anticlockwise 是否是逆时针：值为<span class="literal">true</span>时逆时针，<span class="literal">false</span>为顺时针[默认值]</span><br><span class="line"><span class="number">2.</span>角度与弧度的js表达式:</span><br><span class="line">	角度=弧度*<span class="number">180</span>/<span class="built_in">Math</span>.PI</span><br><span class="line">	弧度=角度*<span class="built_in">Math</span>.PI/<span class="number">180</span></span><br><span class="line">	也就是<span class="number">2</span>π弧度=<span class="number">360</span>度</span><br><span class="line">	<span class="number">1</span>弧度？多少度</span><br><span class="line">    <span class="number">1</span>弧度==约<span class="number">57.32</span>度</span><br><span class="line">    <span class="number">1</span>度==？弧度</span><br><span class="line">	<span class="number">1</span>度==<span class="number">0.017444</span>弧度</span><br><span class="line">   </span><br><span class="line"><span class="number">1</span>、画一个正圆</span><br><span class="line">	假设画布是<span class="number">500</span>*<span class="number">500</span>的尺寸，要画一个刚好能填充的圆：</span><br><span class="line">    pen.beginPath();</span><br><span class="line">    pen.arc(<span class="number">250</span>,<span class="number">250</span>,<span class="number">250</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">Math</span>.PI);</span><br><span class="line">    pen.fill()</span><br><span class="line">    pen.closePath();</span><br><span class="line"><span class="number">2</span>、画一个半圆</span><br><span class="line">    pen.beginPath();</span><br><span class="line">    pen.arc(<span class="number">250</span>,<span class="number">250</span>,<span class="number">250</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI);</span><br><span class="line">    pen.fill()</span><br><span class="line">    pen.closePath();</span><br><span class="line"><span class="number">3</span>、画一段圆弧（不填充）</span><br><span class="line">    pen.beginPath();</span><br><span class="line">    pen.arc(<span class="number">250</span>,<span class="number">250</span>,<span class="number">250</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI);</span><br><span class="line">    pen.stroke()</span><br><span class="line">    pen.closePath();</span><br></pre></td></tr></table></figure>
+<p>c. 路径矩形</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ctx.beginPath()</span><br><span class="line"><span class="comment">//路径矩形</span></span><br><span class="line">ctx.rect(x,y,width,height)</span><br><span class="line"><span class="comment">//给矩形描边</span></span><br><span class="line">ctx.stroke();</span><br><span class="line"><span class="comment">//给矩形填充</span></span><br><span class="line">ctx.fill();</span><br><span class="line"><span class="comment">//以上，可以实现一个描边+填充的矩形，可以代替最开始学的空心矩形和实心矩形</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="上色填充-描边-边框粗细"><a class="markdownIt-Anchor" href="#上色填充-描边-边框粗细">#</a> 上色：填充、描边、边框粗细</h2>
+<ol>
+<li>
+<p>修改描边的颜色</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在画东西之前就要先设置颜色</span></span><br><span class="line">pen.strokeStyle=<span class="string">&quot;合法的颜色名&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改边框粗细</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pen.lineWidth=<span class="string">&quot;数值&quot;</span></span><br><span class="line"><span class="comment">//比如：</span></span><br><span class="line">pen.lineWidth=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改、添加填充色</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.fillStyle=<span class="string">&quot;合法的颜色名&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>描边路径</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在绘制路径后调用该方法</span></span><br><span class="line">pen.stroke();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>填充路径</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在绘制路径后调用该方法</span></span><br><span class="line">pen.fill();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>开始绘制路径，调用以下方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.beginPath();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>结束绘制路径，调用以下方法（不是必须的）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.closePath();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="线条样式属性和方法"><a class="markdownIt-Anchor" href="#线条样式属性和方法">#</a> 线条样式属性和方法</h2>
+<ol>
+<li>
+<p>线端样式<br>
+在画形状之前，先使用以下样式设置线端的外观</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pen.lineCap=<span class="string">&quot;butt|round|square&quot;</span></span><br><span class="line">			  默认   圆   方块</span><br><span class="line">              默认跟方块之间后者拔高了线条高度</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>线条相交样式<br>
+在画形状之前，先使用以下样式设置线端的外观。</p>
+<p>可以用在任意的闭合形状中（不一定是两条线）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pen.lineJoin=<span class="string">&quot;miter|round|bevel&quot;</span></span><br><span class="line">		      默认尖角|圆角|斜切角</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="虚线"><a class="markdownIt-Anchor" href="#虚线">#</a> 虚线</h2>
+<p>设置虚线（dashed）、点（dotted）</p>
+<ol>
+<li>
+<p>设置曲线的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pen.setLineDash([虚线长度，虚线间隔])</span><br><span class="line"><span class="comment">//例子1：设置虚线</span></span><br><span class="line">pen.setLineDash([<span class="number">10</span>,<span class="number">5</span>])</span><br><span class="line"><span class="comment">//例子2：设置点</span></span><br><span class="line">pen.lineCap=<span class="string">&quot;round&quot;</span>;</span><br><span class="line">pen.setLineDash([<span class="number">2</span>,<span class="number">15</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>设置虚线的偏移<br>
+目的：改变虚线的起始点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pen.lineDashOffset=<span class="number">5</span>;<span class="comment">//从最左侧往左偏移5像素开始画虚线-跟样式相反</span></span><br><span class="line">pen.lineDashOffset=-<span class="number">5</span>;<span class="comment">//从最左侧往右的方向偏移5像素</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="绘制文本"><a class="markdownIt-Anchor" href="#绘制文本">#</a> 绘制文本</h2>
+<ol>
+<li>
+<p>设置文本样式（属性）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置字体大小等，写法同css的font属性</span></span><br><span class="line">pen.font=<span class="string">&quot;32px  微软雅黑&quot;</span></span><br><span class="line"><span class="comment">//设置颜色（昨天的）</span></span><br><span class="line">pen.strokeStyle=<span class="string">&quot;颜色&quot;</span>;<span class="comment">//适用于空心文本</span></span><br><span class="line">pen.fillStyle=<span class="string">&quot;颜色&quot;</span>;<span class="comment">//实心文本</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>绘制空心文本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.strokeText(<span class="string">&quot;写点啥&quot;</span>,x,y,[最大宽度]);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>绘制实心文本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pen.fillText(<span class="string">&quot;写点啥&quot;</span>, x, y [, maxWidth])</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="渐变"><a class="markdownIt-Anchor" href="#渐变">#</a> 渐变</h2>
+<p>原理跟 PS 渐变一样。</p>
+<p>渐变是一种特殊的颜色。可将其当做普通颜色那样使用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 生成一个渐变（方法）容器-线性</span><br><span class="line"><span class="keyword">var</span> grd=pen.createLinearGradient(x0,y0,x1,y1);</span><br><span class="line">参数说明：</span><br><span class="line">a.x0,y0表示的是渐变的起始点</span><br><span class="line">b.x1,y1表示的是渐变的终点 </span><br><span class="line">也就是决定渐变如何拉（横着拉、斜着、竖着、<span class="number">45</span>度等）</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 生成色标（颜色）（方法）--</span><br><span class="line">语法：grd.addColorStop(<span class="string">&#x27;位置&#x27;</span>,<span class="string">&#x27;颜色&#x27;</span>)</span><br><span class="line"><span class="comment">//0表示起点..0.1 0.2 ...1表示开始与结束之间的位置，配置颜色，取值范围为0~1</span></span><br><span class="line">grd.addColorStop(<span class="number">0</span>,<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">grd.addColorStop(<span class="number">0.5</span>,<span class="string">&#x27;green&#x27;</span>)</span><br><span class="line">grd.addColorStop(<span class="number">1</span>,<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 将渐变当做颜色赋值给其他可以添加颜色的属性，比如</span><br><span class="line">pen.fillStyle=grd;</span><br></pre></td></tr></table></figure>
+<h2 id="绘制读入一张图片"><a class="markdownIt-Anchor" href="#绘制读入一张图片">#</a> 绘制（读入）一张图片</h2>
+<p>本身不生成图片，而是导入并加工图片。</p>
+<h3 id="图片来源"><a class="markdownIt-Anchor" href="#图片来源">#</a> 图片来源</h3>
+<ol>
+<li>写 img 标签，并且在 canvas 中导入</li>
+<li>动态通过 createElement 方法生成一张图片对象，并且导入</li>
+</ol>
+<h3 id="如何绘制导入"><a class="markdownIt-Anchor" href="#如何绘制导入">#</a> 如何绘制（导入）</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>保留原本图片大小--最简单的写法</span><br><span class="line">pen.drawImage(img对象,x,y)</span><br><span class="line">参数说明：</span><br><span class="line">	x,y表示起点</span><br><span class="line"><span class="number">2.</span>将图片绘制在指定大小范围内--中级</span><br><span class="line">pen.drawImage(img对象,x,y,w,h)</span><br><span class="line">参数说明：</span><br><span class="line">	x,y表示起点</span><br><span class="line">	w,h表示用来显示图片的区域的大小（可能会缩放图片）</span><br><span class="line"><span class="number">3.</span>裁剪原图片，并且绘制在指定范围内--复杂的最全的写法</span><br><span class="line">pen.drawImage(img对象,x0,y0,w0,h0,x1,y1,w1,h1);</span><br><span class="line">参数说明：</span><br><span class="line">	x0,y0,w0,h0表示原始图片从何处切割，切割多大</span><br><span class="line">	x1,y1,w1,h1表示将截取的图粘贴到画布的何处和大小</span><br></pre></td></tr></table></figure>
+<h2 id="canvas实例"><a class="markdownIt-Anchor" href="#canvas实例">#</a> canvas 实例</h2>
+<h3 id="笑脸"><a class="markdownIt-Anchor" href="#笑脸">#</a> 笑脸</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;作业1&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #canvas&#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            right: 0;</span><br><span class="line">            margin:100px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;625&quot; height&#x3D;&quot;625&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var canvas&#x3D;document.getElementById(&quot;canvas&quot;);</span><br><span class="line">        var pen&#x3D;canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        &#x2F;&#x2F; 画大脸盘子</span><br><span class="line">        pen.lineWidth&#x3D;5;</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(315,315,250,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">        &#x2F;&#x2F; 画笑脸</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(315,315,125,0,Math.PI);</span><br><span class="line">        pen.stroke();</span><br><span class="line">        &#x2F;&#x2F; 画眼睛</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(250,250,8,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(375,250,8,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="机器猫"><a class="markdownIt-Anchor" href="#机器猫">#</a> 机器猫</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;作业2&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #canvas&#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            right: 0;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;620&quot; height&#x3D;&quot;620&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var canvas&#x3D;document.getElementById(&quot;canvas&quot;);</span><br><span class="line">        var pen&#x3D;canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        &#x2F;&#x2F; 开始画大脸盘子</span><br><span class="line">        pen.lineWidth&#x3D;5;</span><br><span class="line">        pen.strokeStyle&#x3D;&quot;#4d4f50&quot;;</span><br><span class="line">        pen.fillStyle&#x3D;&quot;#07beea&quot;;</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(315,315,188,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">        pen.fill();</span><br><span class="line">        &#x2F;&#x2F; 开始画腮帮子</span><br><span class="line">        pen.lineWidth&#x3D;3;</span><br><span class="line">        pen.fillStyle&#x3D;&quot;#fff&quot;;</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(315,340,123,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">        pen.fill();</span><br><span class="line">        &#x2F;&#x2F; 开始画眼睛</span><br><span class="line">        pen.lineWidth&#x3D;4;</span><br><span class="line">        pen.fillStyle&#x3D;&quot;#fff&quot;;</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.strokeRect(245,226,65,35)</span><br><span class="line">        pen.fillRect(245,226,65,35)</span><br><span class="line">        pen.strokeRect(317,226,65,35)</span><br><span class="line">        pen.fillRect(317,226,65,35)</span><br><span class="line">        pen.closePath();</span><br><span class="line">        &#x2F;&#x2F; 开始画眼珠子</span><br><span class="line">        pen.fillStyle&#x3D;&quot;#000000&quot;;</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(278,243,12,0,2*Math.PI);</span><br><span class="line">        pen.arc(350,243,12,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.fill();</span><br><span class="line">        &#x2F;&#x2F; 开始画大红鼻子</span><br><span class="line">        pen.lineWidth&#x3D;2;</span><br><span class="line">        pen.strokeStyle&#x3D;&quot;#000&quot;;</span><br><span class="line">        pen.fillStyle&#x3D;&quot;#ff0000&quot;;</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(313,295,26,0,2*Math.PI);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.fill();</span><br><span class="line">        pen.stroke();</span><br><span class="line">        &#x2F;&#x2F; 画小嘴中线</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.moveTo(313,320)</span><br><span class="line">        pen.lineTo(313,420)</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">        &#x2F;&#x2F; 画微笑</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        pen.arc(315,330,89,30*Math.PI&#x2F;180,150*Math.PI&#x2F;180);</span><br><span class="line">        pen.stroke();</span><br><span class="line">        &#x2F;&#x2F; 画胡须</span><br><span class="line">        pen.beginPath();</span><br><span class="line">        &#x2F;&#x2F; 左边</span><br><span class="line">        pen.moveTo(275,328);</span><br><span class="line">        pen.lineTo(193,328);</span><br><span class="line">        pen.moveTo(275,338);</span><br><span class="line">        pen.lineTo(193,358);</span><br><span class="line">        pen.moveTo(275,318);</span><br><span class="line">        pen.lineTo(193,300);</span><br><span class="line">        &#x2F;&#x2F; 右边</span><br><span class="line">        pen.moveTo(439,328);</span><br><span class="line">        pen.lineTo(357,328);</span><br><span class="line">        pen.moveTo(439,358);</span><br><span class="line">        pen.lineTo(357,338);</span><br><span class="line">        pen.moveTo(439,300);</span><br><span class="line">        pen.lineTo(357,318);</span><br><span class="line">        pen.closePath();</span><br><span class="line">        pen.stroke();</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="随机颜色色块"><a class="markdownIt-Anchor" href="#随机颜色色块">#</a> 随机颜色色块</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;作业3&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #canvas &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            right: 0;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;800&quot; height&#x3D;&quot;800&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var canvas &#x3D; document.getElementById(&quot;canvas&quot;);</span><br><span class="line">        var pen &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        setInterval(function () &#123;</span><br><span class="line">            for (var i &#x3D; 0; i &lt; 8; i++) &#123;</span><br><span class="line">                for (var j &#x3D; 0; j &lt; 8; j +&#x3D; 2) &#123;</span><br><span class="line">                    pen.fillStyle &#x3D; randomColor();</span><br><span class="line">                    i % 2 !&#x3D; 0 ? pen.fillRect(100 * j + 100, 100 * i, 100, 100) : pen.fillRect(100 * j, 100 * i,100, 100);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, 500)</span><br><span class="line">        function randomColor() &#123;</span><br><span class="line">            var arr &#x3D; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]</span><br><span class="line">            var c &#x3D; &#39;&#39;</span><br><span class="line">            for (var i &#x3D; 0; i &lt; 6; i++) &#123;</span><br><span class="line">                c +&#x3D; arr[Math.round(Math.random() * 15)]</span><br><span class="line">            &#125;</span><br><span class="line">            return &quot;#&quot; + c;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="七彩虹伞"><a class="markdownIt-Anchor" href="#七彩虹伞">#</a> 七彩虹伞</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;作业1&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #canvas &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            right: 0;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;500&quot; height&#x3D;&quot;800&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var canvas &#x3D; document.getElementById(&quot;canvas&quot;);</span><br><span class="line">        var pen &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        &#x2F;&#x2F; 彩虹七色小伞</span><br><span class="line">        var rainbow &#x3D; [&quot;#FF0000&quot;,&quot;#FF7F00&quot;,&quot;#FFFF00&quot;,&quot;#00FF00&quot;,&quot;#00FFFF&quot;,&quot;#0000FF&quot;,&quot;#871F78&quot;]</span><br><span class="line">        for (var i &#x3D; 0; i &lt; 7; i++) &#123;</span><br><span class="line">            pen.fillStyle &#x3D; pen.strokeStyle &#x3D; rainbow[i];</span><br><span class="line">            &#x2F;&#x2F; 伞盖</span><br><span class="line">            pen.beginPath();</span><br><span class="line">            pen.arc(30 + 70 * i, 140, 30, Math.PI, 2 * Math.PI);</span><br><span class="line">            pen.closePath();</span><br><span class="line">            pen.fill();</span><br><span class="line">            &#x2F;&#x2F; 伞柄</span><br><span class="line">            pen.beginPath();</span><br><span class="line">            pen.moveTo(30 + 70 * i, 140);</span><br><span class="line">            pen.lineTo(30 + 70 * i, 187);</span><br><span class="line">            pen.closePath();</span><br><span class="line">            pen.stroke();</span><br><span class="line">            &#x2F;&#x2F; 伞把</span><br><span class="line">            pen.beginPath();</span><br><span class="line">            pen.arc(26 + 70 * i, 187, 4, 0, Math.PI);</span><br><span class="line">            pen.stroke();</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 随机变颜色的七个小伞</span><br><span class="line">        &#x2F;&#x2F; setInterval(function () &#123;</span><br><span class="line">        &#x2F;&#x2F;     for (var i &#x3D; 0; i &lt; 7; i++) &#123;</span><br><span class="line">        &#x2F;&#x2F;         pen.fillStyle &#x3D; pen.strokeStyle &#x3D; randomColor();</span><br><span class="line">        &#x2F;&#x2F;         &#x2F;&#x2F; 伞盖</span><br><span class="line">        &#x2F;&#x2F;         pen.beginPath();</span><br><span class="line">        &#x2F;&#x2F;         pen.arc(30 + 70 * i, 40, 30, Math.PI, 2 * Math.PI);</span><br><span class="line">        &#x2F;&#x2F;         pen.closePath();</span><br><span class="line">        &#x2F;&#x2F;         pen.fill();</span><br><span class="line">        &#x2F;&#x2F;         &#x2F;&#x2F; 伞柄</span><br><span class="line">        &#x2F;&#x2F;         pen.beginPath();</span><br><span class="line">        &#x2F;&#x2F;         pen.moveTo(30 + 70 * i, 40);</span><br><span class="line">        &#x2F;&#x2F;         pen.lineTo(30 + 70 * i, 87);</span><br><span class="line">        &#x2F;&#x2F;         pen.closePath();</span><br><span class="line">        &#x2F;&#x2F;         pen.stroke();</span><br><span class="line">        &#x2F;&#x2F;         &#x2F;&#x2F; 伞把</span><br><span class="line">        &#x2F;&#x2F;         pen.beginPath();</span><br><span class="line">        &#x2F;&#x2F;         pen.arc(26 + 70 * i, 87, 4, 0, Math.PI);</span><br><span class="line">        &#x2F;&#x2F;         pen.stroke();</span><br><span class="line">        &#x2F;&#x2F;     &#125;</span><br><span class="line">        &#x2F;&#x2F; &#125;, 1000)</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 生成随机颜色的方法</span><br><span class="line">        function randomColor() &#123;</span><br><span class="line">            var arr &#x3D; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]</span><br><span class="line">            var c &#x3D; &#39;&#39;</span><br><span class="line">            for (var i &#x3D; 0; i &lt; 6; i++) &#123;</span><br><span class="line">                c +&#x3D; arr[Math.round(Math.random() * 15)]</span><br><span class="line">            &#125;</span><br><span class="line">            return &quot;#&quot; + c;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="忍者水果"><a class="markdownIt-Anchor" href="#忍者水果">#</a> 忍者水果</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;作业4&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #canvas &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            right: 0;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;640&quot; height&#x3D;&quot;480&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;** @type &#123;HTMLCanvasElement&#125; *&#x2F;</span><br><span class="line">        var canvas &#x3D; document.getElementById(&quot;canvas&quot;);</span><br><span class="line">        var pen &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        var img1 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img1.src &#x3D; &quot;images&#x2F;background.jpg&quot;;</span><br><span class="line">        var img2 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img2.src &#x3D; &quot;images&#x2F;home-mask.png&quot;;</span><br><span class="line">        var img3 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img3.src &#x3D; &quot;images&#x2F;logo.png&quot;;</span><br><span class="line">        var img4 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img4.src &#x3D; &quot;images&#x2F;ninja.png&quot;;</span><br><span class="line">        var img5 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img5.src &#x3D; &quot;images&#x2F;home-desc.png&quot;;</span><br><span class="line">        var img6 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img6.src &#x3D; &quot;images&#x2F;dojo.png&quot;;</span><br><span class="line">        var img7 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img7.src &#x3D; &quot;images&#x2F;fruit&#x2F;peach.png&quot;;</span><br><span class="line">        var img8 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img8.src &#x3D; &quot;images&#x2F;new.png&quot;;</span><br><span class="line">        var img9 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img9.src &#x3D; &quot;images&#x2F;new-game.png&quot;;</span><br><span class="line">        var img10 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img10.src &#x3D; &quot;images&#x2F;fruit&#x2F;sandia.png&quot;;</span><br><span class="line">        var img11 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img11.src &#x3D; &quot;images&#x2F;quit.png&quot;;</span><br><span class="line">        var img12 &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">        img12.src &#x3D; &quot;images&#x2F;boom.png&quot;;</span><br><span class="line">        window.onload &#x3D; function () &#123;</span><br><span class="line">            pen.drawImage(img1, 0, 0);</span><br><span class="line">            pen.drawImage(img2, 0, 0);</span><br><span class="line">            pen.drawImage(img3, 20, 0);</span><br><span class="line">            pen.drawImage(img4, 316, 45);</span><br><span class="line">            pen.drawImage(img5, 8, 125);</span><br><span class="line">            &#x2F;&#x2F; 旋转桃子</span><br><span class="line">            pen.translate(20, 278);</span><br><span class="line">            pen.rotate(-Math.PI &#x2F; 8);</span><br><span class="line">            pen.drawImage(img6, 0, 0);</span><br><span class="line">            pen.rotate(Math.PI &#x2F; 8);</span><br><span class="line">            pen.translate(-20, -278);</span><br><span class="line">            pen.translate(165, 352);</span><br><span class="line">            pen.rotate(-Math.PI);</span><br><span class="line">            pen.drawImage(img7, 0, 0);</span><br><span class="line">            pen.rotate(Math.PI);</span><br><span class="line">            pen.translate(-165, -352);</span><br><span class="line">            pen.drawImage(img8, 162, 211);</span><br><span class="line">            &#x2F;&#x2F; 画西瓜</span><br><span class="line">            pen.translate(220, 274);</span><br><span class="line">            pen.rotate(-Math.PI &#x2F; 8);</span><br><span class="line">            pen.drawImage(img9, 0, 0);</span><br><span class="line">            pen.rotate(Math.PI &#x2F; 8);</span><br><span class="line">            pen.translate(-220, -274);</span><br><span class="line">            pen.translate(320, 386);</span><br><span class="line">            pen.rotate(1.4*Math.PI );</span><br><span class="line">            pen.drawImage(img10, 0, 0);</span><br><span class="line">            pen.rotate(-1.4*Math.PI );</span><br><span class="line">            pen.translate(-320, -386);</span><br><span class="line">            &#x2F;&#x2F; 画炸弹</span><br><span class="line">            pen.translate(579, 480);</span><br><span class="line">            pen.rotate(1.2*Math.PI);</span><br><span class="line">            pen.drawImage(img11,0, 0);</span><br><span class="line">            pen.rotate(-1.2*Math.PI);</span><br><span class="line">            pen.translate(-579, -480);</span><br><span class="line">            pen.translate(509, 330);</span><br><span class="line">            pen.rotate(-Math.PI&#x2F;112);</span><br><span class="line">            pen.drawImage(img12,0, 0,88,88);</span><br><span class="line">            pen.rotate(Math.PI&#x2F;112);</span><br><span class="line">            pen.translate(-509, -330);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/canvas/" rel="tag"><i class="ic i-tag"></i> canvas</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-31 11:54:14" itemprop="dateModified" datetime="2021-03-31T11:54:14+08:00">2021-03-31</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/09/07/canvas%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="canvas基础入门">https://serena-tz.github.io/2020/09/07/canvas基础入门/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/09/05/H5%E8%A1%A8%E5%8D%95/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclx6phq6j20zk0m8e36.jpg" title="H5表单">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>H5表单</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/09/09/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis3attqj20zk0m8k7l.jpg" title="多媒体标签">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>多媒体标签</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E7%94%BB%E5%B8%83"><span class="toc-number">1.</span> <span class="toc-text"> 新建画布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E7%94%BB%E7%AC%94%E5%B7%A5%E5%85%B7js"><span class="toc-number">2.</span> <span class="toc-text"> 准备画笔（工具）—js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%BB%E7%82%B9%E4%BB%80%E4%B9%88%E5%AD%A6%E4%B9%A0pen%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7%E4%BA%86"><span class="toc-number">3.</span> <span class="toc-text"> 画点什么–学习 pen 的方法和属性了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%89%B2%E5%A1%AB%E5%85%85-%E6%8F%8F%E8%BE%B9-%E8%BE%B9%E6%A1%86%E7%B2%97%E7%BB%86"><span class="toc-number">4.</span> <span class="toc-text"> 上色：填充、描边、边框粗细</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%9D%A1%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text"> 线条样式属性和方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E7%BA%BF"><span class="toc-number">6.</span> <span class="toc-text"> 虚线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E6%96%87%E6%9C%AC"><span class="toc-number">7.</span> <span class="toc-text"> 绘制文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%90%E5%8F%98"><span class="toc-number">8.</span> <span class="toc-text"> 渐变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E8%AF%BB%E5%85%A5%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87"><span class="toc-number">9.</span> <span class="toc-text"> 绘制（读入）一张图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%9D%A5%E6%BA%90"><span class="toc-number">9.1.</span> <span class="toc-text"> 图片来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%BB%98%E5%88%B6%E5%AF%BC%E5%85%A5"><span class="toc-number">9.2.</span> <span class="toc-text"> 如何绘制（导入）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#canvas%E5%AE%9E%E4%BE%8B"><span class="toc-number">10.</span> <span class="toc-text"> canvas 实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%91%E8%84%B8"><span class="toc-number">10.1.</span> <span class="toc-text"> 笑脸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E7%8C%AB"><span class="toc-number">10.2.</span> <span class="toc-text"> 机器猫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E9%A2%9C%E8%89%B2%E8%89%B2%E5%9D%97"><span class="toc-number">10.3.</span> <span class="toc-text"> 随机颜色色块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E5%BD%A9%E8%99%B9%E4%BC%9E"><span class="toc-number">10.4.</span> <span class="toc-text"> 七彩虹伞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%8D%E8%80%85%E6%B0%B4%E6%9E%9C"><span class="toc-number">10.5.</span> <span class="toc-text"> 忍者水果</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">39</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/09/05/H5%E8%A1%A8%E5%8D%95/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/09/09/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/12/json%E8%A7%A3%E6%9E%90/" title="json解析">json解析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="git零基础入门">git零基础入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/07/canvas%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="canvas基础入门">canvas基础入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/19/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" title="响应式布局">响应式布局</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" title="vue小胡子语法、v-bind">vue小胡子语法、v-bind</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" title="移动端开发">移动端开发</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/21/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8C%87%E4%BB%A4/" title="微信小程序的指令">微信小程序的指令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/30/Bootstrap%E7%9A%84%E7%BB%84%E4%BB%B6/" title="Bootstrap表格、表单、巨幕、信息提示框、进度条、卡片">Bootstrap表格、表单、巨幕、信息提示框、进度条、卡片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/14/ajax%E4%BC%A0%E5%8F%82%E5%AE%9E%E7%8E%B0%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%90%8C%E7%9A%84json%E6%95%B0%E6%8D%AE%E3%80%81JQ%E7%89%88ajax/" title="ajax传参实现获取不同的json数据、JQ版ajax">ajax传参实现获取不同的json数据、JQ版ajax</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/17/echarts%E5%9B%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/" title="echarts图表的基本应用">echarts图表的基本应用</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/09/07/canvas基础入门/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
