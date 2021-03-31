@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>阳光果苏 • Posts by &#34;php&#34; tag</title>
+        <link>https://Serena-tz.github.io</link>
+        <description>心情笔记 &amp; 编程日记</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 09 Oct 2020 09:18:05 +0800</pubDate>
+        <lastBuildDate>Fri, 09 Oct 2020 09:18:05 +0800</lastBuildDate>
+        <category>Bootstrap</category>
+        <category>ajax</category>
+        <category>jquery</category>
+        <category>SEO</category>
+        <category>PHP</category>
+        <category>echarts</category>
+        <category>git</category>
+        <category>manual</category>
+        <category>json</category>
+        <category>ES6</category>
+        <category>web应用</category>
+        <category>服务器</category>
+        <category>小程序</category>
+        <category>数据库</category>
+        <category>跨域</category>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/10/09/PHP%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/</guid>
+            <title>PHP获取数据</title>
+            <link>https://serena-tz.github.io/2020/10/09/PHP%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/</link>
+            <category>PHP</category>
+            <pubDate>Fri, 09 Oct 2020 09:18:05 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;后端开发用什么语言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后端开发用什么语言&#34;&gt;#&lt;/a&gt; 后端开发用什么语言&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;java  数据库    网站 | 软件   .jsp&lt;/li&gt;
+&lt;li&gt;.net  微软的 + 数据库    网站 | 软件  .aspx&lt;/li&gt;
+&lt;li&gt;node.js 咱们前端也可以做后端开发   网站 | 软件&lt;/li&gt;
+&lt;li&gt;php 轻巧容易学，网站 | APP | 微信小程序  mysql  .php&lt;/li&gt;
+&lt;li&gt;python 处理 Excel 表格  AI，大数据  .py&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;大部分语言都是相同的，只是写法不一样。&lt;/p&gt;
+&lt;h2 id=&#34;php环境配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#php环境配置&#34;&gt;#&lt;/a&gt; PHP 环境配置&lt;/h2&gt;
+&lt;p&gt;php 文件的后缀 .php&lt;/p&gt;
+&lt;p&gt;PHP 文件可以写什么：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;php 最大的特点是混编：即可以在 PHP 文件中嵌入前端代码&lt;/li&gt;
+&lt;li&gt;也可以写纯 PHP 代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所有的后端语言都不能直接在浏览器中运行，都需要编译。需要安装编译软件，PHP 编译的软件：&lt;strong&gt;PHPstudy 或 xampp 或 wampp&lt;/strong&gt; (他们都是集成开发环境 — 傻瓜式的编译软件，不需要配环境，直接可以使用，还附带数据库)&lt;/p&gt;
+&lt;h2 id=&#34;如何使用phpstudy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何使用phpstudy&#34;&gt;#&lt;/a&gt; 如何使用 PHPstudy&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;开启&lt;strong&gt; Apache&lt;/strong&gt; 服务，即可解析 PHP 文件&lt;/li&gt;
+&lt;li&gt;将 PHP 文件放到特定文件夹（服务器）你的 PHPstudy 安装目录下的 www 文件夹（该文件夹在浏览器使用 localhost 来表示）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PHP 语法更多：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucnVub29iLmNvbS9waHAvcGhwLXR1dG9yaWFsLmh0bWw=&#34;&gt;https://www.runoob.com/php/php-tutorial.html&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

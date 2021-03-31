@@ -4,15 +4,21 @@
     <title>阳光果苏 • Posts by &#34;web应用&#34; tag</title>
     <link href="https://Serena-tz.github.io" />
     <updated>2020-11-27T08:33:31.000Z</updated>
-    <category term="manual" />
-    <category term="SEO" />
+    <category term="Bootstrap" />
+    <category term="ajax" />
     <category term="jquery" />
+    <category term="SEO" />
+    <category term="PHP" />
     <category term="echarts" />
     <category term="git" />
-    <category term="服务器" />
+    <category term="manual" />
+    <category term="json" />
     <category term="ES6" />
     <category term="web应用" />
+    <category term="服务器" />
     <category term="小程序" />
+    <category term="数据库" />
+    <category term="跨域" />
     <entry>
         <id>https://serena-tz.github.io/2020/11/27/web%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83/</id>
         <title>web应用的打包和发布</title>

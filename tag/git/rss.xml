@@ -7,15 +7,21 @@
         <language>zh-CN</language>
         <pubDate>Sat, 17 Oct 2020 15:57:42 +0800</pubDate>
         <lastBuildDate>Sat, 17 Oct 2020 15:57:42 +0800</lastBuildDate>
-        <category>manual</category>
-        <category>SEO</category>
+        <category>Bootstrap</category>
+        <category>ajax</category>
         <category>jquery</category>
+        <category>SEO</category>
+        <category>PHP</category>
         <category>echarts</category>
         <category>git</category>
-        <category>服务器</category>
+        <category>manual</category>
+        <category>json</category>
         <category>ES6</category>
         <category>web应用</category>
+        <category>服务器</category>
         <category>小程序</category>
+        <category>数据库</category>
+        <category>跨域</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
             <title>git零基础入门</title>

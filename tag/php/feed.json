@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "阳光果苏 • All posts by \"php\" tag",
+    "description": "心情笔记 & 编程日记",
+    "home_page_url": "https://Serena-tz.github.io",
+    "items": [
+        {
+            "id": "https://serena-tz.github.io/2020/10/09/PHP%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/",
+            "url": "https://serena-tz.github.io/2020/10/09/PHP%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/",
+            "title": "PHP获取数据",
+            "date_published": "2020-10-09T01:18:05.000Z",
+            "content_html": "<h2 id=\"后端开发用什么语言\"><a class=\"markdownIt-Anchor\" href=\"#后端开发用什么语言\">#</a> 后端开发用什么语言</h2>\n<ol>\n<li>java  数据库    网站 | 软件   .jsp</li>\n<li>.net  微软的 + 数据库    网站 | 软件  .aspx</li>\n<li>node.js 咱们前端也可以做后端开发   网站 | 软件</li>\n<li>php 轻巧容易学，网站 | APP | 微信小程序  mysql  .php</li>\n<li>python 处理 Excel 表格  AI，大数据  .py</li>\n</ol>\n<p>大部分语言都是相同的，只是写法不一样。</p>\n<h2 id=\"php环境配置\"><a class=\"markdownIt-Anchor\" href=\"#php环境配置\">#</a> PHP 环境配置</h2>\n<p>php 文件的后缀 .php</p>\n<p>PHP 文件可以写什么：</p>\n<ol>\n<li>php 最大的特点是混编：即可以在 PHP 文件中嵌入前端代码</li>\n<li>也可以写纯 PHP 代码</li>\n</ol>\n<p>所有的后端语言都不能直接在浏览器中运行，都需要编译。需要安装编译软件，PHP 编译的软件：<strong>PHPstudy 或 xampp 或 wampp</strong> (他们都是集成开发环境 — 傻瓜式的编译软件，不需要配环境，直接可以使用，还附带数据库)</p>\n<h2 id=\"如何使用phpstudy\"><a class=\"markdownIt-Anchor\" href=\"#如何使用phpstudy\">#</a> 如何使用 PHPstudy</h2>\n<ol>\n<li>开启<strong> Apache</strong> 服务，即可解析 PHP 文件</li>\n<li>将 PHP 文件放到特定文件夹（服务器）你的 PHPstudy 安装目录下的 www 文件夹（该文件夹在浏览器使用 localhost 来表示）</li>\n</ol>\n<p>PHP 语法更多：<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cucnVub29iLmNvbS9waHAvcGhwLXR1dG9yaWFsLmh0bWw=\">https://www.runoob.com/php/php-tutorial.html</span></p>\n",
+            "tags": [
+                "PHP"
+            ]
+        }
+    ]
+}

@@ -7,15 +7,21 @@
         <language>zh-CN</language>
         <pubDate>Mon, 19 Oct 2020 16:04:53 +0800</pubDate>
         <lastBuildDate>Mon, 19 Oct 2020 16:04:53 +0800</lastBuildDate>
-        <category>manual</category>
-        <category>SEO</category>
+        <category>Bootstrap</category>
+        <category>ajax</category>
         <category>jquery</category>
+        <category>SEO</category>
+        <category>PHP</category>
         <category>echarts</category>
         <category>git</category>
-        <category>服务器</category>
+        <category>manual</category>
+        <category>json</category>
         <category>ES6</category>
         <category>web应用</category>
+        <category>服务器</category>
         <category>小程序</category>
+        <category>数据库</category>
+        <category>跨域</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/10/19/%E5%88%9D%E5%A7%8BES6%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
             <title>初始ES6新特性</title>

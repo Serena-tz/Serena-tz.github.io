@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Serena-tz.github.io</id>
+    <title>阳光果苏 • Posts by &#34;数据库&#34; tag</title>
+    <link href="https://Serena-tz.github.io" />
+    <updated>2020-10-10T01:30:19.000Z</updated>
+    <category term="Bootstrap" />
+    <category term="ajax" />
+    <category term="jquery" />
+    <category term="SEO" />
+    <category term="PHP" />
+    <category term="echarts" />
+    <category term="git" />
+    <category term="manual" />
+    <category term="json" />
+    <category term="ES6" />
+    <category term="web应用" />
+    <category term="服务器" />
+    <category term="小程序" />
+    <category term="数据库" />
+    <category term="跨域" />
+    <entry>
+        <id>https://serena-tz.github.io/2020/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+        <title>数据库的概念、如何管理数据库</title>
+        <link rel="alternate" href="https://serena-tz.github.io/2020/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+        <content type="html">&lt;p&gt;后端语言需要结合数据库才能做成一个动态的网站&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;java  配套的数据库 Oracle  甲骨文&lt;/li&gt;
+&lt;li&gt;.net  配套的数据库 SQL2000，SQL2008&lt;/li&gt;
+&lt;li&gt;PHP 配套数据库 MySQL&lt;/li&gt;
+&lt;li&gt;Python  可以跟任意数据库搭配&lt;/li&gt;
+&lt;li&gt;Nodejs 也有数据库，也可以跟任意数据库搭配，芒果数据库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;数据库的概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库的概念&#34;&gt;#&lt;/a&gt; 数据库的概念&lt;/h2&gt;
+&lt;p&gt;放数据的仓库。数据库长什么样子，很像 Excel 表格。数据库保存到本地，就像保存了一份 Excel 文件，后缀名一般是.sql。一个数据库一般有若干个数据库表组成，一个数据库至少要有一个表。集成开发环境就已经帮我们安装好了数据库，可以直接使用。&lt;/p&gt;
+&lt;h2 id=&#34;如何去管理数据库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何去管理数据库&#34;&gt;#&lt;/a&gt; 如何去管理数据库？&lt;/h2&gt;
+&lt;p&gt;即对数据库进行一系列的增删改查、导入、导出等处理&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用可视化的界面来管理&lt;br&gt;
+在 PHPstudy 中安装数据库管理工具：phpmyadmin，点击管理或者直接在浏览器中输入&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdC9waHBNeUFkbWluNC44LjUv&#34;&gt; http://localhost/phpMyAdmin4.8.5/&lt;/span&gt;  phpmystudy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdC9waHBNeUFkbWluLw==&#34;&gt;http://localhost/phpMyAdmin/&lt;/span&gt;  xampp&lt;/p&gt;
+&lt;p&gt;字段 就是列&lt;br&gt;
+一条记录指的就是一行&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用 SQL 语言来管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;SQL：结构化查询语言，是一门通用的用来使用各种指令对数据库进行增删改查的语言。&lt;/p&gt;
+&lt;p&gt;操作数据库其实就是对数据库信息进行增删改查&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;增加&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;insert&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;into&lt;/span&gt; 表名 &lt;span class=&#34;keyword&#34;&gt;values&lt;/span&gt; (字段名);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;比如：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;insert&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;into&lt;/span&gt; reg &lt;span class=&#34;keyword&#34;&gt;values&lt;/span&gt; (id,uname,pwd,&lt;span class=&#34;type&#34;&gt;time&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;语法&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;update 表名 &lt;span class=&#34;keyword&#34;&gt;set&lt;/span&gt; 字段名 &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; 新的值&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;语法&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;update 表名 &lt;span class=&#34;keyword&#34;&gt;set&lt;/span&gt; 字段名 &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; 新的值 &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; 条件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;例子：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;如： update reg &lt;span class=&#34;keyword&#34;&gt;set&lt;/span&gt; sex &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;男&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; id &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;或： update student &lt;span class=&#34;keyword&#34;&gt;set&lt;/span&gt; sex &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;男&amp;#x27;&lt;/span&gt;,subject &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;string&#34;&gt;&amp;#x27;语文&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; id &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;或： update student &lt;span class=&#34;keyword&#34;&gt;set&lt;/span&gt; price &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; price&lt;span class=&#34;operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; price&lt;span class=&#34;operator&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;500&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;或： update student &lt;span class=&#34;keyword&#34;&gt;set&lt;/span&gt; price &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; price&lt;span class=&#34;operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; price&lt;span class=&#34;operator&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;500&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;and&lt;/span&gt; brand &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;string&#34;&gt;&amp;#x27;小米&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查询&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; 表名&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;语法：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; 表名  [&lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; 条件]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;如：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; uname &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; reg&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; reg&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;语法：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; 表名 &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; 条件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;如：&lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; reg &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; id&lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;或：&lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; reg &lt;span class=&#34;keyword&#34;&gt;where&lt;/span&gt; age&lt;span class=&#34;operator&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;or&lt;/span&gt; age&lt;span class=&#34;operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="数据库" />
+        <updated>2020-10-10T01:30:19.000Z</updated>
+    </entry>
+</feed>

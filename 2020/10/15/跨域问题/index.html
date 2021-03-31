@@ -1,0 +1,566 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="跨域" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
+
+
+
+  <title>
+跨域问题 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">跨域问题
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-10-15 10:12:52">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-10-15T10:12:52+08:00">2020-10-15</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="如何获取数据地址"><a class="markdownIt-Anchor" href="#如何获取数据地址">#</a> 如何获取数据地址</h2>
+<ol>
+<li>
+<p>后端。后端会给一个详细的接口文档地址给前端。</p>
+</li>
+<li>
+<p>第三方的地址。因为浏览器的同源策略，在 A 站点中去拿 B 站点的数据会产生一个跨域问题。</p>
+</li>
+</ol>
+<h2 id="如何解决跨域问题"><a class="markdownIt-Anchor" href="#如何解决跨域问题">#</a> 如何解决跨域问题</h2>
+<ol>
+<li>
+<p>让后端开放数据访问权限（除非是自己公司的网站，否则成功概率几乎为零）</p>
+</li>
+<li>
+<p>使用 JSONP（json with padding）光明正大的拿（用来解决跨域问题的最有效的方式）</p>
+<p>将 json 数据填充到函数参数中以达到传递的目的。<strong>JSONP 与 JSON 地址的唯一区别是前者用函数调用包裹者的</strong>。如果是 jsonp 就用 jsonp 来解决，否则用常规的 ajax 来解决。</p>
+</li>
+</ol>
+<h2 id="如何知道数据地址"><a class="markdownIt-Anchor" href="#如何知道数据地址">#</a> 如何知道数据地址</h2>
+<p>只有知道数据地址才能使用 jsonp 来解决。jsonp 也是用来获取数据的一种方式。</p>
+<ol>
+<li>
+<p>向后端要</p>
+</li>
+<li>
+<p>通过网络面板自己去找数据</p>
+</li>
+</ol>
+<p>如何获取的步骤<br>
+ a、打开浏览器的开发者工具<br>
+ b、清空网络面板<br>
+ c、发送一个请求，比如输入内容，看看网络面板的请求状态，找下有没有 xhr 等<br>
+ d、点击打开该网络地址，看看是不是数据源</p>
+<ol start="3">
+<li>通过公开的渠道或别人告诉你的地址来获取<br>
+ 1、3 是拿来主义。2 才是技巧</li>
+</ol>
+<h2 id="使用js的方式来解决跨域问题"><a class="markdownIt-Anchor" href="#使用js的方式来解决跨域问题">#</a> 使用 JS 的方式来解决跨域问题</h2>
+<p>实现原理：<br>
+1. 使用 script 标签引入数据（将 json 数据放入函数调用的参数中）<br>
+2. 定义函数，函数即为上面的函数<br>
+ 3. 在定义的函数内使用传过来的数据<br>
+ 4. 优化：将 script 带来的数据作为动态加载，只有需要的时候才请求，这样就做到了类似于 ajax 的效果</p>
+<h2 id="使用jq的方式来解决跨域问题"><a class="markdownIt-Anchor" href="#使用jq的方式来解决跨域问题">#</a> 使用 JQ 的方式来解决跨域问题</h2>
+<p>ajax 和 jsonp 合二为一了。使用 JQ 来获取 jsonp 易如反掌，仅需要在昨天的 ajax 模板中添加两个配置项即可搞定。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="comment">//默认是get，所以可以省略，等价于open()</span></span><br><span class="line">   type:<span class="string">&quot;get|post&quot;</span>,</span><br><span class="line">   <span class="comment">//等价于open()</span></span><br><span class="line">   url:<span class="string">&quot;数据地址&quot;</span>,</span><br><span class="line">   dataType:<span class="string">&quot;jsonp&quot;</span>,</span><br><span class="line">   jsonp:<span class="string">&quot;回调函数的属性名，一般填cb,默认是callback&quot;</span>,</span><br><span class="line">    <span class="comment">//该方法只会在数据获取成功后才会执行，</span></span><br><span class="line">    <span class="comment">//等价于onreadystatechange,if(xhr.readyState==4&amp;&amp;xhr.status==200)</span></span><br><span class="line">   success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//写如何解析json的代码</span></span><br><span class="line">        <span class="built_in">console</span>.log(res);<span class="comment">//res就是真对象，甚至可以不需要使用JSON.parse()</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//原来的JS是没有的，除非写else语句，可选</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;);  </span><br></pre></td></tr></table></figure>
+<h2 id="解决跨域问题实例"><a class="markdownIt-Anchor" href="#解决跨域问题实例">#</a> 解决跨域问题实例</h2>
+<h3 id="原生的js"><a class="markdownIt-Anchor" href="#原生的js">#</a> 原生的 js</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;!-- </span><br><span class="line">        原生可以跨域的标签有：</span><br><span class="line">        link:</span><br><span class="line">        a</span><br><span class="line">        video</span><br><span class="line">        audio</span><br><span class="line">        img</span><br><span class="line">        script 它被选中了用来解决跨域问题</span><br><span class="line">     --&gt;</span><br><span class="line"></span><br><span class="line">     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;ipt&quot; value&#x3D;&quot;&quot;&gt;</span><br><span class="line">     &lt;button id&#x3D;&quot;btn&quot;&gt;搜索建议&lt;&#x2F;button&gt;</span><br><span class="line">     &lt;ul id&#x3D;&quot;list&quot;&gt;</span><br><span class="line">         &lt;!-- &lt;li&gt;jut&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">     &lt;&#x2F;ul&gt;</span><br><span class="line">     &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F;为了让它看起来更加像ajax，我们可以将调用的代码改为动态生成</span><br><span class="line">    var btn&#x3D;document.getElementById(&quot;btn&quot;);</span><br><span class="line">    var ipt&#x3D;document.getElementById(&quot;ipt&quot;);</span><br><span class="line">    &#x2F;&#x2F; 点击了按钮后再调用函数体的代码</span><br><span class="line">    &#x2F;&#x2F; 按需加载</span><br><span class="line">    btn.onclick&#x3D;function()&#123;</span><br><span class="line">        &#x2F;&#x2F; 动态生成一个script标签，该标签中的src地址就是jsonp地址，其实本质上就是在调用一个函数，并且返回了该数据</span><br><span class="line">         var os&#x3D;document.createElement(&quot;script&quot;);</span><br><span class="line">            &#x2F;&#x2F; os.src&#x3D;&quot;jsonp&#x2F;baidu1.js&quot;;</span><br><span class="line">            os.src&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;sugrec?pre&#x3D;1&amp;p&#x3D;3&amp;ie&#x3D;utf-8&amp;json&#x3D;1&amp;prod&#x3D;pc&amp;from&#x3D;pc_web&amp;sugsid&#x3D;32617,1445,32723,32231,7517,32117,31709,32761,26350&amp;wd&#x3D;&quot;+ipt.value+&quot;&amp;req&#x3D;2&amp;csor&#x3D;1&amp;cb&#x3D;jQuery1102032309254967909795_1602724322024&amp;_&#x3D;1602724322031&quot;;</span><br><span class="line">            document.body.appendChild(os);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;写函数体，fun</span><br><span class="line">     function jQuery1102032309254967909795_1602724322024(data)&#123;</span><br><span class="line">        console.log(data);&#x2F;&#x2F;拿到了外部JS的数据</span><br><span class="line">        &#x2F;&#x2F;数组就数据，拿到后就可以开始干活了</span><br><span class="line">        &#x2F;&#x2F;跟之前解析数据一样的做法了</span><br><span class="line">        &#x2F;&#x2F;</span><br><span class="line">        var json&#x3D;data.g;</span><br><span class="line">        console.log(json);</span><br><span class="line">        var html&#x3D;&quot;&quot;;</span><br><span class="line">        for(var i&#x3D;0;i&lt;json.length;i++)&#123;</span><br><span class="line">            html+&#x3D;&#96;&lt;li&gt;$&#123;json[i].q&#125;&lt;&#x2F;li&gt;&#96;;</span><br><span class="line">        &#125;</span><br><span class="line">        document.getElementById(&quot;list&quot;).innerHTML&#x3D;html;</span><br><span class="line">        </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     &lt;&#x2F;script&gt;</span><br><span class="line">        </span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="改回调函数名"><a class="markdownIt-Anchor" href="#改回调函数名">#</a> 改回调函数名</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;!-- </span><br><span class="line">        原生可以跨域的标签有：</span><br><span class="line">        link:</span><br><span class="line">        a</span><br><span class="line">        video</span><br><span class="line">        audio</span><br><span class="line">        img</span><br><span class="line">        script 它被选中了用来解决跨域问题</span><br><span class="line">     --&gt;</span><br><span class="line"></span><br><span class="line">     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;ipt&quot; value&#x3D;&quot;&quot;&gt;</span><br><span class="line">     &lt;button id&#x3D;&quot;btn&quot;&gt;搜索建议&lt;&#x2F;button&gt;</span><br><span class="line">     &lt;ul id&#x3D;&quot;list&quot;&gt;</span><br><span class="line">         &lt;!-- &lt;li&gt;jut&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">     &lt;&#x2F;ul&gt;</span><br><span class="line">     &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F;为了让它看起来更加像ajax，我们可以将调用的代码改为动态生成</span><br><span class="line">    var btn&#x3D;document.getElementById(&quot;btn&quot;);</span><br><span class="line">    var ipt&#x3D;document.getElementById(&quot;ipt&quot;);</span><br><span class="line">    &#x2F;&#x2F; 点击了按钮后再调用函数体的代码</span><br><span class="line">    &#x2F;&#x2F; 按需加载</span><br><span class="line">    btn.onclick&#x3D;function()&#123;</span><br><span class="line">        &#x2F;&#x2F; 动态生成一个script标签，该标签中的src地址就是jsonp地址，其实本质上就是在调用一个函数，并且返回了该数据</span><br><span class="line">         var os&#x3D;document.createElement(&quot;script&quot;);</span><br><span class="line">            &#x2F;&#x2F; os.src&#x3D;&quot;jsonp&#x2F;baidu1.js&quot;;</span><br><span class="line">            os.src&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;sugrec?pre&#x3D;1&amp;p&#x3D;3&amp;ie&#x3D;utf-8&amp;json&#x3D;1&amp;prod&#x3D;pc&amp;from&#x3D;pc_web&amp;sugsid&#x3D;32617,1445,32723,32231,7517,32117,31709,32761,26350&amp;wd&#x3D;&quot;+ipt.value+&quot;&amp;req&#x3D;2&amp;csor&#x3D;1&amp;cb&#x3D;fun&amp;_&#x3D;1602724322031&quot;;</span><br><span class="line">            document.body.appendChild(os);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; cb &#x3D;&#x3D;&#x3D; callback  回调</span><br><span class="line">            &#x2F;&#x2F; callback  </span><br><span class="line">            &#x2F;&#x2F; 改调用的函数名的</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;写函数体，fun</span><br><span class="line">     function fun(data)&#123;</span><br><span class="line">        console.log(data);&#x2F;&#x2F;拿到了外部JS的数据</span><br><span class="line">        &#x2F;&#x2F;数组就数据，拿到后就可以开始干活了</span><br><span class="line">        &#x2F;&#x2F;跟之前解析数据一样的做法了</span><br><span class="line">        &#x2F;&#x2F;</span><br><span class="line">        var json&#x3D;data.g;</span><br><span class="line">        console.log(json);</span><br><span class="line">        var html&#x3D;&quot;&quot;;</span><br><span class="line">        for(var i&#x3D;0;i&lt;json.length;i++)&#123;</span><br><span class="line">            html+&#x3D;&#96;&lt;li&gt;$&#123;json[i].q&#125;&lt;&#x2F;li&gt;&#96;;</span><br><span class="line">        &#125;</span><br><span class="line">        document.getElementById(&quot;list&quot;).innerHTML&#x3D;html;</span><br><span class="line">        </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     &lt;&#x2F;script&gt;</span><br><span class="line">        </span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="用jq的方式"><a class="markdownIt-Anchor" href="#用jq的方式">#</a> 用 jq 的方式</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;jquery-3.5.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;ipt&quot; value&#x3D;&quot;&quot;&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;list&quot;&gt;</span><br><span class="line">        &lt;!-- &lt;li&gt;jut&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    $(&quot;#ipt&quot;).blur(function()&#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            &#x2F;&#x2F;默认是get，所以可以省略，等价于open()</span><br><span class="line">           type:&quot;get&quot;,</span><br><span class="line">           &#x2F;&#x2F;等价于open()</span><br><span class="line">           url:&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;sugrec?pre&#x3D;1&amp;p&#x3D;3&amp;ie&#x3D;utf-8&amp;json&#x3D;1&amp;prod&#x3D;pc&amp;from&#x3D;pc_web&amp;sugsid&#x3D;32617,1445,32723,32231,7517,32117,31709,32761,26350&amp;wd&#x3D;&quot;+$(&quot;#ipt&quot;).val()+&quot;&amp;req&#x3D;2&amp;csor&#x3D;1&amp;cb&#x3D;fun&amp;_&#x3D;1602724322031&quot;,</span><br><span class="line">           &#x2F;&#x2F; 如果是JSONP地址，则添加dataType属性</span><br><span class="line">           dataType:&quot;jsonp&quot;,</span><br><span class="line">           &#x2F;&#x2F; jsonp属性指的是url数据地址的用来填写回调函数的那个属性名</span><br><span class="line">           &#x2F;&#x2F; 一般写cb,callback等，默认是callback</span><br><span class="line">           jsonp:&quot;cb&quot;,</span><br><span class="line">            &#x2F;&#x2F;该方法只会在数据获取成功后才会执行，</span><br><span class="line">            &#x2F;&#x2F;等价于onreadystatechange,if(xhr.readyState&#x3D;&#x3D;4&amp;&amp;xhr.status&#x3D;&#x3D;200)</span><br><span class="line">           success:function(res)&#123;</span><br><span class="line">                &#x2F;&#x2F;写如何解析json的代码</span><br><span class="line">                console.log(res);&#x2F;&#x2F;res就是真对象，甚至可以不需要使用JSON.parse()</span><br><span class="line">                var json&#x3D;res.g;</span><br><span class="line">                console.log(json);</span><br><span class="line">                var html&#x3D;&quot;&quot;;</span><br><span class="line">                for(var i&#x3D;0;i&lt;json.length;i++)&#123;</span><br><span class="line">                    html+&#x3D;&#96;&lt;li&gt;$&#123;json[i].q&#125;&lt;&#x2F;li&gt;&#96;;</span><br><span class="line">                &#125;</span><br><span class="line">                document.getElementById(&quot;list&quot;).innerHTML&#x3D;html;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#x2F;&#x2F;原来的JS是没有的，除非写else语句，可选</span><br><span class="line">            error:function(err)&#123;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;); </span><br><span class="line">    &#125;); </span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/%E8%B7%A8%E5%9F%9F/" rel="tag"><i class="ic i-tag"></i> 跨域</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-31 10:22:14" itemprop="dateModified" datetime="2021-03-31T10:22:14+08:00">2021-03-31</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="跨域问题">https://serena-tz.github.io/2020/10/15/跨域问题/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/10/14/ajax%E4%BC%A0%E5%8F%82%E5%AE%9E%E7%8E%B0%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%90%8C%E7%9A%84json%E6%95%B0%E6%8D%AE%E3%80%81JQ%E7%89%88ajax/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipey84bjtj20zk0m8hdt.jpg" title="ajax传参实现获取不同的json数据、JQ版ajax">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>ajax传参实现获取不同的json数据、JQ版ajax</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexw3o58j20zk0m8e81.jpg" title="git零基础入门">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>git零基础入门</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%9C%B0%E5%9D%80"><span class="toc-number">1.</span> <span class="toc-text"> 如何获取数据地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text"> 如何解决跨域问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%95%B0%E6%8D%AE%E5%9C%B0%E5%9D%80"><span class="toc-number">3.</span> <span class="toc-text"> 如何知道数据地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8js%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9D%A5%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text"> 使用 JS 的方式来解决跨域问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jq%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9D%A5%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text"> 使用 JQ 的方式来解决跨域问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E5%AE%9E%E4%BE%8B"><span class="toc-number">6.</span> <span class="toc-text"> 解决跨域问题实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%94%9F%E7%9A%84js"><span class="toc-number">6.1.</span> <span class="toc-text"> 原生的 js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%90%8D"><span class="toc-number">6.2.</span> <span class="toc-text"> 改回调函数名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8jq%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">6.3.</span> <span class="toc-text"> 用 jq 的方式</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">26</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">15</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/10/14/ajax%E4%BC%A0%E5%8F%82%E5%AE%9E%E7%8E%B0%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%90%8C%E7%9A%84json%E6%95%B0%E6%8D%AE%E3%80%81JQ%E7%89%88ajax/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/21/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8C%87%E4%BB%A4/" title="微信小程序的指令">微信小程序的指令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/28/Bootstrap%E7%9A%84%E6%A0%85%E6%A0%BC%E5%8C%96%E7%B3%BB%E7%BB%9F/" title="Bootstrap的栅格化系统">Bootstrap的栅格化系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
+</div>
+
+    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/" title="jquery的事件">jquery的事件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/29/Bootstrap%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/" title="Bootstrap全局样式">Bootstrap全局样式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="jQueryDOM节点操作2节点的增删改查">jQueryDOM节点操作2节点的增删改查</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/" title="分类于 操作步骤">操作步骤</a>
+</div>
+
+    <span><a href="/2020/04/01/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/27/web%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83/" title="web应用的打包和发布">web应用的打包和发布</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/19/%E5%88%9D%E5%A7%8BES6%E6%96%B0%E7%89%B9%E6%80%A7/" title="初始ES6新特性">初始ES6新特性</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="jquery工具方法和开发插件">jquery工具方法和开发插件</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/10/15/跨域问题/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

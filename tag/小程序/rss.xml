@@ -7,15 +7,21 @@
         <language>zh-CN</language>
         <pubDate>Sun, 22 Nov 2020 16:13:49 +0800</pubDate>
         <lastBuildDate>Sun, 22 Nov 2020 16:13:49 +0800</lastBuildDate>
-        <category>manual</category>
-        <category>SEO</category>
+        <category>Bootstrap</category>
+        <category>ajax</category>
         <category>jquery</category>
+        <category>SEO</category>
+        <category>PHP</category>
         <category>echarts</category>
         <category>git</category>
-        <category>服务器</category>
+        <category>manual</category>
+        <category>json</category>
         <category>ES6</category>
         <category>web应用</category>
+        <category>服务器</category>
         <category>小程序</category>
+        <category>数据库</category>
+        <category>跨域</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-php%E5%AE%9E%E7%8E%B0%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
             <title>微信小程序+php实现今日头条小程序</title>
