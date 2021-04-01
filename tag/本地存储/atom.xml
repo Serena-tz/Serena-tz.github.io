@@ -8,30 +8,30 @@
     <category term="CSS3" />
     <category term="H5" />
     <category term="jquery" />
-    <category term="PHP" />
     <category term="SEO" />
-    <category term="axios" />
+    <category term="PHP" />
     <category term="ajax" />
+    <category term="axios" />
     <category term="echarts" />
     <category term="git" />
     <category term="manual" />
     <category term="json" />
-    <category term="less" />
     <category term="node" />
     <category term="vue" />
     <category term="npm" />
-    <category term="web应用" />
+    <category term="less" />
     <category term="webpack" />
-    <category term="响应式布局" />
+    <category term="web应用" />
     <category term="ES6" />
     <category term="地理位置" />
+    <category term="响应式布局" />
     <category term="服务器" />
-    <category term="小程序" />
     <category term="弹性盒子" />
+    <category term="小程序" />
     <category term="数据库" />
     <category term="本地存储" />
-    <category term="移动端" />
     <category term="跨域" />
+    <category term="移动端" />
     <category term="canvas" />
     <entry>
         <id>https://serena-tz.github.io/2020/09/10/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/</id>

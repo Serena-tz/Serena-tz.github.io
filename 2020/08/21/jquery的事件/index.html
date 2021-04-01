@@ -1,0 +1,600 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="jquery" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/">
+
+
+
+  <title>
+jquery的事件 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">jquery的事件
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-21 15:29:02">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-21T15:29:02+08:00">2020-08-21</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="js中绑事件的方式"><a class="markdownIt-Anchor" href="#js中绑事件的方式">#</a> JS 中绑事件的方式</h2>
+<ol>
+<li>
+<p>行内事件 - 不建议使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">JS :</span><br><span class="line">&lt;div onclick&#x3D;&quot;fun&quot;&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">JQ: </span><br><span class="line">&lt;div onclick&#x3D;&quot;fun&quot;&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">js:</span><br><span class="line">function()&#123;</span><br><span class="line">    &#x2F;&#x2F;函数体</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>给标签的事件属性添加事件处理函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">JS :</span><br><span class="line">节点.onclick&#x3D;function()&#123;&#125;</span><br><span class="line">解绑：节点.onclick&#x3D;null;</span><br><span class="line">JQ：</span><br><span class="line">节点.click(function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F;解绑</span><br><span class="line">节点.unbind(&quot;click&quot;);</span><br><span class="line">不一样的地方：JQ将事件属性改为函数，并且去掉on</span><br><span class="line"></span><br><span class="line">缺点：绑定相同类型的事件时，会冲突</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>事件监听（官方推荐）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">JS:</span><br><span class="line">节点.addEventListener(&quot;事件类型&quot;,事件函数,[true]);&#x2F;&#x2F;第三个参数可选，指定是冒泡还是捕获，默认是冒泡</span><br><span class="line">可以给一个元素绑定不同的事件类型，也可以给同一个事件类型绑定不同的事件处理函数</span><br><span class="line">div.addEventListener(&quot;click&quot;,fun1&#x3D;function()&#123;&#125;)</span><br><span class="line">div.addEventListener(&quot;click&quot;,fun2&#x3D;function()&#123;&#125;)</span><br><span class="line">div.addEventListener(&quot;dbclick&quot;,fun1&#x3D;function()&#123;&#125;)</span><br><span class="line">缺点：</span><br><span class="line">    只支持现代浏览器，在IE6、7中不支持。</span><br><span class="line">div.attachEvent();</span><br><span class="line">&#x2F;&#x2F;解绑</span><br><span class="line">节点.removeEventListener();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>JQ 中用来绑定事件的新的方式： <strong>bind</strong>。</p>
+<p>怎么写都不会有冲突，解决了兼容性问题。</p>
+<p>解绑：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(&quot;div&quot;).unbind(&quot;click&quot;);&#x2F;&#x2F;解绑所有</span><br><span class="line">$(&quot;div&quot;).unbind(&quot;click&quot;,fun1)&#x2F;&#x2F;解绑某一个点击事件的处理函数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">JQ:</span><br><span class="line">$(&quot;div&quot;).bind(&quot;不带on的事件类型&quot;,事件处理函数);&#x2F;&#x2F;标准的写法,大部分情况下只需要这一种方式</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2、假设要给他添加不同的事件处理函数，或事件类型,链式操作</span><br><span class="line">$(&quot;div&quot;).bind(&quot;click&quot;,function()&#123;&#125;).bind(&quot;mouseout&quot;,function()&#123;&#125;);</span><br><span class="line">&#x2F;&#x2F;3、还可以改成对象的写法</span><br><span class="line">$(&quot;div&quot;).bind(&#123;</span><br><span class="line">    &quot;click&quot;:function()&#123;&#125;,</span><br><span class="line">    &quot;dblclick&quot;:function()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F;4、还可以将多个事件类型写在一块，共用一个事件处理函数</span><br><span class="line">$(&quot;div&quot;).bind(&quot;click dblclick&quot;,function()&#123;&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>JQ<strong> 特有事件之</strong>：one 事件（一次性事件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">JS:</span><br><span class="line">$(&quot;div&quot;).one(function()&#123;</span><br><span class="line">    alert(&quot;这辈子只会弹一次&quot;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>JQ 之特有事件：hover 事件（合成事件）。hover==mouseover+mouseout</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;二级菜单：鼠标摸到div上，让ul显示，离开则隐藏</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;ul&gt;&lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">JQ：</span><br><span class="line">$(&quot;div&quot;).hover(函数1，函数2);</span><br><span class="line">&#x2F;&#x2F;解释：</span><br><span class="line">1、函数1表示鼠标摸上去时会触发</span><br><span class="line">2、函数2表示鼠标离开时触发</span><br><span class="line">$(&quot;div&quot;).hover(function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;,function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>trigger 模拟鼠标点击，模拟人为的点击（使用场景不多）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div&gt;111&lt;&#x2F;div&gt;</span><br><span class="line">JQ:</span><br><span class="line">$(&quot;div&quot;).click(function()&#123;</span><br><span class="line">    alert(111);</span><br><span class="line">    &#x2F;&#x2F;写之前的代码</span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F;自动帮我点击那个div触发函数</span><br><span class="line">&#x2F;&#x2F;原先是必须用户亲手点击了那个div才会触发函数，现在有了trigger后，可以自动触发</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">    $(&quot;div&quot;).trigger(&quot;click&quot;);</span><br><span class="line">&#125;,2000);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>解绑事件。以上所有的事件解绑时，通通使用 unbind</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(&quot;div&quot;).unbind(&quot;click&quot;);</span><br><span class="line">$(&quot;div&quot;).unbind(&quot;click&quot;,fun);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="官方推荐的绑事件的方式-on"><a class="markdownIt-Anchor" href="#官方推荐的绑事件的方式-on">#</a> 官方推荐的绑事件的方式  ON</h2>
+<p>作用：</p>
+<ol>
+<li>普通用法，用法同 bind 一模一样</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).bind(<span class="string">&quot;事件类型&quot;</span>,事件函数);</span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).on(<span class="string">&quot;事件类型&quot;</span>,事件函数);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>
+<p>给未来的元素绑事件（由 JS 动态生成的元素）（重点）—<strong> 事件委托</strong></p>
+<p>如果用常规的方法给未来的元素绑事件：</p>
+</li>
+<li>
+<p>使用行内事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(&quot;div&quot;).append($(&#39;&lt;p onclick&#x3D;&quot;fun(this)&quot;&gt;&lt;&#x2F;p&gt;&#39;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>生成元素后再重新绑定一次。现在使用 ON 可以一步到位：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(&quot;父元素&quot;).on(&quot;事件类型&quot;,&quot;要绑定事件的元素&quot;,事件处理函数);</span><br><span class="line">原本是给li绑定，现在将li标签置后，将父元素写前面。</span><br><span class="line">$(&quot;ul&quot;).on(&quot;click&quot;,&quot;li&quot;,function()&#123;&#125;);</span><br><span class="line"></span><br><span class="line">含义：将原本发生在li标签上的事情冒泡给父级，让父级来监听子集身上发生的事情。即子元素的事件委托给父级来监听。</span><br><span class="line"></span><br><span class="line">注意：父元素可以写任意的祖先元素，即不一定是直接父级。</span><br><span class="line"></span><br><span class="line">on绑定的事件解绑：</span><br><span class="line">使用off</span><br><span class="line">$(&quot;div&quot;).off();</span><br><span class="line">$(&quot;div&quot;).off(&quot;click&quot;);</span><br><span class="line">$(&quot;div&quot;).off(&quot;click&quot;,fun1);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="event对象"><a class="markdownIt-Anchor" href="#event对象">#</a> event 对象</h2>
+<p>event 对象是用来记录事件发生时的所有细节 - 黑盒子，行车记录仪。</p>
+<p>注意：不同的事件类型的 event 对象的属性有所不同。</p>
+<p>直接通过 console.log (event) 即可</p>
+<p>JS 的 event 和 JQ 的 event 几乎一致。JQ 的 event 没有兼容性问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//之前的写法</span></span><br><span class="line">odiv.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//火狐需要写成window.event(曾经)</span></span><br><span class="line">    <span class="keyword">var</span> e=e||<span class="built_in">window</span>.event; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;div&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event);</span><br><span class="line">&#125;);</span><br><span class="line">回顾：</span><br><span class="line"><span class="number">1</span>、写在那里：直接写在事件处理函数的参数中</span><br><span class="line"><span class="number">2</span>、如何使用：直接在事件处理函数中使用</span><br><span class="line"><span class="number">3</span>、何时生效：事件触发时，即执行了事件处理函数时</span><br><span class="line"><span class="number">4</span>、何时销毁：事件处理函数执行完毕后</span><br><span class="line"></span><br><span class="line">常用的event的属性和方法：</span><br><span class="line"><span class="number">1</span>、坐标</span><br><span class="line">	可视点坐标：</span><br><span class="line">	e.clientX;<span class="comment">// 鼠标点击的那个点到浏览器可视范围的x坐标</span></span><br><span class="line">	e.clientY;<span class="comment">//鼠标点击的那个点到浏览器可视范围的Y坐标</span></span><br><span class="line">	绝对坐标点：(JS也可用)</span><br><span class="line">    e.pageX;</span><br><span class="line">	e.pageY;</span><br><span class="line"><span class="number">2</span>、键盘、鼠标值</span><br><span class="line">	e.keyCode  键盘</span><br><span class="line">	e.which    鼠标按键：<span class="number">1</span>左，<span class="number">2</span>中，<span class="number">3</span>表示右</span><br><span class="line"><span class="number">3</span>、事件冒泡和捕获</span><br><span class="line">	e.stopPropagation();</span><br><span class="line"><span class="number">4</span>、阻止默认事件</span><br><span class="line">	e.preventDefault();</span><br><span class="line">小技巧：如果要同时阻止冒泡+默认事件，可以直接写<span class="keyword">return</span> <span class="literal">false</span>；</span><br></pre></td></tr></table></figure>
+<h2 id="跟位置有关的方法"><a class="markdownIt-Anchor" href="#跟位置有关的方法">#</a> 跟位置有关的方法</h2>
+<ol>
+<li>
+<p>元素的绝对距离（到定位父级的距离）<br>
+JQ 中获取的距离其实就是绝对距离，即 JQ 帮我们封装好了那个 getPos ();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">JS：odiv.offsetLeft;&#x2F;&#x2F;到定位父级的距离</span><br><span class="line">	odiv.offsetTop;&#x2F;&#x2F;</span><br><span class="line">JQ:求出就是绝对距离，跟定位父级无关</span><br><span class="line">&#x2F;&#x2F;$(&quot;div&quot;).offset()就相当于是之前我们写的getPos().top</span><br><span class="line">$(&quot;div&quot;).offset().left;&#x2F;&#x2F;该元素到浏览器最左侧（到HTML）的绝对距离</span><br><span class="line">$(&quot;div&quot;).offset().top;&#x2F;&#x2F;最顶部的绝对距离</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>元素的可见宽、占位宽</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">JS:</span><br><span class="line">样式宽：div.style.width</span><br><span class="line">	 div.style.height</span><br><span class="line">JQ： $(<span class="string">&quot;div&quot;</span>).width();</span><br><span class="line">	 $(<span class="string">&quot;div&quot;</span>).height();</span><br><span class="line">JS:</span><br><span class="line">可视宽： div.clientWidth</span><br><span class="line">		div.clientHeight</span><br><span class="line">JQ:		$(<span class="string">&quot;div&quot;</span>).innerWidth();</span><br><span class="line">		$(<span class="string">&quot;div&quot;</span>).innerHeight();</span><br><span class="line">JS：</span><br><span class="line">占位宽： div.offsetWidth</span><br><span class="line">		div.offsetHeight</span><br><span class="line">JQ:     $(<span class="string">&quot;div&quot;</span>).outerWidth();</span><br><span class="line">		$(<span class="string">&quot;div&quot;</span>).outerHeight();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>元素的滚动条相关的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">被卷去的高度：</span><br><span class="line">JS：document.scrollTop;</span><br><span class="line">JQ:$(document).scrollTop();</span><br><span class="line"></span><br><span class="line">被卷去的宽度</span><br><span class="line">JS：document.scrollLeft;</span><br><span class="line">JQ:$(document).scrollLeft();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="on-事件委托实例"><a class="markdownIt-Anchor" href="#on-事件委托实例">#</a> on - 事件委托实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script type&#x3D;&quot;&quot; src&#x3D;&quot;js&#x2F;jquery-3.5.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        .red&#123;</span><br><span class="line">            background-color: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;text&quot;  name&#x3D;&quot;&quot;&gt;</span><br><span class="line">    &lt;button&gt;添加新闻&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;!-- Kong --&gt;</span><br><span class="line">        &lt;!-- &lt;li&gt;111&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    $(&quot;button&quot;).on(&quot;click&quot;,function()&#123;</span><br><span class="line">        var $text&#x3D;$(&quot;input&quot;).val();</span><br><span class="line">        $(&quot;ul&quot;).append($(&quot;&lt;li&gt;&quot;+$text+&quot;&lt;&#x2F;li&gt;&quot;));</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 需求：要给li标签绑定事件，点击li标签后，加高亮</span><br><span class="line">    $(&quot;body&quot;).on(&quot;click&quot;,&#39;li&#39;,function()&#123;</span><br><span class="line">        &#x2F;&#x2F; this的指向依然不变，还是指向发生事件的元素本身</span><br><span class="line">        $(this).toggleClass(&#39;red&#39;);</span><br><span class="line">    &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="jq拖拽实例"><a class="markdownIt-Anchor" href="#jq拖拽实例">#</a> jq 拖拽实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script type&#x3D;&quot;&quot; src&#x3D;&quot;js&#x2F;jquery-3.5.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        #box&#123;</span><br><span class="line">            background-color: red;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 10px;</span><br><span class="line">            top: 10px</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;box&quot;&gt;</span><br><span class="line">        </span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    $(&quot;#box&quot;).on(&quot;mousedown&quot;,function(event) &#123;</span><br><span class="line">        &#x2F;&#x2F; 鼠标点击时，就要确定disx,和disy</span><br><span class="line">        var disx&#x3D;event.clientX-$(this).offset().left;</span><br><span class="line">        var disy&#x3D;event.clientY-$(this).offset().top;</span><br><span class="line">        &#x2F;&#x2F; 鼠标拖拽时</span><br><span class="line">        $(this).on(&quot;mousemove&quot;,function(e)&#123;</span><br><span class="line">            console.log(e.clientX);</span><br><span class="line">            $(this).css(&#123;</span><br><span class="line">                left:e.clientX-disx+&quot;px&quot;,</span><br><span class="line">                top:e.clientY-disy+&quot;px&quot;,</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F; 鼠标抬起时</span><br><span class="line">        $(this).on(&quot;mouseup&quot;,function()&#123;</span><br><span class="line">            $(this).off(&#39;mousemove&#39;);</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        console.log(disx);</span><br><span class="line">    &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="小球碰壁运动实例"><a class="markdownIt-Anchor" href="#小球碰壁运动实例">#</a> 小球碰壁运动实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;作业1&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .box &#123;</span><br><span class="line">            width: 800px;</span><br><span class="line">            height: 500px;</span><br><span class="line">            border: 5px solid #000;</span><br><span class="line">            border-image: linear-gradient(skyblue, pink) 1 10;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .ball &#123;</span><br><span class="line">            width: 80px;</span><br><span class="line">            height: 80px;</span><br><span class="line">            border-radius: 50%;</span><br><span class="line">            background-image: linear-gradient(pink, lightblue);</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 0;</span><br><span class="line">            top: 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;ball&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;jquery-3.3.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(function () &#123;</span><br><span class="line">            var $box &#x3D; $(&quot;.box&quot;);</span><br><span class="line">            var $ball &#x3D; $(&quot;.ball&quot;);</span><br><span class="line">            var w &#x3D; $(&quot;.box&quot;).innerWidth();</span><br><span class="line">            var h &#x3D; $(&quot;.box&quot;).innerHeight();</span><br><span class="line">            var speedX &#x3D; speedY &#x3D; 5;</span><br><span class="line">            setInterval(function()&#123;</span><br><span class="line">                var left &#x3D; $ball.position().left;</span><br><span class="line">                var top &#x3D; $ball.position().top;</span><br><span class="line">                left +&#x3D; speedX</span><br><span class="line">                top +&#x3D; speedY</span><br><span class="line">                if (left &gt;&#x3D; w - $ball.outerWidth() || left &lt;&#x3D; 0) &#123;</span><br><span class="line">                    speedX *&#x3D; -1</span><br><span class="line">                &#125;</span><br><span class="line">                if (top &gt;&#x3D; h - $ball.outerHeight() || top &lt;&#x3D; 0) &#123;</span><br><span class="line">                    speedY *&#x3D; -1</span><br><span class="line">                &#125;</span><br><span class="line">                $ball.css(&quot;left&quot;, left + &quot;px&quot;)</span><br><span class="line">                $ball.css(&quot;top&quot;, top + &quot;px&quot;)</span><br><span class="line">            &#125;,8)</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="导航平滑滚动实例"><a class="markdownIt-Anchor" href="#导航平滑滚动实例">#</a> 导航平滑滚动实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .navBar &#123;</span><br><span class="line">            height: 42px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #nav &#123;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            background-color: #fff;</span><br><span class="line">            width: 100%;</span><br><span class="line">            padding: 10px 20px;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            border-bottom: 1px solid blue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #nav li &#123;</span><br><span class="line">            float: left;</span><br><span class="line">            border-right: 1px solid blue;</span><br><span class="line">            list-style: none;</span><br><span class="line">            padding: 0 20px;</span><br><span class="line">            border-left: 1px solid blue;</span><br><span class="line">            margin-left: -1px;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .scroll &#123;</span><br><span class="line">            border: 1px solid red;</span><br><span class="line">            height: 400px;</span><br><span class="line">            margin: 20px</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;*让nav固定的样式*&#x2F;</span><br><span class="line">        .fixed &#123;</span><br><span class="line">            position: fixed;</span><br><span class="line">            top: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;&lt;img src&#x3D;&quot;images&#x2F;head.jpg&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div&gt;&lt;img src&#x3D;&quot;images&#x2F;banner3.jpg&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;navBar&quot;&gt;</span><br><span class="line">        &lt;ul id&#x3D;&quot;nav&quot;&gt;</span><br><span class="line">            &lt;li&gt;导航1&lt;&#x2F;li&gt;</span><br><span class="line">            &lt;li&gt;导航2&lt;&#x2F;li&gt;</span><br><span class="line">            &lt;li&gt;导航3&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;wrapper&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;scroll&quot;&gt;导航1&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;scroll&quot;&gt;导航2&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;scroll&quot;&gt;导航3&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;img src&#x3D;&quot;images&#x2F;foot.jpg&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;jquery-3.3.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 这里实现代码</span><br><span class="line">        $(function () &#123;</span><br><span class="line">            var $nav &#x3D; $(&quot;#nav&quot;);</span><br><span class="line">            var $t &#x3D; $nav.offset().top;</span><br><span class="line">            var $d &#x3D; $(document);</span><br><span class="line">            &#x2F;&#x2F; 滚动条的吸附</span><br><span class="line">            $d.scroll(function () &#123;</span><br><span class="line">                $d.scrollTop() &gt;&#x3D; $t ? $nav.addClass(&quot;fixed&quot;) : $nav.removeClass(&quot;fixed&quot;);</span><br><span class="line">            &#125;);</span><br><span class="line">            &#x2F;&#x2F; 导航条的点击事件</span><br><span class="line">            $(&quot;#nav li&quot;).click(function () &#123;</span><br><span class="line">                $(&#39;body,html&#39;).animate(&#123; scrollTop: $(&quot;.wrapper .scroll:eq(&quot; + $(this).index() + &quot;)&quot;).offset().top - 45 &#125;, 800);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="游戏排序实例"><a class="markdownIt-Anchor" href="#游戏排序实例">#</a> 游戏排序实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        li &#123;</span><br><span class="line">            margin-bottom: 3px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        input &#123;</span><br><span class="line">            margin: 0 3px</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ul,</span><br><span class="line">        ol &#123;</span><br><span class="line">            padding-left: 20px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;jquery-3.3.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h4&gt;游戏排序&lt;&#x2F;h4&gt;</span><br><span class="line">    &lt;p&gt;输入你喜欢玩的游戏(每输入一次点击一次确定)：&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;&quot;&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;确定&quot; name&#x3D;&quot;btn&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;!-- &lt;li&gt;今晚吃鸡&amp;nbsp;&amp;nbsp;&lt;input type&#x3D;&quot;button&quot; name&#x3D;&quot;up&quot; value&#x3D;&quot;↑&quot;&gt;&lt;input type&#x3D;&quot;button&quot; name&#x3D;&quot;down&quot; value&#x3D;&quot;↓&quot;&gt;&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">    &lt;&#x2F;ol&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 这里写JQ代码</span><br><span class="line">        $(function () &#123;</span><br><span class="line">            var $text&#x3D;$(&#39;input[type&#x3D;&quot;text&quot;]&#39;);</span><br><span class="line">            var $btn&#x3D;$(&#39;input[value&#x3D;&quot;确定&quot;]&#39;);</span><br><span class="line">            var $ol&#x3D;$(&quot;ol&quot;)</span><br><span class="line">            &#x2F;&#x2F; 给确定按钮绑定单击事件</span><br><span class="line">            $btn.click(function()&#123;</span><br><span class="line">                var $val&#x3D;$text.val();</span><br><span class="line">                &#x2F;&#x2F; 文本框内容的非空判断</span><br><span class="line">                if(!$val)&#123;</span><br><span class="line">                    alert(&quot;您输入的游戏不能为空！&quot;);</span><br><span class="line">                    return;</span><br><span class="line">                &#125;</span><br><span class="line">                $ol.append(&#39;&lt;li&gt;&#39;+$val+&#39;&amp;nbsp;&amp;nbsp;&lt;input type&#x3D;&quot;button&quot; name&#x3D;&quot;up&quot; value&#x3D;&quot;↑&quot;&gt;&lt;input type&#x3D;&quot;button&quot; name&#x3D;&quot;down&quot; value&#x3D;&quot;↓&quot;&gt;&lt;&#x2F;li&gt;&#39;)</span><br><span class="line">                $text.val(&quot;&quot;);</span><br><span class="line">            &#125;);</span><br><span class="line">            &#x2F;&#x2F; 给向上按钮绑定单击事件</span><br><span class="line">            $ol.on(&quot;click&quot;,&#39;input[value&#x3D;&quot;↑&quot;]&#39;,function()&#123;</span><br><span class="line">                    $(this).parent().prev().before($(this).parent())</span><br><span class="line">            &#125;)</span><br><span class="line">            &#x2F;&#x2F;给向下按钮绑定单击事件</span><br><span class="line">            $ol.on(&quot;click&quot;,&#39;input[value&#x3D;&quot;↓&quot;]&#39;,function()&#123;</span><br><span class="line">                    $(this).parent().next().after($(this).parent())</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="拖动到底部触发事件实例"><a class="markdownIt-Anchor" href="#拖动到底部触发事件实例">#</a> 拖动到底部触发事件实例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">    #notice &#123;</span><br><span class="line">      display: inline-block;</span><br><span class="line">      margin-bottom: 12px;</span><br><span class="line">      border-radius: 5px;</span><br><span class="line">      width: 600px;</span><br><span class="line">      padding: 5px;</span><br><span class="line">      border: 2px #7FDF55 solid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #rules &#123;</span><br><span class="line">      width: 600px;</span><br><span class="line">      height: 130px;</span><br><span class="line">      padding: 5px;</span><br><span class="line">      border: #2A9F00 solid 2px;</span><br><span class="line">      border-radius: 5px;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;form name&#x3D;&quot;registration&quot;&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">      &lt;textarea id&#x3D;&quot;rules&quot;&gt;</span><br><span class="line">        众所周知：陌陌APP是一款约泡神器。所以您得知道以下协议：</span><br><span class="line"></span><br><span class="line">        北京陌陌科技有限公司（以下简称“陌陌科技”）在此特别提醒您（用户）在注册成为用户之前，请认真阅读本《用户协议》（以下简称“协议”），确保您充分理解本协议中各条款。请您审慎阅读并选择接受或不接受本协议。除非您接受本协议所有条款，否则您无权注册、登录或使用本协议所涉服务。您的注册、登录、使用等行为将视为对本协议的接受，并同意接受本协议各项条款的约束。</span><br><span class="line"></span><br><span class="line">本协议约定陌陌科技与用户之间关于“陌陌”软件服务（以下简称“服务”）的权利义务。“用户”是指注册、登录、使用本服务的个人。本协议可由陌陌科技随时更新，更新后的协议条款一旦公布即代替原来的协议条款，恕不再另行通知，用户可在本网站查阅最新版协议条款。在陌陌科技修改协议条款后，如果用户不接受修改后的条款，请立即停止使用陌陌科技提供的服务，用户继续使用陌陌科技提供的服务将被视为接受修改后的协议。</span><br><span class="line"></span><br><span class="line">一、帐号注册</span><br><span class="line">1、用户在使用本服务前需要注册一个“陌陌”帐号。“陌陌”帐号应当使用手机号码绑定注册，请用户使用尚未与“陌陌”帐号绑定的手机号码，以及未被陌陌科技根据本协议封禁的手机号码注册“陌陌”帐号。陌陌科技可以根据用户需求或产品需要对帐号注册和绑定的方式进行变更，而无须事先通知用户。</span><br><span class="line"></span><br><span class="line">2、“陌陌”系基于地理位置的移动社交产品，用户注册时应当授权陌陌科技公开及使用其地理位置信息方可成功注册“陌陌”帐号。故用户完成注册即表明用户同意陌陌科技提取、公开及使用用户的地理位置信息。如用户需要终止向其他用户公开其地理位置信息，可自行设置为隐身状态。</span><br><span class="line"></span><br><span class="line">3、鉴于“陌陌”帐号的绑定注册方式，您同意陌陌科技在注册时将使用您提供的手机号码及&#x2F;或自动提取您的手机号码及自动提取您的手机设备识别码等信息用于注册。</span><br><span class="line"></span><br><span class="line">4、在用户注册及使用本服务时，陌陌科技需要搜集能识别用户身份的个人信息以便陌陌科技可以在必要时联系用户，或为用户提供更好的使用体验。陌陌科技搜集的信息包括但不限于用户的姓名、性别、年龄、出生日期、身份证号、地址、学校情况、公司情况、所属行业、兴趣爱好、常出没的地方、个人说明；陌陌科技同意对这些信息的使用将受限于第三条用户个人隐私信息保护的约束。&lt;&#x2F;textarea&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">      &lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;accept&quot; id&#x3D;&quot;agree&quot; disabled&#x3D;&quot;disabled&quot; &#x2F;&gt;</span><br><span class="line">      &lt;label for&#x3D;&quot;agree&quot;&gt;别说了，我同意！&lt;&#x2F;label&gt;</span><br><span class="line">      &lt;input type&#x3D;&quot;submit&quot; id&#x3D;&quot;nextstep&quot; value&#x3D;&quot;下一步&quot; disabled&#x3D;&quot;disabled&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line">  &lt;&#x2F;form&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;jquery-3.3.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    $(function () &#123;</span><br><span class="line">      $(&quot;#rules&quot;).scroll(function () &#123;</span><br><span class="line">        if ($(this).scrollTop() + $(this).outerHeight() &gt;&#x3D; $(this)[0].scrollHeight) &#123;</span><br><span class="line">          $(&quot;#agree&quot;).removeAttr(&quot;disabled&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">        $(&quot;#agree&quot;).click(function () &#123;</span><br><span class="line">          if ($(&quot;#agree&quot;)[0].checked) &#123;</span><br><span class="line">            $(&quot;#nextstep&quot;).removeAttr(&quot;disabled&quot;);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/jquery/" rel="tag"><i class="ic i-tag"></i> jquery</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-31 10:48:42" itemprop="dateModified" datetime="2021-03-31T10:48:42+08:00">2021-03-31</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/" title="jquery的事件">https://serena-tz.github.io/2020/08/21/jquery的事件/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeubcbajj20zk0m8h1h.jpg" title="jQueryDOM节点操作2节点的增删改查">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>jQueryDOM节点操作2节点的增删改查</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/08/24/jquery%E7%9A%84%E7%89%B9%E6%95%88%E5%AE%9E%E7%8E%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciub8ja1j20zk0m81ky.jpg" title="jquery的特效实现">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>jquery的特效实现</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E4%B8%AD%E7%BB%91%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> JS 中绑事件的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%E7%9A%84%E7%BB%91%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F-on"><span class="toc-number">2.</span> <span class="toc-text"> 官方推荐的绑事件的方式  ON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#event%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.</span> <span class="toc-text"> event 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%9F%E4%BD%8D%E7%BD%AE%E6%9C%89%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text"> 跟位置有关的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#on-%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%E5%AE%9E%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text"> on - 事件委托实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jq%E6%8B%96%E6%8B%BD%E5%AE%9E%E4%BE%8B"><span class="toc-number">6.</span> <span class="toc-text"> jq 拖拽实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%90%83%E7%A2%B0%E5%A3%81%E8%BF%90%E5%8A%A8%E5%AE%9E%E4%BE%8B"><span class="toc-number">7.</span> <span class="toc-text"> 小球碰壁运动实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8%E5%AE%9E%E4%BE%8B"><span class="toc-number">8.</span> <span class="toc-text"> 导航平滑滚动实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E6%8E%92%E5%BA%8F%E5%AE%9E%E4%BE%8B"><span class="toc-number">9.</span> <span class="toc-text"> 游戏排序实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%96%E5%8A%A8%E5%88%B0%E5%BA%95%E9%83%A8%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="toc-number">10.</span> <span class="toc-text"> 拖动到底部触发事件实例</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">51</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">29</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/08/24/jquery%E7%9A%84%E7%89%B9%E6%95%88%E5%AE%9E%E7%8E%B0/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/13/ajax%E7%AE%80%E4%BB%8B%E3%80%81ajax%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E3%80%81%E6%96%B9%E6%B3%95%EF%BC%88%E5%8F%91%E8%AF%B7%E6%B1%82%EF%BC%89/" title="ajax简介、ajax对象的属性、方法（发请求）">ajax简介、ajax对象的属性、方法（发请求）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/30/Bootstrap%E7%9A%84%E7%BB%84%E4%BB%B6/" title="Bootstrap表格、表单、巨幕、信息提示框、进度条、卡片">Bootstrap表格、表单、巨幕、信息提示框、进度条、卡片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/14/CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/" title="CSS3新增特性">CSS3新增特性</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/04/H5-CSS3%E3%80%81%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" title="H5语义化标签、兼容性问题">H5语义化标签、兼容性问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" title="vue小胡子语法、v-bind">vue小胡子语法、v-bind</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库的概念、如何管理数据库">数据库的概念、如何管理数据库</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" title="jQuery选择器">jQuery选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/28/Bootstrap%E7%9A%84%E6%A0%85%E6%A0%BC%E5%8C%96%E7%B3%BB%E7%BB%9F/" title="Bootstrap的栅格化系统">Bootstrap的栅格化系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/16/CSS3%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" title="CSS3动画效果">CSS3动画效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="node.js基础入门">node.js基础入门</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/08/21/jquery的事件/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
