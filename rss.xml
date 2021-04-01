@@ -5,60 +5,36 @@
         <link>https://Serena-tz.github.io</link>
         <description>心情笔记 &amp; 编程日记</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 27 Nov 2020 16:33:31 +0800</pubDate>
-        <lastBuildDate>Fri, 27 Nov 2020 16:33:31 +0800</lastBuildDate>
+        <pubDate>Thu, 26 Nov 2020 16:17:05 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Nov 2020 16:17:05 +0800</lastBuildDate>
         <category>Bootstrap</category>
         <category>CSS3</category>
         <category>H5</category>
         <category>jquery</category>
         <category>PHP</category>
-        <category>SEO</category>
         <category>ajax</category>
+        <category>SEO</category>
         <category>axios</category>
-        <category>git</category>
         <category>echarts</category>
+        <category>git</category>
         <category>manual</category>
         <category>json</category>
         <category>less</category>
         <category>node</category>
-        <category>vue</category>
         <category>npm</category>
-        <category>webpack</category>
-        <category>web应用</category>
+        <category>vue</category>
         <category>ES6</category>
+        <category>webpack</category>
         <category>响应式布局</category>
         <category>地理位置</category>
-        <category>服务器</category>
         <category>小程序</category>
+        <category>服务器</category>
         <category>弹性盒子</category>
-        <category>本地存储</category>
-        <category>移动端</category>
         <category>数据库</category>
+        <category>本地存储</category>
         <category>跨域</category>
+        <category>移动端</category>
         <category>canvas</category>
-        <item>
-            <guid isPermalink="true">https://serena-tz.github.io/2020/11/27/web%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83/</guid>
-            <title>web应用的打包和发布</title>
-            <link>https://serena-tz.github.io/2020/11/27/web%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83/</link>
-            <category>web应用</category>
-            <pubDate>Fri, 27 Nov 2020 16:33:31 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;开发app的两种方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开发app的两种方式&#34;&gt;#&lt;/a&gt; 开发 APP 的两种方式&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;混合式开发–前端（app）&lt;/li&gt;
-&lt;li&gt;原生开发 --   开发难度大，学起来也麻烦，企业需求在减少&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;uniapp 除了跨平台，主要是用来开发混合 APP（可以在应用市场上架的 APP）。vue 的语法，微信小程序的 API（没有什么学习成本）。缺点：维护起来没有那么方便&lt;/p&gt;
-&lt;h2 id=&#34;应用打包&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#应用打包&#34;&gt;#&lt;/a&gt; 应用打包&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;安卓   	       .apk&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ios 的后缀   .ipa&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
- ]]></description>
-        </item>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/11/26/SEO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</guid>
             <title>SEO的基本介绍</title>
