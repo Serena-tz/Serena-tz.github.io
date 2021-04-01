@@ -5,43 +5,43 @@
         <link>https://Serena-tz.github.io</link>
         <description>心情笔记 &amp; 编程日记</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 01 Apr 2021 09:00:14 +0800</pubDate>
-        <lastBuildDate>Thu, 01 Apr 2021 09:00:14 +0800</lastBuildDate>
+        <pubDate>Wed, 01 Apr 2020 09:00:14 +0800</pubDate>
+        <lastBuildDate>Wed, 01 Apr 2020 09:00:14 +0800</lastBuildDate>
         <category>Bootstrap</category>
         <category>CSS3</category>
         <category>H5</category>
         <category>jquery</category>
-        <category>SEO</category>
         <category>PHP</category>
+        <category>SEO</category>
         <category>ajax</category>
         <category>axios</category>
-        <category>echarts</category>
         <category>git</category>
+        <category>echarts</category>
         <category>manual</category>
         <category>json</category>
         <category>less</category>
-        <category>npm</category>
         <category>node</category>
         <category>vue</category>
+        <category>npm</category>
         <category>webpack</category>
         <category>web应用</category>
         <category>ES6</category>
-        <category>地理位置</category>
         <category>响应式布局</category>
+        <category>地理位置</category>
         <category>服务器</category>
         <category>小程序</category>
         <category>弹性盒子</category>
-        <category>数据库</category>
-        <category>移动端</category>
         <category>本地存储</category>
+        <category>移动端</category>
+        <category>数据库</category>
         <category>跨域</category>
         <category>canvas</category>
         <item>
-            <guid isPermalink="true">https://serena-tz.github.io/2021/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
+            <guid isPermalink="true">https://serena-tz.github.io/2020/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
             <title>node.js基础入门</title>
-            <link>https://serena-tz.github.io/2021/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
+            <link>https://serena-tz.github.io/2020/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
             <category>node</category>
-            <pubDate>Thu, 01 Apr 2021 09:00:14 +0800</pubDate>
+            <pubDate>Wed, 01 Apr 2020 09:00:14 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;nodejs是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nodejs是什么&#34;&gt;#&lt;/a&gt; Node.js 是什么？&lt;/h2&gt;
 &lt;p&gt;node.js 是一个运行 JS 的平台。原来的 JS 脚本只能在浏览器中执行，要想让它脱离出来可以在任意地方都能够执行 JS。JS 当后端语言来使用，必须要安装 Nodejs。安装了 Nodejs 就相当于是安装了 V8 引擎（谷歌中的 JS 解析器）。总的来说：&lt;/p&gt;
 &lt;ol&gt;
@@ -61,12 +61,10 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;交互模式（浏览器的控制台）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;退出：ctrl+C 退出。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入：在命令行中输入&lt;strong&gt; node&lt;/strong&gt; 回车即可。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;退出：ctrl+C 退出。&lt;/li&gt;
+&lt;li&gt;进入：在命令行中输入&lt;strong&gt; node&lt;/strong&gt; 回车即可。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;直接执行一个本地 JS 文件（显示了目录才算）。&lt;/p&gt;
@@ -90,7 +88,7 @@
 &lt;li&gt;
 &lt;p&gt;命名空间（使用一个&lt;strong&gt;对象&lt;/strong&gt;来装一个人写的代码）。&lt;/p&gt;
 &lt;p&gt;将变量和属性全部放在对象中，再通过对象来访问模块属性和方法。&lt;br&gt;
-问题：&lt;/p&gt;
+&lt;strong&gt;问题&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;当代码越来越大时，容易出现对象&lt;strong&gt;嵌套对象&lt;/strong&gt;的情况。会导致访问&lt;strong&gt;路径过长&lt;/strong&gt;。&lt;/li&gt;
 &lt;li&gt;所有属性和方法都会暴露，其他模块可以轻松改变该模块对象。&lt;/li&gt;
@@ -98,13 +96,11 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;IIFE（立即执行函数表达式）Immediately Invoked Function Expression。&lt;br&gt;
-好处：&lt;/p&gt;
+&lt;strong&gt;好处&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;可创建私有作用域（变量，函数）避免命名冲突。&lt;/li&gt;
+&lt;li&gt;能实现模块的开发，是较为完美推荐的方式。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;能实现模块的开发，是较为完美推荐的方式。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;todolist实例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#todolist实例&#34;&gt;#&lt;/a&gt; todolist 实例&lt;/h2&gt;
