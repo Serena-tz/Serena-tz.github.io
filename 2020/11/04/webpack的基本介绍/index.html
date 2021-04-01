@@ -1,0 +1,683 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="webpack" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/11/04/webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+
+
+
+  <title>
+webpack的基本介绍 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">webpack的基本介绍
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-11-04 09:14:35">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-11-04T09:14:35+08:00">2020-11-04</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/11/04/webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="前端构建化工具-webpack"><a class="markdownIt-Anchor" href="#前端构建化工具-webpack">#</a> 前端构建化工具 - webpack</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VicGFja2pzLmNvbS8=">https://www.webpackjs.com/</span> 。前端越来越有工程化、模块化趋势。对前端的要求越来越多。</p>
+<p><strong>webpack 产生的必要性</strong></p>
+<ol>
+<li>开发环境的需求是代码越详细越好、注释越具体越好，模块化开发、按照需求可以开发复杂的代码</li>
+<li>到了生产环境（线上，准备要发布），需求又是相反的。</li>
+<li>所以将开发环境的那些代码通过一款自动化工具来完成打包、编译、压缩等工作就称之为构建</li>
+</ol>
+<h2 id="使用webpack"><a class="markdownIt-Anchor" href="#使用webpack">#</a> 使用 webpack</h2>
+<ol>
+<li>安装 webpack</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在任意文件夹下打开命令行中输入以下两个指令</span></span><br><span class="line">cnpm i webpack -g</span><br><span class="line"><span class="comment">//回车后再次输入以下指令安装：</span></span><br><span class="line">cnpm i webpack-cli -g</span><br><span class="line"><span class="comment">//测试是否安装成功</span></span><br><span class="line">webpack -v </span><br><span class="line"><span class="comment">//可以一次性安装多个</span></span><br><span class="line">cnpm i webpack webpack-cli -g</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>写一个配置文件</li>
+</ol>
+<p>告诉他怎么做，要打包哪些文件，打包到哪里等信息，该配置文件一般命名为：webpack.config.js<br>
+webpack 会自动根据该配置文件打包</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入了一个Nodejs的路径模块</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="comment">// 导出</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line"> <span class="comment">//entry :入口文件。即要打包的文件，自动分析里面的依赖，并且自动构</span></span><br><span class="line">  entry:<span class="string">&#x27;./main.js&#x27;</span>,</span><br><span class="line">  <span class="comment">//出口：将打包好的放哪里</span></span><br><span class="line">  output: &#123;</span><br><span class="line">    <span class="comment">//存放路径，使用path模块下的resolve方法解决打包路径问题，__dirname 特殊的变量当前目录，‘dist’是目标目录</span></span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&#x27;dist&#x27;</span>),</span><br><span class="line">    filename: <span class="string">&#x27;my-first-webpack.bundle.js&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="打包的具体步骤和内容"><a class="markdownIt-Anchor" href="#打包的具体步骤和内容">#</a> 打包的具体步骤和内容</h2>
+<h3 id="打包js"><a class="markdownIt-Anchor" href="#打包js">#</a> 打包 JS</h3>
+<ol>
+<li>如果要打包 JS，需要将之前的 js 改为 Nodejs 的模块才可以正常打包。</li>
+</ol>
+<p>原因：webpack 是基于 Nodejs 环境的，所以 JS 的模块化就不能像刚刚那样写了，要改成 Nodejs 模块的写法</p>
+<ol start="2">
+<li>如何改造：参考如何将 IIFE 改造为</li>
+</ol>
+<p><strong>两个步骤：</strong></p>
+<p>​	a. 注释 IIFE（第一行、最后一行）</p>
+<p>​	b. 将 return 改为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Nodejs的写法</span></span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">    <span class="comment">//要导的变量或方法</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//也可以将其改为ES6的写法</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="comment">//导出去的变量或方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>
+<p>在其他文件使用以上模块，比如导入到 main.js (主 JS 文件) 中使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//NODEJS的导入模块的写法,</span></span><br><span class="line"><span class="comment">//如果后缀名是.js则后缀名可以省略</span></span><br><span class="line"><span class="keyword">let</span> moduleA=<span class="built_in">require</span>(<span class="string">&#x27;./a.js&#x27;</span>);</span><br><span class="line"><span class="comment">//ES6导入模块的写法</span></span><br><span class="line"><span class="keyword">import</span> moduleB <span class="keyword">from</span> <span class="string">&#x27;./b.js&#x27;</span>;</span><br><span class="line"><span class="comment">// 因为在mainjs中导入了a.js，所以可以在main.js中使用它的方法和属性</span></span><br><span class="line"><span class="built_in">console</span>.log(moduleA.a);</span><br><span class="line"><span class="comment">// 调用来自b.js的方法</span></span><br><span class="line">moduleB.fun();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>打包后可以在 index.html 中使用打包好的 JS 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;dist/my-first-webpack.bundle.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="打包css"><a class="markdownIt-Anchor" href="#打包css">#</a> 打包 CSS</h3>
+<p>webpack 默认只能打包 JS，如果要打包其他的，需要下载额外的插件：loader 插件。</p>
+<p>需要添加 style-loader 和 css-loader</p>
+<p>步骤：</p>
+<ol>
+<li>
+<p>导入 css-loader,style-loader（webpack 并没有集成则两款 loader，需要额外下载才可以使用）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在当前目录下执行以下指令：</span><br><span class="line">cnpm i style-loader css-loader </span><br><span class="line">回车</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>改写配置文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入了一个Nodejs的路径模块</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="comment">// 导出模块</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line"> <span class="comment">//entry :入口文件。即要打包的文件，自动分析里面的依赖，并且自动构建</span></span><br><span class="line">  <span class="comment">// entry: &#x27;./a.js&#x27;,</span></span><br><span class="line">  entry:<span class="string">&#x27;./src/main.js&#x27;</span>,</span><br><span class="line">  <span class="comment">//出口：将打包好的放哪里</span></span><br><span class="line">  output: &#123;</span><br><span class="line">    <span class="comment">//存放路径，使用path模块下的resolve方法解决打包路径问题，__dirname 特殊的变量当前目录，‘dist’是目标目录</span></span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&#x27;dist&#x27;</span>),</span><br><span class="line">    filename: <span class="string">&#x27;my-first-webpack.bundle.js&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 在默认配置的基础上添加了如下配置代码</span></span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">      <span class="comment">// 添加打包css的配置</span></span><br><span class="line">      rules:[&#123;</span><br><span class="line">        test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">        use: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  ]&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>导入 css 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在main.js这个主页文件中导入了css</span><br><span class="line"><span class="comment">// 将CSS也当做模块来导入和处理</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./css/style.css&#x27;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>优化：将所有的该项目的依赖包文件写入到 package.json 中，下次即使删除了 node_modules 文件夹，也可以通过一个指令快速将所有的依赖包下载下来。</p>
+<p>即将该项目的依赖包注入到该配置文件中</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果这是你的项目，在第一次下载安装项目依赖包时，顺便写入到package.json中，方便下次一键下载</span></span><br><span class="line">cnpm i 包名 -D;<span class="comment">//--save-dev</span></span><br><span class="line"><span class="comment">//比如：</span></span><br><span class="line">cnpm i style-loader -D</span><br><span class="line"><span class="comment">//或</span></span><br><span class="line">cnpm i style-loader --save-dev</span><br></pre></td></tr></table></figure>
+<p>如果用的是别人的项目，先看看别人的 package.json 中有没有依赖包</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;style-loader&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>如果有，则执行下面的指令一键安装：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i<span class="comment">//下载所有的依赖包，就不需要一个个下载了</span></span><br></pre></td></tr></table></figure>
+<p>如果是自己的项目，假设你第一次时已经将依赖包注入到了 package.json 也可以使用 cnpm i 一键下载所有的依赖包。</p>
+<h3 id="小提示"><a class="markdownIt-Anchor" href="#小提示">#</a> 小提示</h3>
+<ol>
+<li>
+<p>如何升级 nodes 的模块，比如升级 webpack</p>
+<p>升级跟安装是一样的指令</p>
+</li>
+<li>
+<p>项目源代码做了任何改动都需要重新执行一次 webpack 打包指令。</p>
+</li>
+</ol>
+<h2 id="webpack打包图片-图标字体"><a class="markdownIt-Anchor" href="#webpack打包图片-图标字体">#</a> webpack 打包图片、图标字体</h2>
+<p>文件：图片、图标字体</p>
+<p>需要使用一个 file-loader 的加载器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">      rules:[&#123;</span><br><span class="line">      <span class="comment">// 添加打包css的配置</span></span><br><span class="line">        test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">        use: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>]</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">      <span class="comment">// 打包了图片、图标字体---新增的</span></span><br><span class="line">        test: <span class="regexp">/\.(png|jpg|gif|eot|woff|ttf|svg)$/</span>,</span><br><span class="line">        use: <span class="string">&#x27;file-loader&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]&#125;</span><br></pre></td></tr></table></figure>
+<p>在项目根目录下使用命令行工具执行以下指令：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm i <span class="comment">//安装所有的依赖包</span></span><br><span class="line"><span class="comment">//刚刚添加了一个file-loader，需要单独下载并注入到package.json中</span></span><br><span class="line">cnpm i file-loader -D</span><br></pre></td></tr></table></figure>
+<h2 id="打包html-并实现热更新终极版"><a class="markdownIt-Anchor" href="#打包html-并实现热更新终极版">#</a> 打包 HTML、并实现热更新（终极版）</h2>
+<p>需要把 HTML 也当做模块来处理并添加服务器包。</p>
+<p>loader 没办法处理 HTML 这种文件，需要使用插件：</p>
+<ol>
+<li>
+<p>在 webpack.config.js 中新增如下配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//通过 npm 安装</span></span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="comment">//访问内置的插件</span></span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>); </span><br><span class="line"><span class="comment">//改动了任意代码都需要webpack实时更新打包构建，所以需要再次在局部安装一次</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>以上仅仅只是可以处理 HTML，如果要实现热启动（热更新）需要再配置一个服务器对象（包）webpack-dev-server<br>
+<span class="exturl" data-url="aHR0cHM6Ly93d3cud2VicGFja2pzLmNvbS9ndWlkZXMvZGV2ZWxvcG1lbnQvIyVFNCVCRCVCRiVFNyU5NCVBOC13ZWJwYWNrLWRldi1zZXJ2ZXI=">https://www.webpackjs.com/guides/development/# 使用 - webpack-dev-server</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm i --save-dev webpack-dev-server<span class="comment">//局部安装一次</span></span><br><span class="line">cnpm i webpack-dev-server -g<span class="comment">//全局安装一次</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>还需要局部安装一次 webpack-cli 脚手架包</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i  webpack-cli  -D</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装以上 5 个包后，就可以启动该应用了，原来使用 webpack 来启动，现在需要使用服务器的方式来启动，也就是启动指令改为了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack-dev-server --open <span class="comment">//在浏览器新窗口自动打开该应用</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>我们使用的是 webpack5 版本，但是 webpack-dev-server 还没有做好更新，即两者不兼容，需要将 webpack-cli 的版本降低，以便兼容才可以</p>
+<p>做法：在 package.json 中将</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;webpack-cli&quot;</span>: <span class="string">&quot;^4.2.0&quot;</span>,</span><br><span class="line">改为：</span><br><span class="line"><span class="string">&quot;webpack-cli&quot;</span>: <span class="string">&quot;^3.3.12&quot;</span>,</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>然后删除项目的 node_modules 文件夹，重新使用 cnpm i 安装一次</p>
+</li>
+<li>
+<p>将启动指令改为容易记忆的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">找到package.json的script部分，添加如下代码：</span><br><span class="line"><span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack-dev-server --open&quot;</span>,</span><br><span class="line"><span class="comment">//下次启动应用时可以用</span></span><br><span class="line">npm start </span><br><span class="line">来代替webpack-dev-server --open</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="less-css的预处理器之一"><a class="markdownIt-Anchor" href="#less-css的预处理器之一">#</a> less-css 的预处理器之一</h2>
+<h3 id="为什么要学习css的预编译处理器"><a class="markdownIt-Anchor" href="#为什么要学习css的预编译处理器">#</a> 为什么要学习 css 的预编译处理器</h3>
+<p>CSS 最明显的短板就是它只是一个标记语言，没有变量、语句等编程语言的特点。如果项目过长，写起来有些麻烦，而且会产生较多的重复代码。</p>
+<p>虽然只要团队中的成员都有模块化的思想，并有统一的规范，可以完全不在团队中使用与处理器，但是为了能让写 css 变得像写 JS 那样灵活，支持变量、语句、混合（mixin）、函数等等，就产生了预处理器。</p>
+<p>比如 bootstrap 的 css 就是有 css 预编译写好再转成普通 css 文件的。后面我们学习 vue.js 或者看别人写的项目，到公司上班都很有可能遇到 css 预编译处理器。所以我们得学会如何使用。</p>
+<h3 id="常见的预编译处理器"><a class="markdownIt-Anchor" href="#常见的预编译处理器">#</a> 常见的预编译处理器</h3>
+<p>​    1、sass(Syntactically Awesome StyleSheets)<br>
+​        官网：<span class="exturl" data-url="aHR0cDovL3Nhc3MtbGFuZy5jb20v">http://sass-lang.com/</span><br>
+​        中文：<span class="exturl" data-url="aHR0cDovL3Nhc3MuYm9vdGNzcy5jb20v">http://sass.bootcss.com/</span><br>
+​        学习教程：<br>
+​        <span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTIvMDYvc2Fzcy5odG1s">http://www.ruanyifeng.com/blog/2012/06/sass.html</span><br>
+​        线上测试工具：<span class="exturl" data-url="aHR0cHM6Ly93d3cuc2Fzc21laXN0ZXIuY29tLw==">https://www.sassmeister.com/</span></p>
+<p>​	2、less<br>
+​    less 受 sass 影响较大，也就是写法借鉴了 sass，两者语法类似<br>
+​    官网：<span class="exturl" data-url="aHR0cDovL2xlc3Njc3Mub3JnLw==">http://lesscss.org/</span><br>
+​    中文：<span class="exturl" data-url="aHR0cDovL2xlc3Njc3MuY24v">http://lesscss.cn/</span><br>
+​    学习教程：<br>
+​    <span class="exturl" data-url="aHR0cDovL3d3dy5ib290Y3NzLmNvbS9wL2xlc3Njc3Mv">http://www.bootcss.com/p/lesscss/</span><br>
+​    <span class="exturl" data-url="aHR0cDovL3d3dy5ydW5vb2IuY29tL21hbnVhbC9sZXNzZ3VpZGUv">http://www.runoob.com/manual/lessguide/</span><br>
+​    <span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvTGVzc18oJUU1JUIxJTgyJUU1JThGJUEwJUU2JUEwJUI3JUU1JUJDJThGJUU4JUExJUE4KQ==">https://zh.wikipedia.org/wiki/Less_(层叠样式表)</span></p>
+<p>​	3、stylus<br>
+​    因为 node.js 的兴起才诞生的，但流行程度远不及以上两者。</p>
+<pre><code>两者语言语法差不多，基本上一通全通。相比较而言，less稍微简单一点点，更适合前端开发，而sass更适合偏后端使用。
+</code></pre>
+<h3 id="less语法"><a class="markdownIt-Anchor" href="#less语法">#</a> less 语法</h3>
+<ol>
+<li>
+<p>变量</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">JS:</span><br><span class="line">var a=1;</span><br><span class="line">less:</span><br><span class="line">@red:red;<span class="comment">//值是红色</span></span><br><span class="line"><span class="variable">@br:</span><span class="number">1px</span> solid blue;</span><br><span class="line"><span class="variable">@m10:</span><span class="number">10px</span>;</span><br><span class="line">使用：</span><br><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:<span class="variable">@red</span>;</span><br><span class="line">    <span class="attribute">border</span>:<span class="variable">@br</span>;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="variable">@m10</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>:<span class="variable">@m10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//以上代码最终会编译成如下正常格式：</span></span><br><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid blue;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>:<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>混合</p>
+</li>
+<li>
+<p>嵌套</p>
+</li>
+</ol>
+<h3 id="如何使用语法通用"><a class="markdownIt-Anchor" href="#如何使用语法通用">#</a> 如何使用（语法通用）</h3>
+<ol>
+<li>
+<p>在浏览器环境下使用</p>
+<p>两种使用条件：</p>
+<p>a. 需要在服务器环境下进行（要借助 JS 完成）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//在要使用less的HTML文件中写如下代码：</span><br><span class="line"><span class="comment">&lt;!-- 导入less文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet/less&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style.less&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 导入解析less的JS文件</span></span><br><span class="line"><span class="comment">下载地址：https://raw.githubusercontent.com/less/less.js/v2.5.3/dist/less.min.js</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;less.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">//2. 在服务器环境下打开该项目或文件</span><br></pre></td></tr></table></figure>
+<p>b. 先编译再使用（非常原始的用法，很不方便）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在任意文件夹下，通过npm下载less包</span><br><span class="line">cnpm i less -g</span><br><span class="line"><span class="comment">//看看是否安装成功</span></span><br><span class="line">lessc -v <span class="comment">//3.12.2</span></span><br><span class="line"><span class="comment">//编译  输入less文件，输出css文件</span></span><br><span class="line">lessc less文件  css文件</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在 Nodejs 或 webpack 环境下使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、将less放到src中当做模块来打包，在main.js中导入</span><br><span class="line"><span class="comment">// 导入less文件</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./less/style.less&#x27;</span>);</span><br><span class="line"><span class="number">2</span>、在webpack.config.js中导入less-loader来处理</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 添加打包css|less的配置</span></span><br><span class="line">	test: <span class="regexp">/\.(css|less)$/</span>,</span><br><span class="line">	use: [<span class="string">&#x27;style-loader&#x27;</span>,<span class="string">&#x27;css-loader&#x27;</span>,<span class="string">&#x27;less-loader&#x27;</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>、在当前项目目录下下载less-loader和less包</span><br><span class="line">cnpm i less-loader less -D</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、npm start 启动该项目（先确保安装了该项目的所有的依赖包）</span><br><span class="line"></span><br><span class="line"><span class="number">5</span>、OK，完成！在项目中直接写less代码会自动编译和刷新页面</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      <div class="tags">
+          <a href="/tags/webpack/" rel="tag"><i class="ic i-tag"></i> webpack</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-04-01 09:24:41" itemprop="dateModified" datetime="2021-04-01T09:24:41+08:00">2021-04-01</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/11/04/webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="webpack的基本介绍">https://serena-tz.github.io/2020/11/04/webpack的基本介绍/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/11/03/npm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesrnqv3j20zk0m8ava.jpg" title="npm的基本介绍">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>npm的基本介绍</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/11/05/less%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevuctzzj20zk0m84qp.jpg" title="less的基本介绍">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>less的基本介绍</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%8C%96%E5%B7%A5%E5%85%B7-webpack"><span class="toc-number">1.</span> <span class="toc-text"> 前端构建化工具 - webpack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8webpack"><span class="toc-number">2.</span> <span class="toc-text"> 使用 webpack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E7%9A%84%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%E5%92%8C%E5%86%85%E5%AE%B9"><span class="toc-number">3.</span> <span class="toc-text"> 打包的具体步骤和内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85js"><span class="toc-number">3.1.</span> <span class="toc-text"> 打包 JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85css"><span class="toc-number">3.2.</span> <span class="toc-text"> 打包 CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E6%8F%90%E7%A4%BA"><span class="toc-number">3.3.</span> <span class="toc-text"> 小提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack%E6%89%93%E5%8C%85%E5%9B%BE%E7%89%87-%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93"><span class="toc-number">4.</span> <span class="toc-text"> webpack 打包图片、图标字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85html-%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%83%AD%E6%9B%B4%E6%96%B0%E7%BB%88%E6%9E%81%E7%89%88"><span class="toc-number">5.</span> <span class="toc-text"> 打包 HTML、并实现热更新（终极版）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#less-css%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E4%B9%8B%E4%B8%80"><span class="toc-number">6.</span> <span class="toc-text"> less-css 的预处理器之一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0css%E7%9A%84%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">6.1.</span> <span class="toc-text"> 为什么要学习 css 的预编译处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">6.2.</span> <span class="toc-text"> 常见的预编译处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less%E8%AF%AD%E6%B3%95"><span class="toc-number">6.3.</span> <span class="toc-text"> less 语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95%E9%80%9A%E7%94%A8"><span class="toc-number">6.4.</span> <span class="toc-text"> 如何使用（语法通用）</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">51</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">29</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/11/03/npm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/11/05/less%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/16/CSS3%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" title="CSS3动画效果">CSS3动画效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="域名服务器的基本介绍">域名服务器的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/14/CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/" title="CSS3新增特性">CSS3新增特性</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/18/%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90/" title="弹性盒子">弹性盒子</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
+</div>
+
+    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/09/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE/" title="多媒体标签">多媒体标签</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="node.js基础入门">node.js基础入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/10/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="本地存储">本地存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/14/ajax%E4%BC%A0%E5%8F%82%E5%AE%9E%E7%8E%B0%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%90%8C%E7%9A%84json%E6%95%B0%E6%8D%AE%E3%80%81JQ%E7%89%88ajax/" title="ajax传参实现获取不同的json数据、JQ版ajax">ajax传参实现获取不同的json数据、JQ版ajax</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/22/vue%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%8C%87%E4%BB%A4/" title="vue的事件指令">vue的事件指令</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/11/04/webpack的基本介绍/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

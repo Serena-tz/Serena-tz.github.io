@@ -1,0 +1,538 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="vue" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/10/27/vue%E7%9A%84%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7/">
+
+
+
+  <title>
+vue的监听属性 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">vue的监听属性
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-10-27 08:39:09">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-10-27T08:39:09+08:00">2020-10-27</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/10/27/vue%E7%9A%84%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="监听属性"><a class="markdownIt-Anchor" href="#监听属性">#</a> 监听属性</h2>
+<p>计算属性会产生一个新的属性。监听属性只是监听已有的属性。</p>
+<p>watch 监听可以用来监听某一个属性的值的变化，当变化时，可以通过该属性下的对应的函数进行监听并执行该函数。其作用与写法类似于计算属性，但两者之间还是有较大的区别，watch 只是监听派发过来的属性，不用产生一个新的属性并返回出去。</p>
+<p>可以把 watch 看做是 js 中的 onchange 事件，只要该属性的值发生变化了就会触发该函数。</p>
+<p>官网 API：<span class="exturl" data-url="aHR0cHM6Ly9jbi52dWVqcy5vcmcvdjIvYXBpLyN3YXRjaA==">https://cn.vuejs.org/v2/api/#watch</span></p>
+<p>监听属性分为深监听与浅监听，比如要监听某个属性的值为数组，数组元素是对象的情况，默认是浅监听，只有该数组元素的数量进行了变更才会触发函数，如果要让该数组元素中对象的属性变化时也能监听，则需要使用深监听。</p>
+<p>所以深监听主要是用于数组和对象的监听。</p>
+<p>总之：监听属性（侦听器）使用频率不及计算属性。</p>
+<h2 id="事件传参的3种情况"><a class="markdownIt-Anchor" href="#事件传参的3种情况">#</a> 事件传参的 3 种情况</h2>
+<ol>
+<li>
+<p>事件调用没有参数，但是事件函数有参数的情况</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用时没传参</span></span><br><span class="line">&lt;div @click=<span class="string">&quot;fun&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"><span class="comment">//JS</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ...</span><br><span class="line">    methods:&#123;</span><br><span class="line">        <span class="comment">//定义时传参的第一个参数就是事件对象</span></span><br><span class="line">        <span class="function"><span class="title">fun</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">            <span class="comment">//a是事件对象</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>事件调用有参数，事件函数也有参数的情况（都是参数）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用时没传参</span></span><br><span class="line">&lt;div @click=<span class="string">&quot;fun(a,12)&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"><span class="comment">//JS</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ...</span><br><span class="line">	data:&#123;</span><br><span class="line">        a:<span class="number">123</span></span><br><span class="line">    &#125;</span><br><span class="line">    methods:&#123;</span><br><span class="line">        <span class="comment">//定义时传参了，调用时也传参了，则第一个参数就是调用时的值</span></span><br><span class="line">        <span class="function"><span class="title">fun</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">            <span class="comment">//a代表的就是某一个值</span></span><br><span class="line">			<span class="built_in">console</span>.log(a+b);<span class="comment">//</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>把 1、2 两种情况结合起来，即既想要保留事件对象，又需要传递参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用时没传参</span></span><br><span class="line">&lt;div @click=<span class="string">&quot;fun($event,a,12)&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"><span class="comment">//JS</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ...</span><br><span class="line">	data:&#123;</span><br><span class="line">        a:<span class="number">123</span></span><br><span class="line">    &#125;</span><br><span class="line">    methods:&#123;</span><br><span class="line">        <span class="comment">//调用时的第一个参数如果是$event，则表示事件对象，后面的参数才是参数</span></span><br><span class="line">    	<span class="comment">//定义时的第一个参数就是事件对象，后面的是普通参数与上面的一一对应</span></span><br><span class="line">        <span class="function"><span class="title">fun</span>(<span class="params">e,a,b</span>)</span>&#123;</span><br><span class="line">            <span class="comment">//a代表的就是某一个值</span></span><br><span class="line">    		<span class="built_in">console</span>.log(e);<span class="comment">//$event就是事件对象，其他的参数就是形参</span></span><br><span class="line">			<span class="built_in">console</span>.log(a+b);<span class="comment">//</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="监听属性实例"><a class="markdownIt-Anchor" href="#监听属性实例">#</a> 监听属性实例</h2>
+<h3 id="实例1"><a class="markdownIt-Anchor" href="#实例1">#</a> 实例 1</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        *&#123; margin:0;padding:0; &#125;</span><br><span class="line">        div&#123; margin-bottom: 5px; &#125;</span><br><span class="line">        body&#123; padding: 10px; &#125;</span><br><span class="line">        fieldset&#123; padding: 15px; &#125;</span><br><span class="line">        #tableBox &#123; margin-top: 20px; &#125;</span><br><span class="line">        #tableBox thead&#123; background-color: #1F9A00;color: #fff; &#125;</span><br><span class="line">        table,td,th&#123; border:1px solid #999; text-align: center; &#125;</span><br><span class="line">        td,th&#123; padding: 5px; &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;..&#x2F;vue.v2.6.12.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;fieldset&gt;</span><br><span class="line">            &lt;legend&gt;请输入学生信息&lt;&#x2F;legend&gt;</span><br><span class="line">            &lt;form action&#x3D;&quot;#&quot; method&#x3D;&quot;get&quot;&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;label&gt;姓名：&lt;&#x2F;label&gt;</span><br><span class="line">                    &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;&quot; v-model&#x3D;&quot;uname&quot;  @keyup.enter&#x3D;&quot;add()&quot; @keyup.ctrl.enter&#x3D;&quot;add()&quot;&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;label&gt;年龄：&lt;&#x2F;label&gt;</span><br><span class="line">                    &lt;input type&#x3D;&quot;number&quot; name&#x3D;&quot;&quot; v-model&#x3D;&quot;uage&quot;  @keyup.enter&#x3D;&quot;add()&quot; @keyup.ctrl.enter&#x3D;&quot;add()&quot;&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;label&gt;性别：&lt;&#x2F;label&gt;</span><br><span class="line">                    &lt;select v-model&#x3D;&quot;usex&quot;&gt;</span><br><span class="line">                        &lt;option disabled&#x3D;&quot;disabled&quot;&gt;请选择&lt;&#x2F;option&gt;</span><br><span class="line">                        &lt;option&gt;男&lt;&#x2F;option&gt;</span><br><span class="line">                        &lt;option&gt;女&lt;&#x2F;option&gt;</span><br><span class="line">                    &lt;&#x2F;select&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;创建&quot; name&#x3D;&quot;&quot; @click&#x3D;&quot;add()&quot; @keyup.enter&#x3D;&quot;add()&quot; @keyup.ctrl.enter&#x3D;&quot;add()&quot;&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;&#x2F;form&gt;</span><br><span class="line">        &lt;&#x2F;fieldset&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;div id&#x3D;&quot;tableBox&quot;&gt;</span><br><span class="line">            &lt;table width&#x3D;&quot;100%&quot; cellpadding&#x3D;&quot;5&quot; cellspacing&#x3D;&quot;0&quot;&gt;</span><br><span class="line">                &lt;thead&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;姓名&lt;&#x2F;th&gt;</span><br><span class="line">                    &lt;th&gt;年龄&lt;&#x2F;th&gt;</span><br><span class="line">                    &lt;th&gt;性别&lt;&#x2F;th&gt;</span><br><span class="line">                    &lt;th&gt;操作&lt;&#x2F;th&gt;</span><br><span class="line">                    &lt;&#x2F;tr&gt;</span><br><span class="line">                &lt;&#x2F;thead&gt;</span><br><span class="line">                &lt;tbody&gt;</span><br><span class="line">                    &lt;tr v-for&#x3D;&quot;item,index in list&quot;&gt;</span><br><span class="line">                        &lt;td&gt;&#123;&#123;item.name&#125;&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                        &lt;td&gt;&#123;&#123;item.age&#125;&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                        &lt;td&gt;&#123;&#123;item.sex&#125;&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                        &lt;td&gt;&lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;删 除&quot; name&#x3D;&quot;&quot; @click&#x3D;&quot;del(index)&quot;&gt;&lt;&#x2F;td&gt;</span><br><span class="line">                    &lt;&#x2F;tr&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;td colspan&#x3D;&quot;4&quot; v-show&#x3D;&quot;this.list.length&#x3D;&#x3D;0&quot;&gt;您还没有添加任何数据哦&lt;&#x2F;td&gt;</span><br><span class="line">                        &lt;!-- &lt;td colspan&#x3D;&quot;4&quot;&gt;您还没有添加任何数据哦&lt;&#x2F;td&gt; --&gt;</span><br><span class="line">                    &lt;&#x2F;tr&gt;</span><br><span class="line">                &lt;&#x2F;tbody&gt;</span><br><span class="line">            &lt;&#x2F;table&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let dataHandler&#x3D;&#123;</span><br><span class="line">            get()&#123;</span><br><span class="line">                return JSON.parse(localStorage.getItem(&quot;my&quot;))|| [];</span><br><span class="line">            &#125;,</span><br><span class="line">            set(d)&#123;</span><br><span class="line">                localStorage.setItem(&quot;my&quot;,JSON.stringify(d));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        var vm&#x3D;new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">               uname:&quot;&quot;,</span><br><span class="line">               uage:&quot;&quot;,</span><br><span class="line">               usex:&quot;男&quot;,</span><br><span class="line">               list:dataHandler.get()</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                add()&#123;</span><br><span class="line">                    if(!this.uname || !this.uage)&#123;</span><br><span class="line">                        alert(&quot;请将学生信息补充完整！&quot;)</span><br><span class="line">                        return</span><br><span class="line">                    &#125;</span><br><span class="line">                    this.list.unshift(&#123;name:this.uname,age:this.uage,sex:this.usex&#125;);</span><br><span class="line">                    &#x2F;&#x2F;初始化输入框</span><br><span class="line">                    this.uname&#x3D;&quot;&quot;;</span><br><span class="line">                    this.uage&#x3D;&quot;&quot;;</span><br><span class="line">                    this.usex&#x3D;&quot;男&quot;;</span><br><span class="line">                &#125;,</span><br><span class="line">                del(index)&#123;</span><br><span class="line">                    &#x2F;&#x2F; 删除单条数据</span><br><span class="line">                    this.list.splice(index,1)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            watch:&#123;</span><br><span class="line">                list:&#123;</span><br><span class="line">                    handler()&#123;</span><br><span class="line">                        dataHandler.set(this.list);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    deep:true</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="实例2"><a class="markdownIt-Anchor" href="#实例2">#</a> 实例 2</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;zh-CN&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;todolist&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">            box-sizing: border-box;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        body &#123;</span><br><span class="line">            background-color: #f5f5f5;</span><br><span class="line">            color: #444</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        a &#123;</span><br><span class="line">            text-decoration: none;</span><br><span class="line">            color: #333;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #app &#123;</span><br><span class="line">            width: 640px;</span><br><span class="line">            margin: 0 auto</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #app h1 &#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            font-size: 5em;</span><br><span class="line">            color: rgba(175, 47, 47, 0.15);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todoapp &#123;</span><br><span class="line">            min-height: 200px;</span><br><span class="line">            background: #fff;</span><br><span class="line">            margin: 30px 0 40px 0;</span><br><span class="line">            position: relative;</span><br><span class="line">            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),</span><br><span class="line">                0 25px 50px 0 rgba(0, 0, 0, 0.1);</span><br><span class="line">            padding-bottom: 40px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;*.todoapp:before&#123;content: &#39;&#39;;&#125;*&#x2F;</span><br><span class="line">        .header &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .new-todo &#123;</span><br><span class="line">            padding: 16px 16px 16px 60px;</span><br><span class="line">            border: none;</span><br><span class="line">            background: rgba(0, 0, 0, 0.003);</span><br><span class="line">            box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);</span><br><span class="line">            width: 100%;</span><br><span class="line">            font-size: 24px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        :focus &#123;</span><br><span class="line">            outline: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .toggle-all &#123;</span><br><span class="line">            background: none;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 19px;</span><br><span class="line">            left: -6px;</span><br><span class="line">            width: 60px;</span><br><span class="line">            height: 34px;</span><br><span class="line">            text-align: center;</span><br><span class="line">            border: none;</span><br><span class="line">            -webkit-appearance: none;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .toggle-all:before &#123;</span><br><span class="line">            content: &#39;﹀&#39;;</span><br><span class="line">            font-size: 22px;</span><br><span class="line">            color: #333;</span><br><span class="line">            padding: 10px 27px 10px 27px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li &#123;</span><br><span class="line">            padding: 10px;</span><br><span class="line">            border-bottom: 1px solid #e6e6e6;</span><br><span class="line">            list-style: none;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li input,</span><br><span class="line">        .todolist li a &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            width: 45px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li input &#123;</span><br><span class="line">            height: 25px;</span><br><span class="line">            vertical-align: -5px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li a &#123;</span><br><span class="line">            float: right;</span><br><span class="line">            display: none;</span><br><span class="line">            font-size: 20px</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li:hover a &#123;</span><br><span class="line">            color: #af5b5e;</span><br><span class="line">            display: block;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li span &#123;</span><br><span class="line">            font-size: 1.5em;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .todolist li:last-child &#123;</span><br><span class="line">            border-bottom: none;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .footer &#123;</span><br><span class="line">            color: #777;</span><br><span class="line">            padding: 10px 15px;</span><br><span class="line">            height: 40px;</span><br><span class="line">            position: absolute;</span><br><span class="line">            width: 100%;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            border-top: 1px solid #e6e6e6;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .footer:before &#123;</span><br><span class="line">            content: &#39;&#39;;</span><br><span class="line">            position: absolute;</span><br><span class="line">            right: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            height: 50px;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .clear-completed &#123;</span><br><span class="line">            float: right;</span><br><span class="line">            position: absolute;</span><br><span class="line">            right: 20px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;*事项完成时*&#x2F;</span><br><span class="line">        .completed &#123;</span><br><span class="line">            color: #d9d9d9;</span><br><span class="line">            text-decoration: line-through;</span><br><span class="line">        &#125;</span><br><span class="line">        .red&#123;</span><br><span class="line">            color: #f00;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;vue.v2.6.12.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!-- 外观参考了：http:&#x2F;&#x2F;todomvc.com&#x2F;examples&#x2F;vue&#x2F;</span><br><span class="line">代码By 罗永超 --&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h1&gt;todolist&lt;&#x2F;h1&gt;</span><br><span class="line">        &lt;section class&#x3D;&quot;todoapp&quot;&gt;</span><br><span class="line">            &lt;header class&#x3D;&quot;header&quot;&gt;</span><br><span class="line">                &lt;input autofocus&#x3D;&quot;autofocus&quot; autocomplete&#x3D;&quot;off&quot; placeholder&#x3D;&quot;请在这里输入您的待办事项&quot; v-model&#x3D;&quot;text&quot;</span><br><span class="line">                    class&#x3D;&quot;new-todo&quot; @keyup.enter&#x3D;&quot;add&quot;&gt;</span><br><span class="line">                &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;toggle-all&quot; v-model&#x3D;&quot;checkall&quot;&gt;</span><br><span class="line">            &lt;&#x2F;header&gt;</span><br><span class="line">            &lt;ul class&#x3D;&quot;todolist&quot;&gt;</span><br><span class="line">                &lt;li v-for&#x3D;&quot;item,index in list&quot;&gt;</span><br><span class="line">                    &lt;input type&#x3D;&quot;checkbox&quot; v-model&#x3D;&quot;item.check&quot;&gt;</span><br><span class="line">                    &lt;span :class&#x3D;&quot;&#123;completed:item.check&#x3D;&#x3D;true&#125;&quot;&gt;&#123;&#123;item.content&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">                    &lt;a href&#x3D;&quot;#&quot; @click&#x3D;&quot;del(index)&quot;&gt;x&lt;&#x2F;a&gt;</span><br><span class="line">                &lt;&#x2F;li&gt;</span><br><span class="line">            &lt;&#x2F;ul&gt;</span><br><span class="line">            &lt;footer class&#x3D;&quot;footer&quot;&gt;</span><br><span class="line">                &lt;span class&#x3D;&quot;todo-count&quot;&gt;&lt;strong :class&#x3D;&quot;&#123;red:todo&gt;0&#125;&quot;&gt;&#123;&#123;todo&#125;&#125;&lt;&#x2F;strong&gt; 个未完成</span><br><span class="line">                &lt;&#x2F;span&gt;</span><br><span class="line">                &lt;a class&#x3D;&quot;clear-completed&quot; href&#x3D;&quot;#&quot; @click&#x3D;&quot;clear&quot;&gt;</span><br><span class="line">                    清除已完成</span><br><span class="line">                &lt;&#x2F;a&gt;</span><br><span class="line">            &lt;&#x2F;footer&gt;</span><br><span class="line">        &lt;&#x2F;section&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let dataHandler&#x3D;&#123;</span><br><span class="line">            get()&#123;</span><br><span class="line">                return JSON.parse(localStorage.getItem(&quot;mymy&quot;))|| [];</span><br><span class="line">            &#125;,</span><br><span class="line">            set(d)&#123;</span><br><span class="line">                localStorage.setItem(&quot;mymy&quot;,JSON.stringify(d));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        let vm &#x3D; new Vue(&#123;</span><br><span class="line">            el: &quot;#app&quot;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                list: dataHandler.get(),</span><br><span class="line">                text: &quot;&quot;&#x2F;&#x2F;输入框文本</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                add() &#123;&#x2F;&#x2F;回车新增待办</span><br><span class="line">                    if(!this.text)&#123;return&#125;;&#x2F;&#x2F;判断非空</span><br><span class="line">                    this.list.unshift(&#123;check:false,content:this.text&#125;);&#x2F;&#x2F;数组中添加对象</span><br><span class="line">                    this.text &#x3D; &quot;&quot;;&#x2F;&#x2F;输入框文本清空</span><br><span class="line">                &#125;,</span><br><span class="line">                del(index)&#123;&#x2F;&#x2F;删除单个</span><br><span class="line">                    this.list.splice(index,1);</span><br><span class="line">                &#125;,</span><br><span class="line">                clear()&#123;&#x2F;&#x2F;删除全部</span><br><span class="line">                    this.list&#x3D;this.list.filter(item&#x3D;&gt;item.check&#x3D;&#x3D;false);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            computed: &#123;</span><br><span class="line">                checkall: &#123;</span><br><span class="line">                    get() &#123;</span><br><span class="line">                        return this.list.every(item&#x3D;&gt;item.isChecked);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    set(value) &#123;</span><br><span class="line">                        this.list.forEach(item&#x3D;&gt;&#123;item.check&#x3D;value&#125;);&#x2F;&#x2F;全选绑定</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                todo()&#123;</span><br><span class="line">                    return this.list.filter(item&#x3D;&gt;item.check&#x3D;&#x3D;false).length;&#x2F;&#x2F;未完成计数</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            watch:&#123;</span><br><span class="line">                list:&#123;</span><br><span class="line">                    handler()&#123;</span><br><span class="line">                        dataHandler.set(this.list);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    deep:true</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/vue/" rel="tag"><i class="ic i-tag"></i> vue</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-04-01 08:42:49" itemprop="dateModified" datetime="2021-04-01T08:42:49+08:00">2021-04-01</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/10/27/vue%E7%9A%84%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7/" title="vue的监听属性">https://serena-tz.github.io/2020/10/27/vue的监听属性/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/10/26/vue%E7%9A%84%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexw3o58j20zk0m8e81.jpg" title="vue的计算属性">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>vue的计算属性</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/10/29/vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexoj0moj20zk0m8kgu.jpg" title="vue的组件和组件间的通信方式">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>vue的组件和组件间的通信方式</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text"> 监听属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E4%BC%A0%E5%8F%82%E7%9A%843%E7%A7%8D%E6%83%85%E5%86%B5"><span class="toc-number">2.</span> <span class="toc-text"> 事件传参的 3 种情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7%E5%AE%9E%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text"> 监听属性实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B1"><span class="toc-number">3.1.</span> <span class="toc-text"> 实例 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B2"><span class="toc-number">3.2.</span> <span class="toc-text"> 实例 2</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">51</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">29</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/10/26/vue%E7%9A%84%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/10/29/vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/10/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="本地存储">本地存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/30/vue%E7%9A%84%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB/" title="vue的过渡和动画">vue的过渡和动画</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/21/jquery%E7%9A%84%E4%BA%8B%E4%BB%B6/" title="jquery的事件">jquery的事件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/30/vue%E7%9A%84%E6%8F%92%E6%A7%BD/" title="vue的插槽">vue的插槽</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" title="移动端开发">移动端开发</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/22/vue%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%8C%87%E4%BB%A4/" title="vue的事件指令">vue的事件指令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/24/jquery%E7%9A%84%E7%89%B9%E6%95%88%E5%AE%9E%E7%8E%B0/" title="jquery的特效实现">jquery的特效实现</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="跨域问题">跨域问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="jquery工具方法和开发插件">jquery工具方法和开发插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" title="vue小胡子语法、v-bind">vue小胡子语法、v-bind</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/10/27/vue的监听属性/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
