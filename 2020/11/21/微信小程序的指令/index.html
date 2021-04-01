@@ -102,12 +102,12 @@ Serena = 阳光果苏 = 自律给我自由</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,86 +151,78 @@ Serena = 阳光果苏 = 自律给我自由</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="微信的指令"><a class="markdownIt-Anchor" href="#微信的指令">#</a> 微信的指令</h2>
+    <h2 id="小程序的指令"><a class="markdownIt-Anchor" href="#小程序的指令">#</a> 小程序的指令</h2>
 <ol>
 <li>
-<p>wx:for 列表循环</p>
+<p>wx:for 列表循环。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;view wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;array&#125;&#125;&quot;</span> wx:key=<span class="string">&quot;index&quot;</span>&gt;</span><br><span class="line">    <span class="comment">//i</span></span><br><span class="line">  &#123;&#123;index+<span class="number">1</span>&#125;&#125;-- &#123;&#123;item&#125;&#125;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line"><span class="comment">//改变默认的item和index的名字</span></span><br><span class="line">&lt;view wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;array&#125;&#125;&quot;</span> wx:<span class="keyword">for</span>-item=<span class="string">&quot;t&quot;</span> wx:<span class="keyword">for</span>-index=<span class="string">&quot;i&quot;</span>&gt;</span><br><span class="line">    <span class="comment">//i</span></span><br><span class="line">  &#123;&#123;i+<span class="number">1</span>&#125;&#125;-- &#123;&#123;t&#125;&#125;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line"><span class="comment">//循环嵌套，遍历</span></span><br><span class="line">&lt;view wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;array&#125;&#125;&quot;</span> &gt;</span><br><span class="line">    <span class="comment">//i</span></span><br><span class="line">	&#123;&#123;index+<span class="number">1</span>&#125;&#125;-- &#123;&#123;item&#125;&#125;</span><br><span class="line">  &lt;text wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;item&#125;&#125;&quot;</span> wx:<span class="keyword">for</span>-item=<span class="string">&quot;t&quot;</span>  wx:<span class="keyword">for</span>-index=<span class="string">&quot;i&quot;</span>&gt;&#123;&#123;t&#125;&#125;---&#123;&#123;i&#125;&lt;/text&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>wx:if</p>
-<p>用法和含义跟 vue 一样。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">&quot;&#123;&#123;条件表达式&#125;&#125;&quot;</span>&gt; True &lt;/view&gt;</span><br><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">&quot;&#123;&#123;age&gt;18&#125;&#125;&quot;</span>&gt; 成年了 &lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>wx:if。用法和含义跟 vue 一样。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">&quot;&#123;&#123;条件表达式&#125;&#125;&quot;</span>&gt; True &lt;/view&gt;</span><br><span class="line">   &lt;view wx:<span class="keyword">if</span>=<span class="string">&quot;&#123;&#123;age&gt;18&#125;&#125;&quot;</span>&gt; 成年了 &lt;/view&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>wx:if-wxelif-wx:else</p>
+<p>wx:if-wxelif-wx:else。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">&quot;&#123;&#123;length &gt; 5&#125;&#125;&quot;</span>&gt; <span class="number">1</span> &lt;/view&gt;</span><br><span class="line">&lt;view wx:elif=<span class="string">&quot;&#123;&#123;length &gt; 2&#125;&#125;&quot;</span>&gt; <span class="number">2</span> &lt;/view&gt;</span><br><span class="line">&lt;view wx:<span class="keyword">else</span>&gt; <span class="number">3</span> &lt;/view&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>小胡子语法</p>
+<p>小胡子语法。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;msg&gt;<span class="number">19</span>?<span class="string">&quot;成年了&quot;</span>:<span class="string">&quot;未成年&quot;</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>如何 v-show, 没有，使用 hidden 来代替</p>
+<p>如何 v-show, 没有，使用 hidden 来代替。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;view hidden=<span class="string">&quot;&#123;&#123;表达式&#125;&#125;&quot;</span>&gt; 如果表达式成立，则隐藏该view标签 &lt;/view&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>block 标签（虚拟标签，地位等同于 vue 的 template）</p>
+<p>block 标签（虚拟标签，地位等同于 vue 的 template）。</p>
 </li>
 </ol>
 <h2 id="获取json数据"><a class="markdownIt-Anchor" href="#获取json数据">#</a> 获取 json 数据</h2>
 <ol>
 <li>
 <p>何时获取</p>
-<p>点击按钮再获取</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">则写方法</span><br><span class="line">在微信小程序中没有methods属性</span><br></pre></td></tr></table></figure>
-<p>加载页面时就要获取</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将其写在钩子函数中，在onshow之前使用，一般写在onload里面</span><br></pre></td></tr></table></figure>
+<ol>
+<li>点击按钮再获取，则写方法，在微信小程序中没有 methods 属性。</li>
+</ol>
 </li>
 <li>
-<p>数据来源</p>
-<p>只能使用在线数据，不能使用相对路径导入数据</p>
-<p>a. 本地 x</p>
-<p>b. 后台 、自己搭建的平台</p>
-<p>​	自己家的程序员或网站，或自己用小皮搭建后台提供</p>
-<p>c. 第三方、mock</p>
-<p>​	别人家的</p>
+<p>加载页面时就要获取，将其写在钩子函数中，在 onshow 之前使用，一般写在 onload 里面。</p>
 </li>
 <li>
-<p>网站的要求 (假设小程序要发布上线，需要满足以下条件)</p>
-<p>国内备案的域名 + https</p>
+<p>数据来源，只能使用在线数据，不能使用相对路径导入数据。</p>
+<p>a. 本地 。</p>
+<p>b. 后台 、自己搭建的平台。自己家的程序员或网站，或自己用小皮搭建后台提供。</p>
+<p>c.  第三方、mock，别人家的。</p>
 </li>
 <li>
-<p>如何获取</p>
-<p>浏览器：ajax，vue 用 axios，在微信小程序中不需要用任何插件，它自己有一套获取数据的方式</p>
+<p>网站的要求 (假设小程序要发布上线，需要满足以下条件)：国内备案的域名 + https。</p>
+</li>
+<li>
+<p>如何获取数据。</p>
+<p>浏览器：ajax，vue 用 axios，在微信小程序中不需要用任何插件，它自己有一套获取数据的方式。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用法同JQ的ajax或axios</span></span><br><span class="line">wx.request(&#123;</span><br><span class="line">  url: <span class="string">&#x27;test.php&#x27;</span>, <span class="comment">//仅为示例，并非真实的接口地址</span></span><br><span class="line">  method:<span class="string">&quot;get&quot;</span>,</span><br><span class="line">  success (res) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.data)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">fail</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="让数据可响应"><a class="markdownIt-Anchor" href="#让数据可响应">#</a> 让数据可响应</h2>
 <ol>
 <li>
-<p>this</p>
-<p>指的是微信页面实例</p>
-<p>注意 this 的传递问题</p>
+<p>this，指的是微信页面实例。注意 this 的传递问题。</p>
 </li>
 <li>
-<p>对象或数组或其他的变量的响应式操作</p>
+<p>对象或数组或其他的变量的响应式操作。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.setData(&#123;</span><br><span class="line">    老数据:新数据</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="本地存储的例子页面通信"><a class="markdownIt-Anchor" href="#本地存储的例子页面通信">#</a> 本地存储的例子（页面通信）</h2>
-<p>需求：在 A 页面添加留言后，同步到 B 页面并且展示</p>
+<h2 id="本地存储页面通信"><a class="markdownIt-Anchor" href="#本地存储页面通信">#</a> 本地存储（页面通信）</h2>
+<p>需求：在 A 页面添加留言后，同步到 B 页面并且展示。</p>
 <ol>
 <li>
-<p>方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在数据后面添加方法即可，每添加一个方法，相当于是增加了一个葫芦娃兄弟</span><br></pre></td></tr></table></figure>
+<p>方法，在数据后面添加方法即可。</p>
 </li>
 <li>
 <p>页面通信</p>
-<p>a. 本地存储（今天）</p>
-<p>10M 的本地存储</p>
-<p>todolist 的微信小程序实现了</p>
-<p>b. url 传参（明天）</p>
+<p>a.  本地存储：10M 的本地存储</p>
+<p>b.  url 传参</p>
 </li>
 <li>
 <p>简单的双向数据绑定（兼容性问题，基础库要在一定的条件）</p>
@@ -241,20 +233,18 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <h2 id="跳转页面的两种方式"><a class="markdownIt-Anchor" href="#跳转页面的两种方式">#</a> 跳转页面的两种方式</h2>
 <ol>
 <li>
-<p>昨天说的，用 navigator 标签</p>
+<p>用 navigator 标签。</p>
 </li>
 <li>
-<p>今天说的</p>
-<p>用方法来实现跳转（wx.navigator ()）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">      url: <span class="string">&#x27;/pages/add/add&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>用方法来实现跳转（  wx.navigator ()  ）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">      url: <span class="string">&#x27;/pages/add/add&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="微信的css单位rpx"><a class="markdownIt-Anchor" href="#微信的css单位rpx">#</a> 微信的 css 单位（rpx）</h2>
-<p>可以用 px,%,rem 等常用单位，也有一个专属单位：rpx</p>
-<p>rpx（responsive pixel）:</p>
-<p>可以根据屏幕宽度进行自适应。规定屏幕宽为 750rpx。如在 iPhone6 上，屏幕宽度为 375px，共有 750 个物理像素，则 750rpx = 375px = 750 物理像素，1rpx = 0.5px = 1 物理像素。</p>
-<p>建议：以 750px 的 iPhone6s 设计稿为参考搞，量出来是多少，就使用多少 rpx.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">设计设计图是750px(iPhone6,6s,<span class="number">8</span>)</span><br><span class="line">此时量出来多少，就写多少rpx</span><br><span class="line"></span><br><span class="line">40rpx*50rpx</span><br><span class="line"></span><br><span class="line">假设你的设计图是375px</span><br><span class="line">10px*30px==&gt; 20rpx*60rpx</span><br></pre></td></tr></table></figure>
+<h2 id="小程序的css单位rpx"><a class="markdownIt-Anchor" href="#小程序的css单位rpx">#</a> 小程序的 css 单位（rpx）</h2>
+<p>可以用 px,%,rem 等常用单位，也有一个专属单位：rpx。</p>
+<p><strong>rpx</strong>（responsive pixel）: 可以根据屏幕宽度进行<strong>自适应</strong>。规定屏幕宽为 750rpx。如在 iPhone6 上，屏幕宽度为 375px，共有 750 个物理像素，则 750rpx = 375px = 750 物理像素，1rpx = 0.5px = 1 物理像素。</p>
+<p><strong>建议</strong>：以 750px 的 iPhone6s 设计稿为参考搞，量出来是多少，就使用多少 rpx。</p>
+<p>假设你的设计图是 375px， <code>10px * 30px  ==&gt; 20rpx * 60rpx</code></p>
 
       <div class="tags">
           <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag"><i class="ic i-tag"></i> 小程序</a>
@@ -269,7 +259,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-30 17:07:04" itemprop="dateModified" datetime="2021-03-30T17:07:04+08:00">2021-03-30</time>
+    <time title="修改时间：2021-04-01 15:41:23" itemprop="dateModified" datetime="2021-04-01T15:41:23+08:00">2021-04-01</time>
   </span>
 </div>
 
@@ -319,7 +309,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <div class="item left">
       
 
-  <a href="/2020/11/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E3%80%81%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfb3vzhj20zk0m8wny.jpg" title="小程序常用标签、基础指令">
+  <a href="/2020/11/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E3%80%81%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicljgocqbj20zk0m8e81.jpg" title="小程序常用标签、基础指令">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>小程序常用标签、基础指令</h3>
@@ -329,10 +319,10 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <div class="item right">
       
 
-  <a href="/2020/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-php%E5%AE%9E%E7%8E%B0%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxfdlttj20zk0m8npd.jpg" title="微信小程序+php实现今日头条小程序">
+  <a href="/2020/11/26/SEO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipex2cdtbj20zk0m8x6p.jpg" title="SEO的基本介绍">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>微信小程序+php实现今日头条小程序</h3>
+  <h3>SEO的基本介绍</h3>
   </a>
 
     </div>
@@ -351,7 +341,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text"> 微信的指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96json%E6%95%B0%E6%8D%AE"><span class="toc-number">2.</span> <span class="toc-text"> 获取 json 数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A9%E6%95%B0%E6%8D%AE%E5%8F%AF%E5%93%8D%E5%BA%94"><span class="toc-number">3.</span> <span class="toc-text"> 让数据可响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E7%9A%84%E4%BE%8B%E5%AD%90%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1"><span class="toc-number">4.</span> <span class="toc-text"> 本地存储的例子（页面通信）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text"> 跳转页面的两种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E7%9A%84css%E5%8D%95%E4%BD%8Drpx"><span class="toc-number">6.</span> <span class="toc-text"> 微信的 css 单位（rpx）</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text"> 小程序的指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96json%E6%95%B0%E6%8D%AE"><span class="toc-number">2.</span> <span class="toc-text"> 获取 json 数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A9%E6%95%B0%E6%8D%AE%E5%8F%AF%E5%93%8D%E5%BA%94"><span class="toc-number">3.</span> <span class="toc-text"> 让数据可响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1"><span class="toc-number">4.</span> <span class="toc-text"> 本地存储（页面通信）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text"> 跳转页面的两种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84css%E5%8D%95%E4%BD%8Drpx"><span class="toc-number">6.</span> <span class="toc-text"> 小程序的 css 单位（rpx）</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -366,7 +356,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">50</span>
+        <span class="count">49</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -443,7 +433,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2020/11/22/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-php%E5%AE%9E%E7%8E%B0%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2020/11/26/SEO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -467,17 +457,52 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/07/canvas%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="canvas基础入门">canvas基础入门</a></span>
+    <span><a href="/2020/08/04/H5-CSS3%E3%80%81%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" title="H5语义化标签、兼容性问题">H5语义化标签、兼容性问题</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
 </div>
 
-    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+    <span><a href="/2020/10/12/json%E8%A7%A3%E6%9E%90/" title="json解析">json解析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/09/PHP%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" title="PHP获取数据">PHP获取数据</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" title="vue小胡子语法、v-bind">vue小胡子语法、v-bind</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" title="移动端开发">移动端开发</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/05/less%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="less的基本介绍">less的基本介绍</a></span>
   </li>
 
       
@@ -495,7 +520,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/11/%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE/" title="地理位置">地理位置</a></span>
+    <span><a href="/2020/08/20/jQueryDOM%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C2%E8%8A%82%E7%82%B9%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="jQueryDOM节点操作2节点的增删改查">jQueryDOM节点操作2节点的增删改查</a></span>
   </li>
 
       
@@ -504,7 +529,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="域名服务器的基本介绍">域名服务器的基本介绍</a></span>
+    <span><a href="/2020/11/03/npm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="npm的基本介绍">npm的基本介绍</a></span>
   </li>
 
       
@@ -513,43 +538,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/29/Bootstrap%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/" title="Bootstrap全局样式">Bootstrap全局样式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/09/16/CSS3%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" title="CSS3动画效果">CSS3动画效果</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/10/19/%E5%88%9D%E5%A7%8BES6%E6%96%B0%E7%89%B9%E6%80%A7/" title="初始ES6新特性">初始ES6新特性</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/09/14/CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/" title="CSS3新增特性">CSS3新增特性</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/11/04/webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="webpack的基本介绍">webpack的基本介绍</a></span>
+    <span><a href="/2020/09/10/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="本地存储">本地存储</a></span>
   </li>
 
   </ul>
