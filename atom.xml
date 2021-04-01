@@ -22,15 +22,15 @@
     <category term="vue" />
     <category term="webpack" />
     <category term="web应用" />
-    <category term="地理位置" />
     <category term="ES6" />
     <category term="响应式布局" />
     <category term="服务器" />
+    <category term="地理位置" />
     <category term="小程序" />
     <category term="弹性盒子" />
     <category term="数据库" />
-    <category term="移动端" />
     <category term="本地存储" />
+    <category term="移动端" />
     <category term="跨域" />
     <category term="canvas" />
     <entry>
@@ -58,8 +58,10 @@
 &lt;p&gt;交互模式（浏览器的控制台）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;退出：ctrl+C 退出。&lt;br&gt;
-2. 进入：在命令行中输入&lt;strong&gt; node&lt;/strong&gt; 回车即可。&lt;/p&gt;
+&lt;p&gt;退出：ctrl+C 退出。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入：在命令行中输入&lt;strong&gt; node&lt;/strong&gt; 回车即可。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;直接执行一个本地 JS 文件（显示了目录才算）。&lt;/p&gt;
