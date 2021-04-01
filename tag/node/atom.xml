@@ -8,96 +8,96 @@
     <category term="CSS3" />
     <category term="H5" />
     <category term="jquery" />
-    <category term="SEO" />
     <category term="PHP" />
+    <category term="SEO" />
     <category term="ajax" />
     <category term="axios" />
     <category term="echarts" />
     <category term="git" />
     <category term="manual" />
     <category term="json" />
-    <category term="node" />
-    <category term="vue" />
-    <category term="npm" />
     <category term="less" />
+    <category term="node" />
+    <category term="npm" />
+    <category term="vue" />
     <category term="webpack" />
     <category term="web应用" />
-    <category term="ES6" />
     <category term="地理位置" />
+    <category term="ES6" />
     <category term="响应式布局" />
     <category term="服务器" />
-    <category term="弹性盒子" />
     <category term="小程序" />
+    <category term="弹性盒子" />
     <category term="数据库" />
+    <category term="移动端" />
     <category term="本地存储" />
     <category term="跨域" />
-    <category term="移动端" />
     <category term="canvas" />
     <entry>
         <id>https://serena-tz.github.io/2021/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
         <title>node.js基础入门</title>
         <link rel="alternate" href="https://serena-tz.github.io/2021/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
         <content type="html">&lt;h2 id=&#34;nodejs是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nodejs是什么&#34;&gt;#&lt;/a&gt; Node.js 是什么？&lt;/h2&gt;
-&lt;p&gt;是一个运行 JS 的平台。原来的 JS 只能在浏览器中执行，要想让它脱离出来可以在任意地方都能够执行 JS。&lt;/p&gt;
-&lt;p&gt;JS 当后端语言来使用，必须要安装 Nodejs。&lt;/p&gt;
-&lt;p&gt;安装了 Nodejs 就相当于是安装了 V8 引擎（谷歌中的 JS 解析器）&lt;/p&gt;
+&lt;p&gt;node.js 是一个运行 JS 的平台。原来的 JS 脚本只能在浏览器中执行，要想让它脱离出来可以在任意地方都能够执行 JS。JS 当后端语言来使用，必须要安装 Nodejs。安装了 Nodejs 就相当于是安装了 V8 引擎（谷歌中的 JS 解析器）。总的来说：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Nodejs 是一个运行 JS 的平台，不是一门语言，也不是 JS 框架或 js 库，不能像 jquery 那样可以引入到网页增加新功能&lt;/li&gt;
-&lt;li&gt;Nodejs 主要是用于开发网站即网络应用和本地应用、构建工具等，可以做 JS 不能做的事情，比如读取文件，连接数据，网络服务等。类似于 PHP&lt;/li&gt;
+&lt;li&gt;Nodejs 是一个运行 JS 的&lt;strong&gt;平台&lt;/strong&gt;，不是一门语言，也不是 JS 框架或 js 库，不能像 jquery 那样可以引入到网页，增加新功能。&lt;/li&gt;
+&lt;li&gt;Nodejs 主要是用于&lt;strong&gt;开发网站&lt;/strong&gt;，即网络应用和本地应用、构建工具等，可以做 JS 不能做的事情，比如读取文件，连接数据，网络服务等。类似于 PHP。&lt;/li&gt;
 &lt;li&gt;安装 Nodejs 环境的目的：是想要让 JS 能脱离浏览器环境也可以单独执行。相当于是安装了一个解析 JS 的平台。如果安装了该环境，就可以在电脑的任意文件夹中执行 JS 代码。&lt;/li&gt;
-&lt;li&gt;Nodejs 是与浏览器无关的。它能执行的 JS 只能是 ecmascript，不能执行 DOM，BOM 的方法和属性。&lt;/li&gt;
+&lt;li&gt;Nodejs 是与浏览器无关的。它能执行的 JS 只能是&lt;strong&gt; ecmascript&lt;/strong&gt;，不能执行 DOM，BOM 的方法和属性。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;nodejs可以做什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nodejs可以做什么&#34;&gt;#&lt;/a&gt; node.js 可以做什么？&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;1. 可以读写本地文件 
-   2. 完成前端构建化工作：压缩、打包（webpack）
-   3. 是服务器语言，地位等同于java，PHP，.net，意味着可以直接使用JS来做一个动态网站（可以连接数据库）（前端也可以做后端了）
-   4. 可以开发软件、APP    比如：VScode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;可以&lt;strong&gt;读写&lt;/strong&gt;本地文件 。&lt;/li&gt;
+&lt;li&gt;完成前端构建化工作：压缩、打包（webpack）。&lt;/li&gt;
+&lt;li&gt;是服务器语言，地位等同于 java，PHP，.net，意味着可以直接使用 JS 来做一个动态网站（可以连接数据库）（前端也可以做后端了）。&lt;/li&gt;
+&lt;li&gt;可以开发软件、APP，比如：VScode。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;使用nodejs的两种方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用nodejs的两种方式&#34;&gt;#&lt;/a&gt; 使用 Nodejs 的两种方式&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;交互模式（浏览器的控制台）&lt;br&gt;
-退出：ctrl+C 退出&lt;/p&gt;
-&lt;p&gt;进入：在命令行中输入 node 回车即可&lt;/p&gt;
+&lt;p&gt;交互模式（浏览器的控制台）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;直接执行一个本地 JS 文件（显示了目录才算）&lt;/p&gt;
+&lt;p&gt;退出：ctrl+C 退出。&lt;br&gt;
+2. 进入：在命令行中输入&lt;strong&gt; node&lt;/strong&gt; 回车即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直接执行一个本地 JS 文件（显示了目录才算）。&lt;/p&gt;
 &lt;p&gt;首先在本地写一个 JS 文件，然后通过命令行定位到当前目录，输入 node js 文件名.js 回车执行。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;学nodejs的目的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#学nodejs的目的&#34;&gt;#&lt;/a&gt; 学 Nodejs 的目的&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;了解这么后端语言&lt;/li&gt;
-&lt;li&gt;为前端构建化做准备&lt;/li&gt;
-&lt;li&gt;为 Vue 的豪华版做准备&lt;/li&gt;
+&lt;li&gt;了解这门后端语言。&lt;/li&gt;
+&lt;li&gt;为前端构建化做准备。&lt;/li&gt;
+&lt;li&gt;为 Vue 的豪华版做准备。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;js的模块化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的模块化&#34;&gt;#&lt;/a&gt; JS 的模块化&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;如何解决 JS 模块化产生的命名冲突和变量污染问题：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;使用变量前缀&lt;/p&gt;
-&lt;p&gt;比如两个相同名字的同学如何区分。&lt;br&gt;
-var moduleA_a=1; var moduleB_a=1;&lt;br&gt;
- 问题：仍然存在大量全局变量或函数（治标不治本）&lt;/p&gt;
+&lt;p&gt;使用变量&lt;strong&gt;前缀&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;比如两个相同名字的同学如何区分。var moduleA_a=1; var moduleB_a=1;&lt;br&gt;
+ 问题：仍然存在大量全局变量或函数（治标不治本）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;命名空间（使用一个对象来装一个人写的代码）&lt;/p&gt;
-&lt;p&gt;将变量和属性全部放在对象中，再通过对象来访问模块属性和方法&lt;br&gt;
+&lt;p&gt;命名空间（使用一个&lt;strong&gt;对象&lt;/strong&gt;来装一个人写的代码）。&lt;/p&gt;
+&lt;p&gt;将变量和属性全部放在对象中，再通过对象来访问模块属性和方法。&lt;br&gt;
 问题：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;当代码越来越大时，容易出现对象嵌套对象的情况。会导致访问路径过长。&lt;/li&gt;
-&lt;li&gt;所以属性和方法都会暴露，其他模块可以轻松改变该模块对象。&lt;/li&gt;
+&lt;li&gt;当代码越来越大时，容易出现对象&lt;strong&gt;嵌套对象&lt;/strong&gt;的情况。会导致访问&lt;strong&gt;路径过长&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;所有属性和方法都会暴露，其他模块可以轻松改变该模块对象。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;IIFE（立即执行函数表达式）&lt;/p&gt;
-&lt;p&gt;IIFE：Immediately Invoked Function Expression&lt;br&gt;
- 好处：&lt;/p&gt;
+&lt;p&gt;IIFE（立即执行函数表达式）Immediately Invoked Function Expression。&lt;br&gt;
+好处：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;可创建私有作用域（变量，函数）避免命名冲突&lt;/li&gt;
-&lt;li&gt;能实现模块的开发&lt;br&gt;
-是较为完美推荐的方式&lt;/li&gt;
+&lt;li&gt;可创建私有作用域（变量，函数）避免命名冲突。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能实现模块的开发，是较为完美推荐的方式。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;实例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实例&#34;&gt;#&lt;/a&gt; 实例&lt;/h2&gt;
