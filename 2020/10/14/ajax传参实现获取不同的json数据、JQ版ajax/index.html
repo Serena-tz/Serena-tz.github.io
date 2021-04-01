@@ -102,12 +102,12 @@ Serena = 阳光果苏 = 自律给我自由</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
         </ul>
       </div>
     </header>
@@ -154,21 +154,21 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <h2 id="ajax传参实现获取不同的json数据"><a class="markdownIt-Anchor" href="#ajax传参实现获取不同的json数据">#</a> ajax 传参实现获取不同的 json 数据</h2>
 <ol>
 <li>
-<p>get–比较常用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1个参数的写法</span></span><br><span class="line">xhr.open(<span class="string">&quot;get&quot;</span>,<span class="string">&quot;http://localhost/web19/day05/getStudent.php?name=张三&quot;</span>)</span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">//以上前端只要这么写了，后端在getStudent.php中就可以通过该地址直接拿到name的值张三</span></span><br><span class="line"><span class="comment">//多个参数的写法：</span></span><br><span class="line">xhr.open(<span class="string">&quot;get&quot;</span>,<span class="string">&quot;http://localhost/web19/day05/getStudent.php?name=张三&amp;age=18&quot;</span>)</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+<p>get，比较常用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//1个参数的写法</span></span><br><span class="line">xhr.open(<span class="string">&quot;get&quot;</span>,<span class="string">&quot;http://localhost/web19/day05/getStudent.php?name=张三&quot;</span>)</span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">//以上前端只要这么写了，后端在getStudent.php中就可以通过该地址直接拿到name的值张三</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//多个参数的写法：</span></span><br><span class="line">xhr.open(<span class="string">&quot;get&quot;</span>,<span class="string">&quot;http://localhost/web19/day05/getStudent.php?name=张三&amp;age=18&quot;</span>)</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>post— 敏感数据需要使用 post 提交给后端</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//跟get方式的区别有2个：</span></span><br><span class="line"><span class="comment">//1. 要拼接的数据放到了send后面，</span></span><br><span class="line"><span class="comment">//2. 添加了一个方法设置请求头</span></span><br><span class="line">xhr.open(<span class="string">&quot;post&quot;</span>,<span class="string">&quot;http://localhost/web19/day05/getStudent.php&quot;</span>);</span><br><span class="line"><span class="comment">//设置请求头信息，将send中的url地址编码，转成标准的键值对，以便拼接（默认的标准的方式）</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">&quot;Content-type&quot;</span>,<span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">xhr.send(<span class="string">&quot;name=张三&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>post，敏感数据需要使用 post 提交给后端。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 跟get方式的区别有2个：</span></span><br><span class="line"><span class="comment">// 1. 要拼接的数据放到了send后面</span></span><br><span class="line"><span class="comment">// 2. 添加了一个方法设置请求头</span></span><br><span class="line">xhr.open(<span class="string">&quot;post&quot;</span>,<span class="string">&quot;http://localhost/web19/day05/getStudent.php&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置请求头信息，将send中的url地址编码，转成标准的键值对，以便拼接（默认的标准的方式）</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">&quot;Content-type&quot;</span>,<span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">xhr.send(<span class="string">&quot;name=张三&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="jq版的ajax"><a class="markdownIt-Anchor" href="#jq版的ajax">#</a> JQ 版的 ajax</h2>
 <p>JQ 版的 ajax 的亮点：</p>
 <ol>
-<li>兼容各大浏览器（包括 IE）</li>
-<li>高度封装，用起来很方便，仅需要配置即可，类似于插件的使用方式</li>
+<li>兼容各大浏览器（包括 IE）。</li>
+<li>高度封装，用起来很方便，仅需要配置即可，类似于插件的使用方式。</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">    $.ajax(&#123;<span class="attr">name</span>:value, <span class="attr">name</span>:value, ... &#125;)</span><br><span class="line">    type    规定请求的类型，（GET 或 POST）,默认值为get。</span><br><span class="line">    url     规定发送请求的 URL。默认是当前页面。</span><br><span class="line">    <span class="keyword">async</span>   布尔值，表示请求是否异步处理。默认是 <span class="literal">true</span>。</span><br><span class="line">    data    规定要发送到服务器的数据。</span><br><span class="line">    dataType    预期的服务器响应的数据类型，一般不需要设置。</span><br><span class="line">    timeout  规定请求的期限时间，默认没有期限   </span><br><span class="line">    cache   是否缓存请求过来的数据</span><br><span class="line">    success(result,status,xhr)  当请求成功时运行的函数。</span><br><span class="line">    error(xhr,status,error) 如果请求失败要运行的函数。</span><br><span class="line">    complete(xhr) 无论数据请求成功与否，都会执行该函数</span><br><span class="line"><span class="comment">//ajax是JQ的一个全局方法，类似于之前学习过的全局方法</span></span><br><span class="line"><span class="comment">//$.each,$.trim,$.type,。。。</span></span><br><span class="line"><span class="comment">//标准的模板</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="comment">//默认是get，所以可以省略，等价于open()</span></span><br><span class="line">   type:<span class="string">&quot;get|post&quot;</span>,</span><br><span class="line">   <span class="comment">//等价于open()</span></span><br><span class="line">   url:<span class="string">&quot;数据地址&quot;</span>,</span><br><span class="line">    <span class="comment">//该方法只会在数据获取成功后才会执行，</span></span><br><span class="line">    <span class="comment">//等价于onreadystatechange,if(xhr.readyState==4&amp;&amp;xhr.status==200)</span></span><br><span class="line">   success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    	<span class="comment">//写如何解析json的代码</span></span><br><span class="line">		<span class="built_in">console</span>.log(res);<span class="comment">//res就是真对象，甚至可以不需要使用JSON.parse()</span></span><br><span class="line">	&#125;,</span><br><span class="line">    <span class="comment">//原来的JS是没有的，除非写else语句，可选</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//进阶版的模板：</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="comment">//默认是get，可以省略，等价于open()</span></span><br><span class="line">   type:<span class="string">&quot;get|post&quot;</span>,</span><br><span class="line">   <span class="comment">//等价于open()</span></span><br><span class="line">   url:<span class="string">&quot;数据地址&quot;</span>,</span><br><span class="line">   timeout:<span class="number">5000</span>,</span><br><span class="line">    <span class="comment">//该方法只会在数据获取成功后才会执行，</span></span><br><span class="line">    <span class="comment">//等价于if(xhr.readyState==4&amp;&amp;)</span></span><br><span class="line">   success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    	<span class="comment">//写如何解析json的代码</span></span><br><span class="line">		<span class="built_in">console</span>.log(res);<span class="comment">//res就是真对象，甚至可以不需要使用JSON.parse()</span></span><br><span class="line">	&#125;,</span><br><span class="line">        <span class="comment">//原来的JS是没有的，除非写else语句，可选</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    complete:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//不管数据是否获取成功，都会执行该方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">    $.ajax(&#123;<span class="attr">name</span>:value, <span class="attr">name</span>:value, ... &#125;)</span><br><span class="line">    type      规定请求的类型，（GET 或 POST）,默认值为get。</span><br><span class="line">    url       规定发送请求的 URL。默认是当前页面。</span><br><span class="line">    <span class="keyword">async</span>     布尔值，表示请求是否异步处理。默认是 <span class="literal">true</span>。</span><br><span class="line">    data      规定要发送到服务器的数据。</span><br><span class="line">    dataType  预期的服务器响应的数据类型，一般不需要设置。</span><br><span class="line">    timeout   规定请求的期限时间，默认没有期限   </span><br><span class="line">    cache     是否缓存请求过来的数据</span><br><span class="line">    success(result,status,xhr)  当请求成功时运行的函数。</span><br><span class="line">    error(xhr,status,error)     如果请求失败要运行的函数。</span><br><span class="line">    complete(xhr)               无论数据请求成功与否，都会执行该函数</span><br><span class="line"><span class="comment">//ajax是JQ的一个全局方法，类似于之前学习过的全局方法</span></span><br><span class="line"><span class="comment">//$.each,$.trim,$.type,。。。</span></span><br><span class="line"><span class="comment">//标准的模板</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="comment">//默认是get，所以可以省略，等价于open()</span></span><br><span class="line">   type:<span class="string">&quot;get|post&quot;</span>,</span><br><span class="line">   <span class="comment">//等价于open()</span></span><br><span class="line">   url:<span class="string">&quot;数据地址&quot;</span>,</span><br><span class="line">    <span class="comment">//该方法只会在数据获取成功后才会执行，</span></span><br><span class="line">    <span class="comment">//等价于onreadystatechange,if(xhr.readyState==4&amp;&amp;xhr.status==200)</span></span><br><span class="line">   success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    	<span class="comment">//写如何解析json的代码</span></span><br><span class="line">		<span class="built_in">console</span>.log(res);<span class="comment">//res就是真对象，甚至可以不需要使用JSON.parse()</span></span><br><span class="line">	&#125;,</span><br><span class="line">    <span class="comment">//原来的JS是没有的，除非写else语句，可选</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//进阶版的模板：</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="comment">//默认是get，可以省略，等价于open()</span></span><br><span class="line">   type:<span class="string">&quot;get|post&quot;</span>,</span><br><span class="line">   <span class="comment">//等价于open()</span></span><br><span class="line">   url:<span class="string">&quot;数据地址&quot;</span>,</span><br><span class="line">   timeout:<span class="number">5000</span>,</span><br><span class="line">    <span class="comment">//该方法只会在数据获取成功后才会执行，</span></span><br><span class="line">    <span class="comment">//等价于if(xhr.readyState==4&amp;&amp;)</span></span><br><span class="line">   success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    	<span class="comment">//写如何解析json的代码</span></span><br><span class="line">		<span class="built_in">console</span>.log(res);<span class="comment">//res就是真对象，甚至可以不需要使用JSON.parse()</span></span><br><span class="line">	&#125;,</span><br><span class="line">        <span class="comment">//原来的JS是没有的，除非写else语句，可选</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    complete:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//不管数据是否获取成功，都会执行该方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="ajax实例"><a class="markdownIt-Anchor" href="#ajax实例">#</a> ajax 实例</h2>
 <h3 id="实例1"><a class="markdownIt-Anchor" href="#实例1">#</a> 实例 1</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;select id&#x3D;&quot;sel&quot;&gt;</span><br><span class="line">        &lt;option&gt;---请选择学生---&lt;&#x2F;option&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;0&quot;&gt;---张三---&lt;&#x2F;option&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;1&quot;&gt;---李四---&lt;&#x2F;option&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;2&quot;&gt;---王五---&lt;&#x2F;option&gt;</span><br><span class="line">    &lt;&#x2F;select&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;box&quot;&gt;</span><br><span class="line">        &lt;!-- 显示选中了的学生数据，来自于ajax，ajax请求的是后端数据 --&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var sel&#x3D;document.getElementById(&quot;sel&quot;);</span><br><span class="line">    var box&#x3D;document.getElementById(&quot;box&quot;);</span><br><span class="line">    &#x2F;&#x2F; var box&#x3D;doc.</span><br><span class="line">    sel.onchange&#x3D;function()&#123;</span><br><span class="line">        &#x2F;&#x2F; console.log(sel.value)</span><br><span class="line">      &#x2F;&#x2F;xhr即ajax对象</span><br><span class="line">      var xhr&#x3D;new XMLHttpRequest();</span><br><span class="line">      &#x2F;&#x2F;再调用该对象下的方法和属性</span><br><span class="line">      &#x2F;&#x2F;后端提供给我们的地址</span><br><span class="line">      &#x2F;&#x2F;后端其实会写一个接口文档，里面有文档说明</span><br><span class="line">      &#x2F;&#x2F; 数据地址其就是接口地址</span><br><span class="line">      &#x2F;&#x2F; .json</span><br><span class="line">      &#x2F;&#x2F; txt</span><br><span class="line">      &#x2F;&#x2F; html</span><br><span class="line">      &#x2F;&#x2F; xml</span><br><span class="line">      &#x2F;&#x2F; php</span><br><span class="line">      &#x2F;&#x2F; jsp</span><br><span class="line">      &#x2F;&#x2F; php</span><br><span class="line">      &#x2F;&#x2F; py</span><br><span class="line">      &#x2F;&#x2F; 后缀名不代表数据，里面的内容才代表数据</span><br><span class="line">      &#x2F;&#x2F; 文件后缀名仅仅只是用来关联要打开的软件，里面的内容才是关键</span><br><span class="line">      &#x2F;&#x2F; </span><br><span class="line">          &#x2F;&#x2F; xhr.open(&#39;get&#39;,&#39;web19.jpg&#39;);</span><br><span class="line">          &#x2F;&#x2F; 传参到后台,通过url的search部分像后端传递数据（发生数据，通信）</span><br><span class="line">          &#x2F;&#x2F; getStudent.php?name&#x3D;1</span><br><span class="line">          xhr.open(&#39;get&#39;,&#39;getStudent.php?uname&#x3D;&#39;+sel.value);</span><br><span class="line">          xhr.send();</span><br><span class="line">          xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">              if(xhr.readyState&#x3D;&#x3D;4&amp;&amp;xhr.status&#x3D;&#x3D;200)&#123;</span><br><span class="line">                &#x2F;&#x2F; 后端返回过来的数据</span><br><span class="line">                 var json&#x3D;JSON.parse(xhr.response);</span><br><span class="line">                 console.log(xhr.response);&#x2F;&#x2F;1</span><br><span class="line">                  &#x2F;&#x2F;注意：json要写对，否则可能会报错</span><br><span class="line">                  box.innerText&#x3D;&#96;姓名:$&#123;json.name&#125;,年龄:$&#123;json.age&#125;&#96;;</span><br><span class="line">                 &#125;</span><br><span class="line">          &#125;  </span><br><span class="line">    &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -190,7 +190,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-31 10:12:00" itemprop="dateModified" datetime="2021-03-31T10:12:00+08:00">2021-03-31</time>
+    <time title="修改时间：2021-04-01 16:03:19" itemprop="dateModified" datetime="2021-04-01T16:03:19+08:00">2021-04-01</time>
   </span>
 </div>
 
@@ -240,7 +240,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <div class="item left">
       
 
-  <a href="/2020/10/13/ajax%E7%AE%80%E4%BB%8B%E3%80%81ajax%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E3%80%81%E6%96%B9%E6%B3%95%EF%BC%88%E5%8F%91%E8%AF%B7%E6%B1%82%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicliierfjj20zk0m8npd.jpg" title="ajax简介、ajax对象的属性、方法（发请求）">
+  <a href="/2020/10/13/ajax%E7%AE%80%E4%BB%8B%E3%80%81ajax%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E3%80%81%E6%96%B9%E6%B3%95%EF%BC%88%E5%8F%91%E8%AF%B7%E6%B1%82%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="ajax简介、ajax对象的属性、方法（发请求）">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>ajax简介、ajax对象的属性、方法（发请求）</h3>
@@ -250,7 +250,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
     <div class="item right">
       
 
-  <a href="/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitf0kl1j20zk0m87fe.jpg" title="跨域问题">
+  <a href="/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet8c1a2j20zk0m8kct.jpg" title="跨域问题">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>跨域问题</h3>
@@ -388,7 +388,34 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/28/Bootstrap%E7%9A%84%E6%A0%85%E6%A0%BC%E5%8C%96%E7%B3%BB%E7%BB%9F/" title="Bootstrap的栅格化系统">Bootstrap的栅格化系统</a></span>
+    <span><a href="/2020/09/16/CSS3%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" title="CSS3动画效果">CSS3动画效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/11/%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE/" title="地理位置">地理位置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="git零基础入门">git零基础入门</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/07/vue-router%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="vue-router的基本介绍">vue-router的基本介绍</a></span>
   </li>
 
       
@@ -406,7 +433,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/05/H5%E8%A1%A8%E5%8D%95/" title="H5表单">H5表单</a></span>
+    <span><a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" title="vue小胡子语法、v-bind">vue小胡子语法、v-bind</a></span>
   </li>
 
       
@@ -424,33 +451,6 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/09/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE/" title="多媒体标签">多媒体标签</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/11/21/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8C%87%E4%BB%A4/" title="微信小程序的指令">微信小程序的指令</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/10/15/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="跨域问题">跨域问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" title="jQuery选择器">jQuery选择器</a></span>
   </li>
 
@@ -458,10 +458,9 @@ Serena = 阳光果苏 = 自律给我自由</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/" title="分类于 操作步骤">操作步骤</a>
 </div>
 
-    <span><a href="/2020/04/01/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2020/11/03/npm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="npm的基本介绍">npm的基本介绍</a></span>
   </li>
 
       
@@ -470,7 +469,7 @@ Serena = 阳光果苏 = 自律给我自由</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/10/14/ajax%E4%BC%A0%E5%8F%82%E5%AE%9E%E7%8E%B0%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%90%8C%E7%9A%84json%E6%95%B0%E6%8D%AE%E3%80%81JQ%E7%89%88ajax/" title="ajax传参实现获取不同的json数据、JQ版ajax">ajax传参实现获取不同的json数据、JQ版ajax</a></span>
+    <span><a href="/2020/09/18/%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90/" title="弹性盒子">弹性盒子</a></span>
   </li>
 
   </ul>
