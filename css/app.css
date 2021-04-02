@@ -581,6 +581,9 @@ details summary::before {
 .i-cloud-music:before {
   content: "\e76a";
 }
+.i-bilibili:before {
+  content: "\e604";
+}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */

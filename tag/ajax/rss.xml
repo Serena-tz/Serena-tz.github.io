@@ -8,31 +8,31 @@
         <pubDate>Wed, 14 Oct 2020 09:47:29 +0800</pubDate>
         <lastBuildDate>Wed, 14 Oct 2020 09:47:29 +0800</lastBuildDate>
         <category>Bootstrap</category>
-        <category>H5</category>
         <category>CSS3</category>
+        <category>H5</category>
+        <category>jquery</category>
         <category>PHP</category>
         <category>SEO</category>
-        <category>jquery</category>
         <category>ajax</category>
         <category>axios</category>
         <category>echarts</category>
-        <category>git</category>
         <category>manual</category>
+        <category>git</category>
+        <category>node</category>
         <category>json</category>
         <category>less</category>
-        <category>node</category>
         <category>npm</category>
         <category>vue</category>
         <category>webpack</category>
-        <category>响应式布局</category>
-        <category>地理位置</category>
         <category>ES6</category>
+        <category>地理位置</category>
+        <category>响应式布局</category>
         <category>服务器</category>
-        <category>小程序</category>
         <category>弹性盒子</category>
         <category>数据库</category>
-        <category>本地存储</category>
+        <category>小程序</category>
         <category>移动端</category>
+        <category>本地存储</category>
         <category>跨域</category>
         <category>canvas</category>
         <item>
