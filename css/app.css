@@ -2534,10 +2534,10 @@ main >.inner {
   color: #e60026;
 }
 .social .item.qq::before {
-  background-color: #f60;
+  background-color: #0CBEFB;
 }
 .social .item.qq i {
-  color: #f60;
+  color: #0CBEFB;
 }
 .social .item.email::before {
   background-color: #55acd5;
