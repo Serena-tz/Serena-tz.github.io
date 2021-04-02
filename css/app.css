@@ -2527,6 +2527,12 @@ main >.inner {
 .social .item.music i {
   color: #e60026;
 }
+.social .item.qq::before {
+  background-color: #f60;
+}
+.social .item.qq i {
+  color: #f60;
+}
 .social .item.email::before {
   background-color: #55acd5;
 }
