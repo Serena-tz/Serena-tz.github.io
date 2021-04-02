@@ -1,0 +1,636 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="ES6" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/10/19/%E5%88%9D%E5%A7%8BES6%E6%96%B0%E7%89%B9%E6%80%A7/">
+
+
+
+  <title>
+初始ES6新特性 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">初始ES6新特性
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-10-19 16:04:53">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-10-19T16:04:53+08:00">2020-10-19</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/10/19/%E5%88%9D%E5%A7%8BES6%E6%96%B0%E7%89%B9%E6%80%A7/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="新的声明变量的方式"><a class="markdownIt-Anchor" href="#新的声明变量的方式">#</a> 新的声明变量的方式</h2>
+<p>之前用的都是 var 来声明变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">alert(a);<span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">---------</span><br><span class="line">alert(a);<span class="comment">// undefined,var fun</span></span><br><span class="line">fun();<span class="comment">//undefined(); not defined,not a function,IE8及以下会执行函数</span></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">false</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> a=<span class="number">1</span>;   </span><br><span class="line">    <span class="keyword">var</span> fun=<span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>let 关键字<br>
+声明变量的另一种方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>的特点： (面试)</span><br><span class="line"><span class="number">1</span>、是块级作用域，无论在哪里声明，都只能在所包含的作用域内访问，比如函数和代码块（&#123;&#125;这种形式）都可以形成块级作用域</span><br><span class="line"><span class="number">2</span>、在同级作用域内，不能重复声明,包括混用<span class="keyword">var</span> 和<span class="keyword">let</span></span><br><span class="line"><span class="number">3</span>、没有变量提升，也就是没有预解析，必须要先声明再使用（即所谓的暂死区，变量没执行时是不会被扫描到的，必须执行到才会将变量释放并可用）</span><br><span class="line"></span><br><span class="line">作用：</span><br><span class="line"><span class="number">1.</span> 让我们的代码写得更规范严谨</span><br><span class="line"><span class="number">2.</span> 解决了之前使用闭包才能解决的问题</span><br><span class="line"><span class="number">3.</span> 建议在移动端开发中使用<span class="keyword">let</span>来代替<span class="keyword">var</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>const<br>
+ 声明常量的一种方式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">    <span class="number">1</span>、声明时必须要赋值，且该值不可改变</span><br><span class="line">		<span class="keyword">const</span> a;不行的</span><br><span class="line">    <span class="number">2</span>、是块级作用域。同<span class="keyword">let</span></span><br><span class="line">    <span class="number">3</span>、对于对象，不能改对象本身，但可以改里面的属性值，也就是只能通过访问的方式改属性值。类似于指针，不能改变地址，但能改变里面的值</span><br><span class="line">	<span class="keyword">const</span> obj=&#123;&#125;</span><br><span class="line">    obj=<span class="number">123</span>;<span class="comment">//不行的，即不能该对象本身</span></span><br><span class="line">	obj.name=<span class="string">&quot;张三&quot;</span>;<span class="comment">//可以的，可以给该对象添加属性</span></span><br><span class="line">    <span class="number">4</span>、建议使用大写字母来命名</span><br><span class="line"></span><br><span class="line">作用：希望定义的值不被改变（锁定初始值）</span><br><span class="line"><span class="keyword">const</span> pi=<span class="number">3.1415</span>;<span class="comment">//比如希望π的值就是我设置的值</span></span><br><span class="line">pi=<span class="number">4</span>;<span class="comment">//报错</span></span><br><span class="line"><span class="keyword">const</span> xhr=<span class="keyword">new</span> XMLHttpRequest();<span class="comment">//比如希望ajax对象不会被其他人或其他变量给改变。也需要常量</span></span><br><span class="line"><span class="comment">//其他人就无法改变你的变量的值了</span></span><br><span class="line"><span class="keyword">var</span> xhr=<span class="number">1</span>;<span class="comment">//无法更改</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值">#</a> 解构赋值</h2>
+<p>概念：按照一定模式，将数组或对象中提取值（结构拆开）用于给变量赋值。<br>
+通俗讲就是将一个结构给解开，用于给变量或属性赋值。也就是<strong>解构在左边，赋值在右边</strong>。</p>
+<ol>
+<li>
+<p>数组的解构赋值<br>
+之前定义多个变量需要分别进行。而现在可以像数组那样批量声明和赋值变量。</p>
+<p>注意：左右两边必须要有中括号，才是解构赋值，如果左边有，右边没有则会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例子1：</span></span><br><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; 等价于<span class="keyword">let</span> a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">let</span> [a, b, c, d] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; 等价于<span class="keyword">let</span> a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>,d=<span class="literal">undefined</span>;</span><br><span class="line"><span class="comment">//例子2：在左边可以给变量默认值</span></span><br><span class="line"><span class="keyword">let</span> [a, b, c=<span class="number">5</span>] = [<span class="number">1</span>, <span class="number">2</span>]; 等价于<span class="keyword">let</span> a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="comment">//注意：如果同时给了默认值和初始值，那么初始值会替换默认值</span></span><br><span class="line"><span class="keyword">let</span> [a, b, c=<span class="number">5</span>] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; 等价于<span class="keyword">let</span> a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>  即c不会等于<span class="number">5</span>，而是等于<span class="number">3</span></span><br><span class="line"><span class="comment">//例子3：可以使用逗号省略变量名</span></span><br><span class="line"><span class="keyword">let</span> [a,,c] =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]; 此时相当于<span class="keyword">let</span> a=<span class="number">1</span>,c=<span class="number">3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>对象的结构赋值<br>
+可以使用一个 let 声明批量定义多个对象。左边的变量名必须要在右边也出现相同的属性名。且没有顺序之分。<br>
+对象的结构赋值，右边的属性值可以是任意类型的数据。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意：匹配设置对象后，可以通过左边的变量名来访问右边对象的属性或方法，但是不允许在同级作用域中再次出现重复命名。即：</span></span><br><span class="line"><span class="keyword">let</span> &#123;foo,bar&#125;=&#123;<span class="attr">foo</span>:<span class="string">&quot;abc&quot;</span>,<span class="attr">bar</span>:<span class="string">&quot;123&quot;</span>&#125;; </span><br><span class="line"><span class="keyword">let</span> foo=<span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(foo) <span class="comment">// 报错，不允许重复声明。因为foo已经被声明了。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>字符串<br>
+字符串之所以能够解构赋值，是因为字符串被转换成了一个类似数组的对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c, d, e] = <span class="string">&#x27;hello&#x27;</span>; <span class="comment">//此时：a=h,b=e,...</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>函数参数</p>
+<p>假设参数是对象、数组、字符串以上 3 种时，可以用结构赋值的写法来写。<br>
+a. 参数是数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数add的参数表面上是一个数组，但在传入参数的那一刻，数组参数就被解构成变量x和y。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">[x, y]</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line">add([<span class="number">1</span>, <span class="number">2</span>]); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>b. 参数是对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//d=5为默认值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">&#123;a,b,c,d=<span class="number">5</span>&#125;</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="built_in">console</span>.log(b);</span><br><span class="line">    <span class="built_in">console</span>.log(c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">fun(&#123;</span><br><span class="line">    a:<span class="number">1</span>,</span><br><span class="line">    b:<span class="number">2</span>,</span><br><span class="line">    c:<span class="number">3</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="模板字符串"><a class="markdownIt-Anchor" href="#模板字符串">#</a> 模板字符串</h2>
+<p>模板字符串（template string）是增强版的字符串。用反引号（左上角的 1 旁边的符号），可以格式化 HTML 结构输出。</p>
+<p>使用 ${字符串变量或表达式} 占位符来表示具体的字符串，该模式放在反引号内即可，而不再需要用 + 号切割</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例子:</span></span><br><span class="line"><span class="keyword">let</span> name=<span class="string">&quot;KOUOK&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello,<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello,<span class="subst">$&#123;name+<span class="number">1</span>&#125;</span>`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello,<span class="subst">$&#123;<span class="number">2</span>+<span class="number">2</span>&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="对象的简洁表示法"><a class="markdownIt-Anchor" href="#对象的简洁表示法">#</a> 对象的简洁表示法</h2>
+<ol>
+<li>
+<p>属性和方法的简写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wo=<span class="string">&quot;属性值&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    <span class="comment">//wo:wo,</span></span><br><span class="line">    wo,</span><br><span class="line">    <span class="comment">//只能在对象中的方法简写</span></span><br><span class="line">    <span class="function"><span class="title">skill</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Object.assign ()  合并对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1=&#123;</span><br><span class="line">    name:<span class="string">&quot;药水哥&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2=&#123;</span><br><span class="line">    age:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line">obj2=obj1;<span class="comment">//不靠谱</span></span><br><span class="line">obj2.sex=<span class="string">&quot;男&quot;</span></span><br><span class="line"><span class="comment">//之前是如何实现的</span></span><br><span class="line"><span class="keyword">for</span>(prop <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    obj2[prop]=obj[prop];</span><br><span class="line">&#125;</span><br><span class="line">obj2.sex=<span class="string">&quot;男&quot;</span>;<span class="comment">//不影响obj了</span></span><br><span class="line">语法：</span><br><span class="line"><span class="built_in">Object</span>.assign(target,ojb2,obj3);</span><br><span class="line">作用：将多个对象合并到目标对象中，会改变目标对象。</span><br><span class="line"><span class="comment">//JQ的extend几乎一样</span></span><br><span class="line"><span class="keyword">var</span> newObj=$.extend(obj,obj2);<span class="comment">//会改变obj对象</span></span><br><span class="line"><span class="comment">//使用场景：用户参数与系统默认参数进行合并</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="箭头函数重难点"><a class="markdownIt-Anchor" href="#箭头函数重难点">#</a> 箭头函数（重难点）</h2>
+<p>概念：使用箭头 =&gt; 定义的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//php:Array(&#x27;name&#x27;=&gt;&quot;药水哥&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//以上改箭头如何改</span></span><br><span class="line"><span class="keyword">var</span> fun=<span class="function">(<span class="params">a</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以进一步简化为：</span></span><br><span class="line"><span class="keyword">var</span> fun=<span class="function"><span class="params">a</span>=&gt;</span>a;</span><br></pre></td></tr></table></figure>
+<p><strong>3 个特征：</strong></p>
+<p>1）、不需要 function 关键字来创建函数<br>
+ var fun= function (x){<br>
+return x;<br>
+}<br>
+ 可简写为：var fun= x=&gt; x;<br>
+ 注意：如果只有一个参数，可以不写 (), 如果没有参数或多个参数就一定要写<br>
+比如 var fun=()=&gt; 5; 等价于 var fun=function (){ return 5;}<br>
+ 2）、省略 return 关键字<br>
+函数语句和返回值只有一个表达式时是可以省略 {} 和 return 关键字的<br>
+ 3）、继承当前上下文的 this 关键字，即在哪里定义 this 指的就是谁，而不是看它在哪里调用</p>
+<p><strong>注意事项：（面试题）</strong><br>
+1、不可以当作构造函数，也就是说，不可以使用 new 命令，否则会抛出一个错误<br>
+ 2、不可以使用 arguments 对象，该对象在函数体内不存在，如果要用，可以用 Rest 参数代替<br>
+ 3、在箭头函数中，this 指向是固定的，也就是绑定在了定义时所在的作用域下。</p>
+<p>4、返回一个对象，且只有一条 return 语句时，需要加 ()；函数体包含多条语句时不可省略 {}，有多条语句并有返回值还需要手动写 return 返回</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第4个注意事项的例子：</span></span><br><span class="line"><span class="keyword">var</span> fun=<span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        a:<span class="number">1</span>,</span><br><span class="line">        b:<span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果函数只有一条return语句，则return关键字和&#123;&#125;都可以省略</span></span><br><span class="line"><span class="keyword">var</span> fun=<span class="function">(<span class="params">a,b</span>)=&gt;</span>(&#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="函数的默认值"><a class="markdownIt-Anchor" href="#函数的默认值">#</a> 函数的默认值</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设用户传参了，则用用户的，否则用参数默认值，比如10</span></span><br><span class="line"><span class="comment">//最靠谱的给参数设置默认值的方式</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a=<span class="number">10</span></span>)</span>&#123;</span><br><span class="line">    alert(a);<span class="comment">//undefined，10</span></span><br><span class="line">&#125;</span><br><span class="line">fun();<span class="comment">//10</span></span><br><span class="line">fun(<span class="number">0</span>);<span class="comment">//0</span></span><br><span class="line"><span class="comment">//之前的写法：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//给参数设置一个默认值</span></span><br><span class="line">    a=a||<span class="number">10</span>;<span class="comment">//短路运算,但是假设用户传递的是0，则会得不到用户的期待</span></span><br><span class="line">    alert(a);<span class="comment">//undefined，10</span></span><br><span class="line">&#125;</span><br><span class="line">fun(<span class="number">0</span>);<span class="comment">//用户没有调用</span></span><br></pre></td></tr></table></figure>
+<h2 id="函数的rest参数"><a class="markdownIt-Anchor" href="#函数的rest参数">#</a> 函数的 rest 参数</h2>
+<p>简单理解为 arguments 的升级强化版。</p>
+<p>如同 arguments 那样，但是是使用… 变量名表示，也就是将实参放入该参数数组中，该数组为一个真正的数组，可以使用数组的方法</p>
+<p>arguments 作用：函数的重载。根据传递不同的参数个数来实现不同的功能。</p>
+<p>它的缺点：是伪数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//原来的arguments</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(aruments.length==<span class="number">0</span>)&#123;</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(aruments.length==<span class="number">2</span>)&#123;</span><br><span class="line">       aruments[<span class="number">0</span>]+aruments[<span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br><span class="line">fun(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">///1、----使用rest参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">...arg</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//...rest参数</span></span><br><span class="line">    <span class="comment">//arg是真数组</span></span><br><span class="line">  <span class="keyword">if</span>(arg.length=<span class="number">0</span>)&#123;</span><br><span class="line">     <span class="comment">//假设用户没有传参</span></span><br><span class="line">   &#125; </span><br><span class="line">   <span class="comment">//假设用户传递的是2个参数</span></span><br><span class="line">  <span class="keyword">if</span>(arg.length==<span class="number">2</span>)&#123;</span><br><span class="line">     arg[<span class="number">0</span>]+arg[<span class="number">1</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line">fun();</span><br><span class="line">fun(<span class="number">1</span>);</span><br><span class="line">fun(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">fun(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//作用：代替arguments参数</span></span><br><span class="line"><span class="comment">//2、确定的使用形参，不确定的参数使用rest参数，即可选的参数使用rest参数来代替</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a,...arg</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a+arg[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line">fun(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">fun(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//例子2</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a,b,...arg</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a+b+arg[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对象和数组的扩展运算符"><a class="markdownIt-Anchor" href="#对象和数组的扩展运算符">#</a> 对象和数组的扩展运算符</h2>
+<p>语法：… 对象或… 数组</p>
+<p>作用：深度复制对象或数组（合并对象或数组）</p>
+<ol>
+<li>
+<p>对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1=&#123;</span><br><span class="line">    name:<span class="string">&quot;药水哥&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2=&#123;</span><br><span class="line">    sex:<span class="string">&quot;男&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//需求，将obj1，obj2合并为一个对象</span></span><br><span class="line"><span class="keyword">var</span> obj3=&#123;...obj1,...obj2&#125;</span><br><span class="line">很明显是Ojbect.assign()的一个更简单的写法，语法糖形式。</span><br><span class="line">语法糖：添加了某种语法，不影响程序功能，但更方便程序员使用。</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> brr=[<span class="number">4</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> crr=[...arr,...brr];<span class="comment">//[1,2,3,4,3,4];</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="数组新增的那5个方法重点"><a class="markdownIt-Anchor" href="#数组新增的那5个方法重点">#</a> 数组新增的那 5 个方法（重点）</h2>
+<p>共同点：写法都类似，只是功能不一样。</p>
+<ol>
+<li>
+<p>forEach<br>
+ 相当于是 JQ 的 each 方法，遍历数组的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">34</span>,<span class="number">45</span>];</span><br><span class="line"><span class="keyword">var</span> sum=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//传统的JS的写法</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">    sum+=arr[i]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//forEach,JS，隐式迭代</span></span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//item是数组中的每一项</span></span><br><span class="line">    <span class="comment">//index是数组的索引</span></span><br><span class="line">	sum+=item;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//JQ:</span></span><br><span class="line">$.each(arr,<span class="function"><span class="keyword">function</span>(<span class="params">index,item</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//item是数组中的每一项</span></span><br><span class="line">    <span class="comment">//index是数组的索引</span></span><br><span class="line">	sum+=item;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>map<br>
+ 映射。地图。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//需求，将数组的每一项数组元素*2并返回生成一个新的数组</span></span><br><span class="line"><span class="comment">//通过A数组按照某种模式或公式得到一个新的数组，他们之间存在映射关系，称之为影子数组</span></span><br><span class="line"><span class="keyword">var</span> arr=[<span class="number">3</span>,<span class="number">4</span>,<span class="number">54</span>,<span class="number">5</span>,<span class="number">1</span>];</span><br><span class="line"><span class="keyword">var</span> brr=[<span class="number">6</span>,<span class="number">8</span>,<span class="number">108</span>,<span class="number">10</span>,<span class="number">2</span>];<span class="comment">//新数组</span></span><br><span class="line"><span class="comment">//语法</span></span><br><span class="line"><span class="keyword">var</span> 影子数组=老数组.map(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//item指定的是数组的每一项数组元素</span></span><br><span class="line">    <span class="comment">//index指的是索引</span></span><br><span class="line">	<span class="keyword">return</span> 表达式|值</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//传统方式来写</span></span><br><span class="line"><span class="keyword">var</span> arr=[<span class="number">3</span>,<span class="number">4</span>,<span class="number">54</span>,<span class="number">5</span>,<span class="number">1</span>];</span><br><span class="line"><span class="keyword">var</span> brr=[];</span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">    brr.push(item*<span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//map方法来写</span></span><br><span class="line"><span class="keyword">var</span> brr=arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item*<span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//箭头来帮忙</span></span><br><span class="line"><span class="keyword">var</span> brr=arr.map(<span class="function"><span class="params">item</span>=&gt;</span>item*<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>filter</p>
+</li>
+<li>
+<p>every</p>
+</li>
+<li>
+<p>find</p>
+</li>
+</ol>
+<p>兼容性：在 IE9 以上和现代浏览器中支持</p>
+
+      <div class="tags">
+          <a href="/tags/ES6/" rel="tag"><i class="ic i-tag"></i> ES6</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-30 16:10:05" itemprop="dateModified" datetime="2021-03-30T16:10:05+08:00">2021-03-30</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/10/19/%E5%88%9D%E5%A7%8BES6%E6%96%B0%E7%89%B9%E6%80%A7/" title="初始ES6新特性">https://serena-tz.github.io/2020/10/19/初始ES6新特性/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="git零基础入门">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>git零基础入门</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet8c1a2j20zk0m8kct.jpg" title="vue小胡子语法、v-bind">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>vue小胡子语法、v-bind</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E7%9A%84%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> 新的声明变量的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">2.</span> <span class="toc-text"> 解构赋值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">3.</span> <span class="toc-text"> 模板字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E6%B4%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text"> 对象的简洁表示法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E9%87%8D%E9%9A%BE%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text"> 箭头函数（重难点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">6.</span> <span class="toc-text"> 函数的默认值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84rest%E5%8F%82%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text"> 函数的 rest 参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">8.</span> <span class="toc-text"> 对象和数组的扩展运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%96%B0%E5%A2%9E%E7%9A%84%E9%82%A35%E4%B8%AA%E6%96%B9%E6%B3%95%E9%87%8D%E7%82%B9"><span class="toc-number">9.</span> <span class="toc-text"> 数组新增的那 5 个方法（重点）</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">49</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">28</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/10/17/git%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/10/21/vue%E5%B0%8F%E8%83%A1%E5%AD%90%E8%AF%AD%E6%B3%95%E3%80%81v-bind/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="域名服务器的基本介绍">域名服务器的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/16/CSS3%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" title="CSS3动画效果">CSS3动画效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/29/vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" title="vue的组件和组件间的通信方式">vue的组件和组件间的通信方式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/11/%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE/" title="地理位置">地理位置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
+</div>
+
+    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/05/H5%E8%A1%A8%E5%8D%95/" title="H5表单">H5表单</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/19/JQ%E7%9A%84dom%E6%93%8D%E4%BD%9C/" title="JQ的dom操作">JQ的dom操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="jquery工具方法和开发插件">jquery工具方法和开发插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/11/axios%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="axios的基本介绍">axios的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" title="移动端开发">移动端开发</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/10/19/初始ES6新特性/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

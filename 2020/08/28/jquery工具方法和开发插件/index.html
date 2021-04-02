@@ -1,0 +1,614 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="jquery" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/">
+
+
+
+  <title>
+jquery工具方法和开发插件 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">jquery工具方法和开发插件
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-08-28 11:06:43">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-28T11:06:43+08:00">2020-08-28</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="jquery的工具方法"><a class="markdownIt-Anchor" href="#jquery的工具方法">#</a> jquery 的工具方法</h2>
+<ol>
+<li>
+<p>对象方法  --90%，JQ 中大部分都是此方法<br>
+ $(“选择器”).do ()</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>x</mi><mi>x</mi><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">().xx(),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal">x</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span>().yyy()</p>
+<p>作用：选择 DOM 元素，然后做对应的操作</p>
+<p>比如：</p>
+<p>$(“div”).hide();</p>
+</li>
+<li>
+<p>工具方法 — 全局方法</p>
+<p>$.do();   –</p>
+<p>格式：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">.</mi><mi>x</mi><mi>x</mi><mi>x</mi><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mtext>；</mtext></mrow><annotation encoding="application/x-tex">.xxx()；</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathnormal">x</span><span class="mord mathnormal">x</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">；</span></span></span></span>.yyy()</p>
+<p>比如：</p>
+<p>$.trim (“字符串”)；针对的是字符串、对象、数组等。</p>
+</li>
+</ol>
+<h2 id="常用的工具方法"><a class="markdownIt-Anchor" href="#常用的工具方法">#</a> 常用的工具方法</h2>
+<ol>
+<li>
+<p>$.trim (“字符串”)</p>
+<p>作用：去除首尾空格，返回去了的字符串</p>
+</li>
+<li>
+<p>$.type(）</p>
+<p>作用：类似于 JS 的 typeof  ，验证数据的类型</p>
+<p>typeof  [];//object</p>
+<p>typeof /abc/;//object</p>
+<p>jquery 的 type 方法可以精确的检测对象的类型。</p>
+</li>
+<li>
+<p>$.each   全局  可以遍历数组、对象、和 DOM  重点方法</p>
+<p>$(“div”).each ()  只能遍历 DOM 元素</p>
+<p>用来代替 JS 的 for 循环</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$.each()  --全局方法（工具方法）</span><br><span class="line">作用：可以遍历对象、数组、DOM元素等</span><br><span class="line">$.each(<span class="string">&quot;对象、数组、DOM&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">index,item</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//index表示数组索引或对象的属性名</span></span><br><span class="line">    <span class="comment">//item表示数组的每一项，或对象的值</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>$(<span class="string">&quot;选择器&quot;</span>).each(); ---对象方法</span><br><span class="line">作用：只能遍历DOM元素</span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index,item</span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br><span class="line">使用场景：用得较少，因为JQ可以直接对元素批量操作，而不需要使用循环</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>$.inArray()</p>
+<p>类似于 JS 的 indexOf 方法</p>
+<p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.inArray(<span class="string">&#x27;要查找的数组元素&#x27;</span>,数组);<span class="comment">//如果有，则返回下标，否则返回-1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>$.extend (target,obj1,obj2);  // 扩展已有的对象</p>
+<p>将多个对象合并到一块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">&#x27;张三&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2=&#123;</span><br><span class="line">    sex:<span class="string">&quot;男&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">JS：需要使用<span class="keyword">for</span> <span class="keyword">in</span>循环一个个遍历给另外一个对象</span><br><span class="line"></span><br><span class="line">JQ：</span><br><span class="line">$.extend(要合并的对象,对象<span class="number">2</span>,对象<span class="number">3</span>);  </span><br><span class="line">会改写原来的那个对象。</span><br><span class="line">$.extend(obj,obj2);<span class="comment">//新的obj</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="jq的两种插件"><a class="markdownIt-Anchor" href="#jq的两种插件">#</a> JQ 的两种插件</h2>
+<h3 id="全局插件"><a class="markdownIt-Anchor" href="#全局插件">#</a> 全局插件</h3>
+<p>步骤：</p>
+<ol>
+<li>
+<p>使用开发模板【重点】</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.extend(&#123;</span><br><span class="line">    <span class="comment">//参数一般写对象、数组、字符串等</span></span><br><span class="line">    xxx：<span class="function"><span class="keyword">function</span>(<span class="params">参数</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//插件代码</span></span><br><span class="line">    &#125;,</span><br><span class="line">    插件名<span class="number">2</span>：<span class="function"><span class="keyword">function</span>(<span class="params">参数</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//插件代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用：</span></span><br><span class="line">$.xxx();</span><br><span class="line">$.yyy();</span><br><span class="line"><span class="comment">//举例：开发一个去除左边空格的全局方法</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>起一个好名字</p>
+<p>起名有规范：<br>
+如果 jquery 插件，起名应该是</p>
+<p>jquery. 插件名.js</p>
+<p>jquery. 插件名.min.js  // 如果是压缩版</p>
+</li>
+<li>
+<p>写说明文档</p>
+<pre>
+    说明书：
+    使用步骤：
+    1、本插件依赖jquery环境，在使用前先导入jquery
+    2、可以去掉字符串左边的空格，使用以下方法调用
+		$.leftTirm("字符串");
+		可以返回去掉的字符串
+		。。。
+	3、关注我的微博，请扫描二维码打赏我喝一杯咖啡
+</pre>
+</li>
+<li>
+<p>宣传推广</p>
+<p>压缩 JS 代码的工具网站：</p>
+<p>可以根据压缩程度选择对应的压缩方式：<br>
+<span class="exturl" data-url="aHR0cDovL3Rvb2wuY2hpbmF6LmNvbS9qcy5hc3B4">http://tool.chinaz.com/js.aspx</span></p>
+</li>
+</ol>
+<h3 id="对象插件的开发"><a class="markdownIt-Anchor" href="#对象插件的开发">#</a> 对象插件的开发</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 全局方法的插件模板</span><br><span class="line">;$.extend(&#123;</span><br><span class="line">  插件名:<span class="function"><span class="keyword">function</span>(<span class="params">参数</span>)</span>&#123;</span><br><span class="line">      </span><br><span class="line">  &#125;   </span><br><span class="line">&#125;)</span><br><span class="line"><span class="number">2.</span>对象方法的插件模板</span><br><span class="line">;(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//昨天没有添加fn</span></span><br><span class="line">    $.fn.extend(&#123;</span><br><span class="line">        插件名:<span class="function"><span class="keyword">function</span>(<span class="params">参数</span>)</span>&#123;</span><br><span class="line">            <span class="comment">//插件代码</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例子<span class="number">1</span>：开发</span><br><span class="line">例子<span class="number">2</span>：要开发这种插件</span><br><span class="line">$(<span class="string">&quot;div&quot;</span>).tab(&#123;</span><br><span class="line">    a:<span class="string">&#x27;a&#x27;</span>，</span><br><span class="line">    b:<span class="string">&#x27;b&#x27;</span></span><br><span class="line">&#125;);</span><br><span class="line">开发这种插件，需要结合昨天的$.extend()；即合并多个对象的方法</span><br></pre></td></tr></table></figure>
+<p>注意：<br>
+1. 插件中的 this 的指向：谁调用了插件，指向的就是谁<br>
+ 2. 此处的 this 指向的是 jQuery, 而非 js dom 对象<br>
+ 3.css () 方法会返回调用它的对象，即此处的 this, 所以在原方法的基础上记得添加 return，以保证 jquery 链式操作的延续性</p>
+<h2 id="插件编写要点"><a class="markdownIt-Anchor" href="#插件编写要点">#</a> 插件编写要点</h2>
+<p>1. 一般建议文件命名为 jquey. 插件名.js，以免和其他 js 库插件混淆    例如命名为 jquery.color.js</p>
+<p>2. 所有的<strong>对象方法</strong>都应当附加到 jQuery.fn.extend ({}); 对象上，而所有的全局函数 (工具方法) 都应当附加到 jQuery.extend ({}) 对象本身上</p>
+<p>3. 插件内部 this 指向是当前的局部对象（使用该插件的元素）</p>
+<p>4. 可以通过 this.each 来遍历所有元素</p>
+<p>5. 所有的方法或插件，必须用分号结尾，避免出问题，为了更稳妥可以在插件头部先加一个分号</p>
+<p>6. 插件应该返回的是 jQuery 对象，以保证可链式操作，除非插件是全局方法（需要获取的量，如字符串或数组等  ）</p>
+<p>7. 避免插件内部使用 $, 如果要使用，请传参数 jQuery 进去</p>
+<h2 id="无缝滚动的幻灯片插件实例"><a class="markdownIt-Anchor" href="#无缝滚动的幻灯片插件实例">#</a> 无缝滚动的幻灯片插件实例</h2>
+<h3 id="html文件"><a class="markdownIt-Anchor" href="#html文件">#</a> html 文件</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;——作业2——&lt;&#x2F;title&gt;</span><br><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">	*&#123;margin:0;padding: 0;&#125;</span><br><span class="line">	body&#123;</span><br><span class="line">		height: 1000px;</span><br><span class="line">	&#125;</span><br><span class="line">	ul,li&#123;list-style: none;&#125;</span><br><span class="line">	.content&#123;</span><br><span class="line">		position: relative;</span><br><span class="line">		width: 790px;</span><br><span class="line">		height: 390px;</span><br><span class="line">		overflow: hidden;</span><br><span class="line">	&#125;</span><br><span class="line">	.content ul&#123;</span><br><span class="line">		position: absolute;</span><br><span class="line">		top: 0;</span><br><span class="line">		left: -790px;</span><br><span class="line">		&#x2F;*width: 3950px;*&#x2F;</span><br><span class="line">		height: 340px;</span><br><span class="line">	&#125;</span><br><span class="line">	.content ul li&#123;</span><br><span class="line">		float: left;</span><br><span class="line">		width: 790px;</span><br><span class="line">		height: 340px;</span><br><span class="line">	&#125;</span><br><span class="line">	.content ul li img&#123;</span><br><span class="line">		width: 100%;</span><br><span class="line">		height: 100%;</span><br><span class="line">	&#125;</span><br><span class="line">	.arrow&#123;</span><br><span class="line">		position: absolute;</span><br><span class="line">		left: 0;</span><br><span class="line">		bottom: 0;</span><br><span class="line">		width: 790px;</span><br><span class="line">		text-align: center;</span><br><span class="line">		background-color: #fff;</span><br><span class="line">	&#125;</span><br><span class="line">	.arrow a&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		width: 40px;</span><br><span class="line">		height: 40px;</span><br><span class="line">		line-height: 40px;</span><br><span class="line">		text-decoration: none;</span><br><span class="line">		color: #666;</span><br><span class="line">		border:1px solid #ddd;</span><br><span class="line">		border-radius: 5px;</span><br><span class="line">	&#125;</span><br><span class="line">	.arrow a:hover&#123;</span><br><span class="line">		background-color: #eee;</span><br><span class="line">	&#125;</span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;js&#x2F;jquery-3.3.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;js&#x2F;jquery.scroll.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;!-- </span><br><span class="line">	2.编写一个可以改变无缝滚动大小，速度的幻灯片插件</span><br><span class="line">    其中可变参数为轮播图的宽度和高度，滚动时的速度</span><br><span class="line">    调用格式：</span><br><span class="line">        $(&quot;#box&quot;).scroll(&#123;</span><br><span class="line">            width:790,</span><br><span class="line">            height:390,</span><br><span class="line">            speed:&quot;normal&quot;</span><br><span class="line">        &#125;)</span><br><span class="line">	 --&gt;</span><br><span class="line">	 &lt;script&gt;</span><br><span class="line">		 $(function()&#123;</span><br><span class="line">			$(&quot;#box&quot;).scroll(&#123;</span><br><span class="line">				width:790,</span><br><span class="line">				height:390,</span><br><span class="line">				speed:1000</span><br><span class="line">			&#125;)</span><br><span class="line">		 &#125;)</span><br><span class="line">	 &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id&#x3D;&quot;box&quot; class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">		&lt;ul class&#x3D;&quot;clearfix&quot;&gt;</span><br><span class="line">			&lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;adv4.jpg&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">			&lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;adv1.jpg&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">			&lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;adv2.jpg&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">			&lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;adv3.jpg&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">			&lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;adv4.jpg&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">			&lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;adv1.jpg&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;&#x2F;ul&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;arrow&quot;&gt;</span><br><span class="line">			&lt;a href&#x3D;&quot;javascript:void(0);&quot;&gt;&lt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a href&#x3D;&quot;javascript:void(0);&quot;&gt;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="js文件"><a class="markdownIt-Anchor" href="#js文件">#</a> js 文件</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">; (function ($) &#123;</span><br><span class="line">    $.fn.extend(&#123;</span><br><span class="line">        scroll: function (option) &#123;</span><br><span class="line">                option &#x3D; $.extend(&#123;</span><br><span class="line">                    width:690,</span><br><span class="line">                    height:290,</span><br><span class="line">                    speed: 500,</span><br><span class="line">                &#125;, option);</span><br><span class="line">                &#x2F;&#x2F;这里写JQ代码</span><br><span class="line">                var lbtn &#x3D; $(&quot;.arrow a:first&quot;);</span><br><span class="line">                var rbtn &#x3D; $(&quot;.arrow a:last&quot;);</span><br><span class="line">                &#x2F;&#x2F; 胶卷</span><br><span class="line">                var plist &#x3D; $(&quot;.content&gt;ul&quot;);</span><br><span class="line">                &#x2F;&#x2F; 获取多少张</span><br><span class="line">                var len &#x3D; plist.children().length;&#x2F;&#x2F;4</span><br><span class="line">                &#x2F;&#x2F; index表示的就是当前是第几张</span><br><span class="line">                var index &#x3D; 1;</span><br><span class="line">                &#x2F;&#x2F; 去根据胶片改变胶卷的长度</span><br><span class="line">                plist.css(&quot;width&quot;, len * option.width);</span><br><span class="line">                rbtn.on(&quot;click&quot;, function () &#123;</span><br><span class="line">                    index++;</span><br><span class="line">                    if (index &gt; len - 1) &#123;</span><br><span class="line">                        index &#x3D; 2;</span><br><span class="line">                    &#125;</span><br><span class="line">                    plist.stop().animate(&#123; &quot;left&quot;: -index * option.width &#125;, function () &#123;</span><br><span class="line">                        &#x2F;&#x2F; 跳到列表的四张图片第一张</span><br><span class="line">                        if (index &#x3D;&#x3D; len - 1) &#123;</span><br><span class="line">                            plist.css(&quot;left&quot;, -option.width);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;);</span><br><span class="line">                lbtn.on(&quot;click&quot;, function () &#123;</span><br><span class="line">                    index--;</span><br><span class="line">                    if (index &lt; 0) &#123;</span><br><span class="line">                        index &#x3D; len - 3;</span><br><span class="line">                    &#125;</span><br><span class="line">                    plist.stop().animate(&#123; &quot;left&quot;: -index * option.width &#125;, function () &#123;</span><br><span class="line">                        &#x2F;&#x2F; 跳到列表的四张图片最后一张</span><br><span class="line">                        if (index &#x3D;&#x3D; 0) &#123;</span><br><span class="line">                            plist.css(&quot;left&quot;, -option.width * (len - 2));</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;);</span><br><span class="line">                &#x2F;&#x2F; 用定时器触发实现自动轮播</span><br><span class="line">                var timer &#x3D; setInterval(function () &#123;</span><br><span class="line">                    rbtn.trigger(&quot;click&quot;);</span><br><span class="line">                &#125;, option.speed)</span><br><span class="line">                &#x2F;&#x2F; 鼠标移入轮播图的时候轮播静止，移除轮播图的时候轮播继续开始</span><br><span class="line">                $(this).hover(function () &#123;</span><br><span class="line">                    clearInterval(timer)</span><br><span class="line">                &#125;, function () &#123;</span><br><span class="line">                    timer &#x3D; setInterval(function () &#123;</span><br><span class="line">                        rbtn.trigger(&quot;click&quot;);</span><br><span class="line">                    &#125;, option.speed)</span><br><span class="line">                &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)(jQuery)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/jquery/" rel="tag"><i class="ic i-tag"></i> jquery</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-03-31 11:16:06" itemprop="dateModified" datetime="2021-03-31T11:16:06+08:00">2021-03-31</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="jquery工具方法和开发插件">https://serena-tz.github.io/2020/08/28/jquery工具方法和开发插件/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/08/24/jquery%E7%9A%84%E7%89%B9%E6%95%88%E5%AE%9E%E7%8E%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="jquery的特效实现">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>jquery的特效实现</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/09/05/H5%E8%A1%A8%E5%8D%95/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyvx1d4j20zk0m8hdt.jpg" title="H5表单">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>H5表单</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jquery%E7%9A%84%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text"> jquery 的工具方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> 常用的工具方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jq%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%8F%92%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> JQ 的两种插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E6%8F%92%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text"> 全局插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%8F%92%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91"><span class="toc-number">3.2.</span> <span class="toc-text"> 对象插件的开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E8%A6%81%E7%82%B9"><span class="toc-number">4.</span> <span class="toc-text"> 插件编写要点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BC%9D%E6%BB%9A%E5%8A%A8%E7%9A%84%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%92%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text"> 无缝滚动的幻灯片插件实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text"> html 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js%E6%96%87%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text"> js 文件</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">49</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">28</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/08/24/jquery%E7%9A%84%E7%89%B9%E6%95%88%E5%AE%9E%E7%8E%B0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/09/05/H5%E8%A1%A8%E5%8D%95/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/26/SEO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="SEO的基本介绍">SEO的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/10/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="本地存储">本地存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E3%80%81%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/" title="小程序常用标签、基础指令">小程序常用标签、基础指令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/04/webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="webpack的基本介绍">webpack的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/03/npm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="npm的基本介绍">npm的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/09/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE/" title="多媒体标签">多媒体标签</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/28/Bootstrap%E7%9A%84%E6%A0%85%E6%A0%BC%E5%8C%96%E7%B3%BB%E7%BB%9F/" title="Bootstrap的栅格化系统">Bootstrap的栅格化系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/13/ajax%E7%AE%80%E4%BB%8B%E3%80%81ajax%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E3%80%81%E6%96%B9%E6%B3%95%EF%BC%88%E5%8F%91%E8%AF%B7%E6%B1%82%EF%BC%89/" title="ajax简介、ajax对象的属性、方法（发请求）">ajax简介、ajax对象的属性、方法（发请求）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/11/%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE/" title="地理位置">地理位置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/04/01/node-js%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="node.js基础入门">node.js基础入门</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/08/28/jquery工具方法和开发插件/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

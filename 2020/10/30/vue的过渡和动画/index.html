@@ -1,0 +1,570 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="阳光果苏" href="https://serena-tz.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="阳光果苏" href="https://serena-tz.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="阳光果苏" href="https://serena-tz.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="vue" />
+
+
+<link rel="canonical" href="https://serena-tz.github.io/2020/10/30/vue%E7%9A%84%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB/">
+
+
+
+  <title>
+vue的过渡和动画 |
+Serena = 阳光果苏 = 自律给我自由</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">vue的过渡和动画
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-10-30 08:51:51">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-10-30T08:51:51+08:00">2020-10-30</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Serena</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://serena-tz.github.io/2020/10/30/vue%E7%9A%84%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="tz">
+    <meta itemprop="description" content="自律给我自由, 心情笔记 & 编程日记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="阳光果苏">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="在vue中使用过渡和动画的步骤"><a class="markdownIt-Anchor" href="#在vue中使用过渡和动画的步骤">#</a> 在 vue 中使用过渡和动画的步骤</h2>
+<ol>
+<li>
+<p>使用条件<br>
+该元素是使用了 v-if,v-show 等让元素隐藏或显示的指令<br>
+ Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果</p>
+</li>
+<li>
+<p>使用 6 个特别的 class 来定制动画</p>
+<p>类似于 a 链接的 4 个状态</p>
+<p>入场：一个元素从隐藏到显示。有 3 个状态<br>
+ v-enter  准备入场（隐藏）0%</p>
+<p>v-enter-active   入场的过程 1%-99%</p>
+<p>v-enter-to  入场完毕（显示）100%</p>
+<p>出场：一个元素从显示到隐藏<br>
+ v-leave  准备出场</p>
+<p>v-leave-active  出场的过程</p>
+<p>v-leave-to 出场完毕</p>
+</li>
+<li>
+<p>以上 6 个 class 的前缀 v - 可以改名，后面的是固定写法<br>
+比如可以将：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">v-enter改为fade-enter</span><br><span class="line">在使用了transition的地方也要其名字才有效</span><br><span class="line">&lt;transition name=<span class="string">&quot;fade&quot;</span>&gt;</span><br><span class="line">    &lt;div&gt;要动画的元素&lt;/div&gt;</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="单元素的过渡动画效果"><a class="markdownIt-Anchor" href="#单元素的过渡动画效果">#</a> 单元素的过渡动画效果</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span> = <span class="string">&quot;nameoftransition&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line">//name可以省略，如果省略，style中的默认前缀是v-</span><br></pre></td></tr></table></figure>
+<p>想要让 div 有动画效果，需要在外层包裹一个虚拟标签 transition，然后指定动画名称。</p>
+<h2 id="多个元素的过渡动画效果"><a class="markdownIt-Anchor" href="#多个元素的过渡动画效果">#</a> 多个元素的过渡动画效果</h2>
+<p>v-if,v-else</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbi52dWVqcy5vcmcvdjIvZ3VpZGUvdHJhbnNpdGlvbnMuaHRtbCMlRTUlQTQlOUElRTQlQjglQUElRTUlODUlODMlRTclQjQlQTAlRTclOUElODQlRTglQkYlODclRTYlQjglQTE=">https://cn.vuejs.org/v2/guide/transitions.html# 多个元素的过渡</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">mode</span>=<span class="string">&quot;out-in&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;flag1&quot;</span> <span class="attr">key</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">        GOGGO1111</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>  <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span> <span class="attr">v-else</span> <span class="attr">key</span>=<span class="string">&quot;2&quot;</span>&gt;</span></span><br><span class="line">    else的情况</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="一组元素的过渡动画效果列表过渡"><a class="markdownIt-Anchor" href="#一组元素的过渡动画效果列表过渡">#</a> 一组元素的过渡动画效果（列表过渡）</h2>
+<p>transition 只包含一个元素，如果要让 transition 包含多个元素，需要使用 transition-group</p>
+<p><transition-group> 组件还有一个特殊之处。不仅可以进入和离开动画，还可以改变定位。</transition-group></p>
+<p>如果只是单纯使用<transition-group>依然会出现弹跳效果，而且此时过渡模式（out-in）并不能解决该问题，这时，需要通过 CSS 定位让他们重合一起进行动画，问题的根源依然是因为 transition 进入和离开同时发生的特性。</transition-group></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//解决方法：</span></span><br><span class="line">   通过给元素设置css的定位属性实现转场动画</span><br><span class="line">    a、将transition改为transition-group,添加<span class="class"><span class="keyword">class</span>属性，然后让其解析为<span class="title">div</span>标签，设置新生成的<span class="title">div</span>为相对定位：</span></span><br><span class="line"><span class="class">    比如：&lt;<span class="title">transition</span>-<span class="title">group</span> <span class="title">tag</span></span>=<span class="string">&quot;div&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;box&quot;</span>&gt;&lt;/transition-group&gt;</span><br><span class="line">    b、给具体的动画元素设置唯一的key属性，如果是动态绑定生成，可以使用:key</span><br><span class="line">    &lt;span v-<span class="keyword">for</span>=<span class="string">&quot;item,i in items&quot;</span> v-bind:key=<span class="string">&quot;i&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;list-item&quot;</span>&gt;</span><br><span class="line">    &#123;&#123; item &#125;&#125;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">    c、添加样式，设置为绝对定位</span><br><span class="line">    比如：.box&gt;span&#123; <span class="attr">position</span>: absolute;top: <span class="number">0</span>;left: <span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbi52dWVqcy5vcmcvdjIvZ3VpZGUvdHJhbnNpdGlvbnMuaHRtbCMlRTUlODglOTclRTglQTElQTglRTglQkYlODclRTYlQjglQTE=">https://cn.vuejs.org/v2/guide/transitions.html# 列表过渡</span></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h2>
+<ol>
+<li>对单个元素使用过渡（transition 标签最终包裹的是一个元素，包括 v-if,v-else 这种）使用 transition + 过渡模式 + 给元素设置 key 属性或定位</li>
+<li>对多个元素使用过渡（transition 标签中需要包裹多个元素，可以是只显示一个元素，其他隐藏），使用 transition-group + 定位解决 + 动态设置唯一 key 属性（该方法同样适用于单元素的过渡）</li>
+</ol>
+<p>官网文档：<span class="exturl" data-url="aHR0cHM6Ly9jbi52dWVqcy5vcmcvdjIvZ3VpZGUvdHJhbnNpdGlvbnMuaHRtbA==">https://cn.vuejs.org/v2/guide/transitions.html</span></p>
+<h2 id="结合使用第三方动画库-animatecss"><a class="markdownIt-Anchor" href="#结合使用第三方动画库-animatecss">#</a> 结合使用第三方动画库 animate.css</h2>
+<p>使用第三方动画库的好处就是不用自己写动画了。使用它让动画无敌。</p>
+<p>它的使用场景依然是上面的条件渲染，条件展示等场景。</p>
+<p>可以使用以下 6 个属性来代替 style 中的 6 个状态：<br>
+enter-class<br>
+enter-active-class=<br>
+enter-to-class (2.1.8+)<br>
+leave-class<br>
+leave-active-class<br>
+leave-to-class (2.1.8+)</p>
+<p>比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">比如：</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;example-3&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;show = !show&quot;</span>&gt;</span></span><br><span class="line">        Toggle render</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    &lt;transition</span><br><span class="line">    name=&quot;custom-classes-transition&quot;</span><br><span class="line">    enter-active-class=&quot;animated tada&quot;</span><br><span class="line">    leave-active-class=&quot;animated bounceOutRight&quot;</span><br><span class="line">    &gt;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;show&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="vue动画实例-轮播图"><a class="markdownIt-Anchor" href="#vue动画实例-轮播图">#</a> vue 动画实例 - 轮播图</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;zh-CN&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;title&gt;Vue焦点图&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css&#x2F;animate.css&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">        &#x2F;* css 重置 *&#x2F;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">            list-style: none;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        body &#123;</span><br><span class="line">            background: #fff;</span><br><span class="line">            font: normal 12px&#x2F;22px 宋体;</span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        img &#123;</span><br><span class="line">            border: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        a &#123;</span><br><span class="line">            text-decoration: none;</span><br><span class="line">            color: #333;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        a:hover &#123;</span><br><span class="line">            color: #1974A1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #footer &#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            padding-top: 20px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;* 本例子css *&#x2F;</span><br><span class="line">        .w3cFocus &#123;</span><br><span class="line">            width: 100%;</span><br><span class="line">            position: relative;</span><br><span class="line">            height: 250px;</span><br><span class="line">            padding: 10px 0;</span><br><span class="line">            background: #292929;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocus .prev,</span><br><span class="line">        .w3cFocus .next &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            display: block;</span><br><span class="line">            left: 10px;</span><br><span class="line">            top: 97px;</span><br><span class="line">            width: 46px;</span><br><span class="line">            height: 62px;</span><br><span class="line">            background: url(img&#x2F;focusAdvBg.png) no-repeat;</span><br><span class="line">            filter: alpha(opacity&#x3D;80);</span><br><span class="line">            opacity: 0.8;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocus .next &#123;</span><br><span class="line">            left: auto;</span><br><span class="line">            right: 10px;</span><br><span class="line">            background-position: -46px 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocus .prev:hover,</span><br><span class="line">        .w3cFocus .next:hover &#123;</span><br><span class="line">            filter: alpha(opacity&#x3D;100) !important;</span><br><span class="line">            opacity: 1 !important;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn &#123;</span><br><span class="line">            width: 960px;</span><br><span class="line">            height: 250px;</span><br><span class="line">            position: relative;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .bd ul &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">            height: 250px;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .bd li &#123;</span><br><span class="line">            float: left;</span><br><span class="line">            width: 960px;</span><br><span class="line">            vertical-align: middle;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .bd li img &#123;</span><br><span class="line">            width: 960px;</span><br><span class="line">            height: 250px;</span><br><span class="line">            display: block;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .hd &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            right: 4px;</span><br><span class="line">            bottom: 6px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .hd ul &#123;</span><br><span class="line">            vertical-align: middle;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            *display: inline;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            zoom: 1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .hd ul li &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">            float: left;</span><br><span class="line">            display: inline;</span><br><span class="line">            padding-top: 4px;</span><br><span class="line">            margin-right: 6px;</span><br><span class="line">            filter: alpha(opacity&#x3D;80);</span><br><span class="line">            opacity: 0.8;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .hd ul li img &#123;</span><br><span class="line">            width: 76px;</span><br><span class="line">            height: 46px;</span><br><span class="line">            border: 2px solid #fff;</span><br><span class="line">            display: block;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .hd ul li.on &#123;</span><br><span class="line">            filter: alpha(opacity&#x3D;100);</span><br><span class="line">            opacity: 1;</span><br><span class="line">            background: url(img&#x2F;focusArrow.png) center 0 no-repeat;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .w3cFocusIn .hd ul li.on img &#123;</span><br><span class="line">            border: 2px solid #3499EA;</span><br><span class="line">            border-bottom-width: 4px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">		&#x2F;* .v-enter&#123;</span><br><span class="line">            opacity: 0;</span><br><span class="line">        &#125; *&#x2F;</span><br><span class="line">        .v-enter-active&#123;</span><br><span class="line">            animation: fadeIn 1s;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;* .v-enter-to&#123;</span><br><span class="line">            opacity: 1;</span><br><span class="line">        &#125;</span><br><span class="line">        .v-leave&#123;</span><br><span class="line">            opacity: 1;</span><br><span class="line">        &#125; *&#x2F;</span><br><span class="line">        .v-leave-active&#123;</span><br><span class="line">            animation: fadeOut 0.5s;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;* .v-leave-to&#123;</span><br><span class="line">            opacity: 0;</span><br><span class="line">        &#125; *&#x2F;</span><br><span class="line">		.abs ul&#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">        &#125;</span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;w3cFocus&quot; id&#x3D;&quot;slide&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;w3cFocusIn&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;bd&quot;&gt;</span><br><span class="line">                &lt;ul&gt;</span><br><span class="line">                    &lt;transition-group tag&#x3D;&quot;div&quot;&gt;</span><br><span class="line">                    &lt;li v-for&#x3D;&quot;item,index in data&quot; v-show&#x3D;&quot;index&#x3D;&#x3D;i&quot; :key&#x3D;&quot;index&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;img :src&#x3D;&quot;item.bgimg&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">                &lt;&#x2F;transition-group&gt;</span><br><span class="line">                    &lt;!-- &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;img src&#x3D;&quot;img&#x2F;pic2.jpg&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">                &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;img src&#x3D;&quot;img&#x2F;pic3.jpg&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span><br><span class="line">                &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;img src&#x3D;&quot;img&#x2F;pic4.jpg&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">                &lt;&#x2F;ul&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div class&#x3D;&quot;hd&quot;&gt;</span><br><span class="line">                &lt;ul&gt;</span><br><span class="line">                    &lt;li v-for&#x3D;&quot;item,index in data&quot; :class&#x3D;&quot;&#123;on:index&#x3D;&#x3D;i&#125;&quot; @click&#x3D;&quot;cg(index)&quot;&gt;&lt;img :src&#x3D;&quot;item.smimg&quot; &#x2F;&gt;</span><br><span class="line">                    &lt;&#x2F;li&gt;</span><br><span class="line">                    &lt;!-- &lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;pic2_s.png&quot; &#x2F;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">                &lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;pic3_s.png&quot; &#x2F;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">                &lt;li&gt;&lt;img src&#x3D;&quot;img&#x2F;pic4_s.png&quot; &#x2F;&gt;&lt;&#x2F;li&gt; --&gt;</span><br><span class="line">                &lt;&#x2F;ul&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;prev&quot; href&#x3D;&quot;javascript:void(0)&quot; @click&#x3D;&quot;i--,i&lt;0?i&#x3D;3:&#39;&#39;&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;next&quot; href&#x3D;&quot;javascript:void(0)&quot; @click&#x3D;&quot;i++,i&gt;3?i&#x3D;0:&#39;&#39;&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F;数据</span><br><span class="line">        var data &#x3D; [&#123;</span><br><span class="line">                bgimg: &quot;img&#x2F;pic1.png&quot;,</span><br><span class="line">                smimg: &quot;img&#x2F;pic1_s.png&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                bgimg: &quot;img&#x2F;pic2.jpg&quot;,</span><br><span class="line">                smimg: &quot;img&#x2F;pic2_s.png&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                bgimg: &quot;img&#x2F;pic3.jpg&quot;,</span><br><span class="line">                smimg: &quot;img&#x2F;pic3_s.png&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                bgimg: &quot;img&#x2F;pic4.jpg&quot;,</span><br><span class="line">                smimg: &quot;img&#x2F;pic4_s.png&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        ];</span><br><span class="line">        var vm &#x3D; new Vue(&#123;</span><br><span class="line">            el: &quot;#slide&quot;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                &#x2F;&#x2F;这里放数据</span><br><span class="line">                data,</span><br><span class="line">                i: 0</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                &#x2F;&#x2F;i指的是调用时传进来的那个参数</span><br><span class="line">                cg(i) &#123;</span><br><span class="line">                    this.i &#x3D; i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F; 定时轮播</span><br><span class="line">        var timer&#x3D;setInterval(fun, 1000)</span><br><span class="line">        function fun() &#123;</span><br><span class="line">            vm.i +&#x3D; 1</span><br><span class="line">            if (vm.i &gt; 3) &#123;</span><br><span class="line">                vm.i &#x3D; 0</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 移入停止</span><br><span class="line">        var slide&#x3D;document.getElementById(&quot;slide&quot;)</span><br><span class="line">        slide.onmouseenter&#x3D;function()&#123;</span><br><span class="line">            clearInterval(timer)</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 移出继续</span><br><span class="line">        slide.onmouseleave&#x3D;function()&#123;</span><br><span class="line">            timer&#x3D;setInterval(fun, 1000)</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/vue/" rel="tag"><i class="ic i-tag"></i> vue</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-04-01 08:56:41" itemprop="dateModified" datetime="2021-04-01T08:56:41+08:00">2021-04-01</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="tz 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="tz 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>tz <i class="ic i-at"><em>@</em></i>阳光果苏
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://serena-tz.github.io/2020/10/30/vue%E7%9A%84%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB/" title="vue的过渡和动画">https://serena-tz.github.io/2020/10/30/vue的过渡和动画/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/10/29/vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclgi503lj20zk0m8hdt.jpg" title="vue的组件和组件间的通信方式">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>vue的组件和组件间的通信方式</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/10/30/vue%E7%9A%84%E6%8F%92%E6%A7%BD/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicm07ih54j20zk0m84qp.jpg" title="vue的插槽">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>vue的插槽</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.</span> <span class="toc-text"> 在 vue 中使用过渡和动画的步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C"><span class="toc-number">2.</span> <span class="toc-text"> 单元素的过渡动画效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C"><span class="toc-number">3.</span> <span class="toc-text"> 多个元素的过渡动画效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E7%BB%84%E5%85%83%E7%B4%A0%E7%9A%84%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C%E5%88%97%E8%A1%A8%E8%BF%87%E6%B8%A1"><span class="toc-number">4.</span> <span class="toc-text"> 一组元素的过渡动画效果（列表过渡）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text"> 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8A%A8%E7%94%BB%E5%BA%93-animatecss"><span class="toc-number">6.</span> <span class="toc-text"> 结合使用第三方动画库 animate.css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue%E5%8A%A8%E7%94%BB%E5%AE%9E%E4%BE%8B-%E8%BD%AE%E6%92%AD%E5%9B%BE"><span class="toc-number">7.</span> <span class="toc-text"> vue 动画实例 - 轮播图</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="tz"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">tz</p>
+  <div class="description" itemprop="description">心情笔记 & 编程日记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">49</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">28</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlcmVuYS10eg==" title="https:&#x2F;&#x2F;github.com&#x2F;Serena-tz"><i class="ic i-github"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS81MDk4OTUyODg0L2hvbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5098952884&#x2F;home"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjE3OTg1MDg0NjlAbWFpbC5jb20=" title="mailto:1798508469@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/10/29/vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/10/30/vue%E7%9A%84%E6%8F%92%E6%A7%BD/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/26/vue%E7%9A%84%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/" title="vue的计算属性">vue的计算属性</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jquery/" title="分类于 jquery">jquery</a>
+</div>
+
+    <span><a href="/2020/08/17/jquery%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%88%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%89/" title="jquery基本介绍（入口函数）">jquery基本介绍（入口函数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/" title="分类于 操作步骤">操作步骤</a>
+</div>
+
+    <span><a href="/2020/04/01/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/29/vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" title="vue的组件和组件间的通信方式">vue的组件和组件间的通信方式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/10/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库的概念、如何管理数据库">数据库的概念、如何管理数据库</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/10/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="本地存储">本地存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/28/jquery%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95%E5%92%8C%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/" title="jquery工具方法和开发插件">jquery工具方法和开发插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/18/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="域名服务器的基本介绍">域名服务器的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/05/less%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" title="less的基本介绍">less的基本介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/18/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" title="jQuery选择器">jQuery选择器</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tz @ Serena</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/10/30/vue的过渡和动画/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
