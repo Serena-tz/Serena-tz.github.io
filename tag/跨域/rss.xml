@@ -12,14 +12,14 @@
         <category>H5</category>
         <category>jquery</category>
         <category>PHP</category>
-        <category>SEO</category>
         <category>ajax</category>
+        <category>SEO</category>
         <category>axios</category>
-        <category>echarts</category>
         <category>git</category>
         <category>manual</category>
-        <category>less</category>
+        <category>echarts</category>
         <category>json</category>
+        <category>less</category>
         <category>node</category>
         <category>npm</category>
         <category>vue</category>
@@ -29,8 +29,8 @@
         <category>地理位置</category>
         <category>服务器</category>
         <category>小程序</category>
-        <category>弹性盒子</category>
         <category>数据库</category>
+        <category>弹性盒子</category>
         <category>本地存储</category>
         <category>移动端</category>
         <category>跨域</category>
