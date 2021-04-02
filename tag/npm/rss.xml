@@ -15,9 +15,9 @@
         <category>SEO</category>
         <category>ajax</category>
         <category>axios</category>
+        <category>git</category>
         <category>echarts</category>
         <category>manual</category>
-        <category>git</category>
         <category>json</category>
         <category>less</category>
         <category>node</category>
@@ -32,8 +32,8 @@
         <category>小程序</category>
         <category>数据库</category>
         <category>本地存储</category>
-        <category>移动端</category>
         <category>跨域</category>
+        <category>移动端</category>
         <category>canvas</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/11/03/npm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</guid>
