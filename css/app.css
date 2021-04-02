@@ -2527,6 +2527,12 @@ main >.inner {
 .social .item.music i {
   color: #e60026;
 }
+.social .item.bilibili::before {
+  background-color: #FB7299;
+}
+.social .item.bilibili i {
+  color: #FB7299;
+}
 .social .item.email::before {
   background-color: #55acd5;
 }
