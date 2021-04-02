@@ -2509,6 +2509,12 @@ main >.inner {
 .social .item.github i {
   color: #191717;
 }
+.social .item.bilibili::before {
+  background-color: #FB7299;
+}
+.social .item.bilibili i {
+  color: #FB7299;
+}
 .social .item.weibo::before {
   background-color: #ea716e;
 }
@@ -2532,12 +2538,6 @@ main >.inner {
 }
 .social .item.qq i {
   color: #f60;
-}
-.social .item.bilibili::before {
-  background-color: #FB7299;
-}
-.social .item.bilibili i {
-  color: #FB7299;
 }
 .social .item.email::before {
   background-color: #55acd5;
