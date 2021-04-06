@@ -17,22 +17,22 @@
     <category term="manual" />
     <category term="jQuery" />
     <category term="json" />
-    <category term="node" />
     <category term="less" />
-    <category term="vue" />
+    <category term="node" />
     <category term="npm" />
+    <category term="vue" />
     <category term="webpack" />
     <category term="ES6" />
     <category term="响应式布局" />
     <category term="bug" />
-    <category term="服务器" />
     <category term="地理位置" />
+    <category term="服务器" />
     <category term="小程序" />
     <category term="弹性盒子" />
     <category term="数据库" />
-    <category term="移动端" />
     <category term="本地存储" />
     <category term="跨域" />
+    <category term="移动端" />
     <category term="canvas" />
     <entry>
         <id>https://serena-tz.github.io/2020/04/01/hello-world/</id>

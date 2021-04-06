@@ -20,22 +20,22 @@
         <category>manual</category>
         <category>jQuery</category>
         <category>json</category>
-        <category>node</category>
         <category>less</category>
-        <category>vue</category>
+        <category>node</category>
         <category>npm</category>
+        <category>vue</category>
         <category>webpack</category>
         <category>ES6</category>
         <category>响应式布局</category>
         <category>bug</category>
-        <category>服务器</category>
         <category>地理位置</category>
+        <category>服务器</category>
         <category>小程序</category>
         <category>弹性盒子</category>
         <category>数据库</category>
-        <category>移动端</category>
         <category>本地存储</category>
         <category>跨域</category>
+        <category>移动端</category>
         <category>canvas</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2021/04/06/jQuery%E4%BD%BF%E7%94%A8on%E8%BF%9B%E8%A1%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%EF%BC%8C%E7%88%B6%E3%80%81%E5%AD%90%E5%85%83%E7%B4%A0%E7%BB%91%E5%AE%9A%E7%9B%B8%E5%90%8C%E4%BA%8B%E4%BB%B6%EF%BC%8C%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1/</guid>
