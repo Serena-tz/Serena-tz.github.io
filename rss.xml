@@ -5,8 +5,8 @@
         <link>https://Serena-tz.github.io</link>
         <description>心情笔记 &amp; 编程日记</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 06 Apr 2021 15:42:22 +0800</pubDate>
-        <lastBuildDate>Tue, 06 Apr 2021 15:42:22 +0800</lastBuildDate>
+        <pubDate>Tue, 06 Apr 2021 16:13:37 +0800</pubDate>
+        <lastBuildDate>Tue, 06 Apr 2021 16:13:37 +0800</lastBuildDate>
         <category>Bootstrap</category>
         <category>CSS3</category>
         <category>H5</category>
@@ -16,17 +16,18 @@
         <category>ajax</category>
         <category>axios</category>
         <category>echarts</category>
-        <category>manual</category>
         <category>git</category>
+        <category>manual</category>
         <category>jQuery</category>
-        <category>json</category>
         <category>less</category>
+        <category>json</category>
         <category>node</category>
         <category>npm</category>
         <category>vue</category>
         <category>webpack</category>
         <category>ES6</category>
         <category>响应式布局</category>
+        <category>bug</category>
         <category>地理位置</category>
         <category>服务器</category>
         <category>小程序</category>
@@ -36,6 +37,15 @@
         <category>移动端</category>
         <category>跨域</category>
         <category>canvas</category>
+        <item>
+            <guid isPermalink="true">https://serena-tz.github.io/2021/04/06/%E5%9C%A8%E8%A6%81%E8%B7%B3%E8%BD%AC%E5%88%B0%E8%AF%A6%E6%83%85%E9%A1%B5%E7%9A%84%E5%8D%A1%E7%89%87%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%80%89%E3%80%81input%E4%BE%BF%E7%AD%BE%E6%97%A0%E6%B3%95%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%EF%BC%8C%E5%8B%BE%E9%80%89%E6%97%B6%E5%8D%B3%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2/</guid>
+            <title>在要跳转到详情页的卡片中实现多选、input便签无法阻止事件冒泡，勾选时即跳转页面</title>
+            <link>https://serena-tz.github.io/2021/04/06/%E5%9C%A8%E8%A6%81%E8%B7%B3%E8%BD%AC%E5%88%B0%E8%AF%A6%E6%83%85%E9%A1%B5%E7%9A%84%E5%8D%A1%E7%89%87%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%80%89%E3%80%81input%E4%BE%BF%E7%AD%BE%E6%97%A0%E6%B3%95%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%EF%BC%8C%E5%8B%BE%E9%80%89%E6%97%B6%E5%8D%B3%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2/</link>
+            <category>bug</category>
+            <pubDate>Tue, 06 Apr 2021 16:13:37 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;今天在一个需要点击跳转到详情页面的卡片列表中实现多选，在 input 的点击事件中使用事件对象的方法 &lt;code&gt;event.stopPropagation(); &lt;/code&gt; 方法阻止冒泡，但是在点击了多选按钮以后，直接跳转页面到详情页，也就是阻止冒泡并没有生效。搞了半天，在 input 标签的父元素 &lt;code&gt;div&lt;/code&gt;  添加了一个事件然后阻止冒泡以后，点击选择框，多选可以实现，点击卡片的其余部分，页面能够跳转到详情页。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2021/04/06/jQuery%E4%BD%BF%E7%94%A8on%E8%BF%9B%E8%A1%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%EF%BC%8C%E7%88%B6%E3%80%81%E5%AD%90%E5%85%83%E7%B4%A0%E7%BB%91%E5%AE%9A%E7%9B%B8%E5%90%8C%E4%BA%8B%E4%BB%B6%EF%BC%8C%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1/</guid>
             <title>jQuery使用on进行事件委托，父、子元素绑定相同事件，阻止冒泡</title>

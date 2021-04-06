@@ -16,17 +16,18 @@
         <category>ajax</category>
         <category>axios</category>
         <category>echarts</category>
-        <category>manual</category>
         <category>git</category>
+        <category>manual</category>
         <category>jQuery</category>
-        <category>json</category>
         <category>less</category>
+        <category>json</category>
         <category>node</category>
         <category>npm</category>
         <category>vue</category>
         <category>webpack</category>
         <category>ES6</category>
         <category>响应式布局</category>
+        <category>bug</category>
         <category>地理位置</category>
         <category>服务器</category>
         <category>小程序</category>
