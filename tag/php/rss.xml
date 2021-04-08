@@ -7,35 +7,35 @@
         <language>zh-CN</language>
         <pubDate>Fri, 09 Oct 2020 09:18:05 +0800</pubDate>
         <lastBuildDate>Fri, 09 Oct 2020 09:18:05 +0800</lastBuildDate>
-        <category>Bootstrap</category>
         <category>CSS3</category>
-        <category>H5</category>
-        <category>PHP</category>
+        <category>Bootstrap</category>
         <category>jquery</category>
-        <category>ajax</category>
+        <category>PHP</category>
+        <category>H5</category>
         <category>SEO</category>
-        <category>git</category>
+        <category>ajax</category>
         <category>axios</category>
         <category>echarts</category>
-        <category>manual</category>
         <category>jQuery</category>
+        <category>git</category>
+        <category>manual</category>
         <category>less</category>
-        <category>vue</category>
         <category>json</category>
         <category>npm</category>
+        <category>vue</category>
         <category>node</category>
         <category>webpack</category>
         <category>bug</category>
-        <category>服务器</category>
         <category>响应式布局</category>
-        <category>ES6</category>
+        <category>服务器</category>
+        <category>弹性盒子</category>
         <category>地理位置</category>
         <category>小程序</category>
-        <category>弹性盒子</category>
-        <category>本地存储</category>
         <category>数据库</category>
-        <category>跨域</category>
+        <category>本地存储</category>
         <category>移动端</category>
+        <category>ES6</category>
+        <category>跨域</category>
         <category>canvas</category>
         <item>
             <guid isPermalink="true">https://serena-tz.github.io/2020/10/09/PHP%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/</guid>
